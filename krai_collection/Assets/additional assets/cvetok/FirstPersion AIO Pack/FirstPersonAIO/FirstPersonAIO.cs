@@ -64,8 +64,7 @@ using UnityEditor;
 using System.Net;
 using krai_cvetok;
 #endif
-namespace krai_cvetok
-{
+
     [RequireComponent(typeof(CapsuleCollider)), RequireComponent(typeof(Rigidbody)), AddComponentMenu("First Person AIO")]
 
 
@@ -502,7 +501,7 @@ namespace krai_cvetok
 
             if (IsGrounded && jumpInput && jumpPowerInternal > 0 && !didJump)
             {
-                SoundManager.Singleton.PlayJumpSound(); /////////////////////////////////////////////////////////
+                krai_cvetok.SoundManager.Singleton.PlayJumpSound(); /////////////////////////////////////////////////////////
                 if (advanced.maxSlopeAngle > 0)
                 {
                     if (advanced.isTouchingFlat || advanced.isTouchingWalkable)
@@ -917,6 +916,7 @@ namespace krai_cvetok
 
 
     }
+
 
 #if UNITY_EDITOR
     [CustomEditor(typeof(FirstPersonAIO)), InitializeOnLoadAttribute]
@@ -1729,5 +1729,5 @@ namespace krai_cvetok
             }
         }
     }
-}
+
 #endif
