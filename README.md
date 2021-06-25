@@ -1,0 +1,1 @@
+krai_collection1
