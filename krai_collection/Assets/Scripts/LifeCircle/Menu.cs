@@ -22,7 +22,8 @@ namespace krai_room
         }
         public void QuitTheGame()
         {
-            Application.Quit();
+            //Application.Quit();
+            SceneManager.LoadScene("main menu");
         }
         public void LoadScene()
         {

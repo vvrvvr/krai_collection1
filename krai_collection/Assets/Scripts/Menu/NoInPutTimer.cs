@@ -1,13 +1,13 @@
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class NoInPutTimer : MonoBehaviour
 {
     [SerializeField] GameObject timerScreen;
     private Text timerText;
     private float currentTime = 0f;
-    private float maxTime = 40f;
     Vector3 lastMousePosition;
     private bool isTimerScreen = false;
 
@@ -28,7 +28,7 @@ public class NoInPutTimer : MonoBehaviour
         if (!Input.anyKey && Input.mousePosition == lastMousePosition) //not pressed
         {
             currentTime += Time.unscaledDeltaTime;
-            if (currentTime >= 5f)
+            if (currentTime >= 30f)
             {
                 if (!isTimerScreen)
                 {
@@ -77,7 +77,9 @@ public class NoInPutTimer : MonoBehaviour
                 miliseconds = 0;
                 minutes = 0;
                 timerText.text = string.Format("выход в меню через: {0}:{1}:{2}", minutes, seconds, (int)miliseconds);
-
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
+                SceneManager.LoadScene("main menu");
                 return;
             }
         }
