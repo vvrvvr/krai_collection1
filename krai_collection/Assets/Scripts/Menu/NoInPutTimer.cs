@@ -9,6 +9,7 @@ public class NoInPutTimer : MonoBehaviour
     private float currentTime = 0f;
     private float maxTime = 40f;
     Vector3 lastMousePosition;
+    private bool isTimerScreen = false;
 
     //visuals
     float seconds = 10f;
@@ -29,13 +30,21 @@ public class NoInPutTimer : MonoBehaviour
             currentTime += Time.unscaledDeltaTime;
             if (currentTime >= 5f)
             {
-                timerScreen.SetActive(true);
+                if (!isTimerScreen)
+                {
+                    timerScreen.SetActive(true);
+                    isTimerScreen = true;
+                }
                 CountTime();
             }
         }
         else //pressed
         {
-            timerScreen.SetActive(false);
+            if (isTimerScreen)
+            {
+                timerScreen.SetActive(false);
+                isTimerScreen = false;
+            }
             seconds = 10f;
             miliseconds = 0f;
             lastMousePosition = Input.mousePosition;
@@ -67,8 +76,6 @@ public class NoInPutTimer : MonoBehaviour
                 seconds = 0;
                 miliseconds = 0;
                 minutes = 0;
-
-
                 timerText.text = string.Format("выход в меню через: {0}:{1}:{2}", minutes, seconds, (int)miliseconds);
 
                 return;
@@ -81,9 +88,9 @@ public class NoInPutTimer : MonoBehaviour
         miliseconds -= Time.unscaledDeltaTime * 100;
         timerText.text = string.Format("выход в меню через: {0}:{1}:{2}", minutes, seconds, (int)miliseconds);
     }
+
     private void ScaleEffect()
     {
-
         Sequence scale = DOTween.Sequence();
         scale.Append(timerText.transform.DOScale(new Vector3(1.2f, 1.2f, 1.2f), 0.5f));
         scale.Append(timerText.transform.DOScale(Vector3.one, 0.5f));
