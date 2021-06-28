@@ -26,4 +26,31 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LifeCircle/room_GameScene.unity
     guid: 11527bf475b87a5488c4a64f785e63f1
+  - enabled: 1
+    path: Assets/Trolley/TheGAME/Scenes/MainMenu.unity
+    guid: 6e4210e3fc46e404ba78488cdab013ac
+  - enabled: 1
+    path: Assets/Trolley/TheGAME/Scenes/Act1_Testing.unity
+    guid: 7b1835813af3bb4418fb080d5a23e9f3
+  - enabled: 1
+    path: Assets/Trolley/TheGAME/Scenes/Act2.unity
+    guid: 75dd86f5eb4a8364db12a9f9aaab1c93
+  - enabled: 1
+    path: Assets/Trolley/TheGAME/Scenes/Act3.unity
+    guid: 7845b8efacb829148b39b156446f95cc
+  - enabled: 1
+    path: Assets/Trolley/TheGAME/Scenes/Act4.unity
+    guid: e0c8f46ecefa4594991fa910b3a05556
+  - enabled: 1
+    path: Assets/Trolley/TheGAME/Scenes/Act5.unity
+    guid: 6ab248f1b0498da4d9eda1fbee5e549d
+  - enabled: 1
+    path: Assets/Trolley/TheGAME/Scenes/Act6.unity
+    guid: 02a30e4b329e705449d9e4590a4ad444
+  - enabled: 1
+    path: Assets/Trolley/TheGAME/Scenes/Titles.unity
+    guid: 193a91e107d92f245ac8c906e99e060b
+  - enabled: 1
+    path: Assets/Trolley/TheGAME/Scenes/Act1.unity
+    guid: d9169dc9e77b3d848980c9af3dd58c10
   m_configObjects: {}
