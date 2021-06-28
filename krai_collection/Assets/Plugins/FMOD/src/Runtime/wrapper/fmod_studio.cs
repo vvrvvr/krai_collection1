@@ -1,6 +1,6 @@
 /* ======================================================================================== */
 /* FMOD Studio API - C# wrapper.                                                            */
-/* Copyright (c), Firelight Technologies Pty, Ltd. 2004-2020.                               */
+/* Copyright (c), Firelight Technologies Pty, Ltd. 2004-2021.                               */
 /*                                                                                          */
 /* For more detail visit:                                                                   */
 /* https://fmod.com/resources/documentation-api?version=2.0&page=page=studio-api.html       */
@@ -62,6 +62,13 @@ namespace FMOD.Studio
     }
 
     [StructLayout(LayoutKind.Sequential)]
+    public struct TIMELINE_NESTED_BEAT_PROPERTIES
+    {
+        public Guid eventid;
+        public TIMELINE_BEAT_PROPERTIES properties;
+    }
+
+    [StructLayout(LayoutKind.Sequential)]
     public struct ADVANCEDSETTINGS
     {
         public int cbsize;
@@ -118,6 +125,8 @@ namespace FMOD.Studio
         PREUPDATE = 0x00000001,
         POSTUPDATE = 0x00000002,
         BANK_UNLOAD = 0x00000004,
+        LIVEUPDATE_CONNECTED = 0x00000008,
+        LIVEUPDATE_DISCONNECTED = 0x00000010,
         ALL = 0xFFFFFFFF,
     }
 
@@ -317,6 +326,7 @@ namespace FMOD.Studio
         REAL_TO_VIRTUAL          = 0x00008000,
         VIRTUAL_TO_REAL          = 0x00010000,
         START_EVENT_COMMAND      = 0x00020000,
+        NESTED_TIMELINE_BEAT     = 0x00040000,
 
         ALL                      = 0xFFFFFFFF,
     }
@@ -386,7 +396,7 @@ namespace FMOD.Studio
         }
         public RESULT setAdvancedSettings(ADVANCEDSETTINGS settings)
         {
-            settings.cbsize = Marshal.SizeOf(typeof(ADVANCEDSETTINGS));
+            settings.cbsize = MarshalHelper.SizeOf(typeof(ADVANCEDSETTINGS));
             return FMOD_Studio_System_SetAdvancedSettings(this.handle, ref settings);
         }
         public RESULT setAdvancedSettings(ADVANCEDSETTINGS settings, string encryptionKey)
@@ -402,7 +412,7 @@ namespace FMOD.Studio
         }
         public RESULT getAdvancedSettings(out ADVANCEDSETTINGS settings)
         {
-            settings.cbsize = Marshal.SizeOf(typeof(ADVANCEDSETTINGS));
+            settings.cbsize = MarshalHelper.SizeOf(typeof(ADVANCEDSETTINGS));
             return FMOD_Studio_System_GetAdvancedSettings(this.handle, out settings);
         }
         public RESULT initialize(int maxchannels, INITFLAGS studioflags, FMOD.INITFLAGS flags, IntPtr extradriverdata)
@@ -602,7 +612,7 @@ namespace FMOD.Studio
         }
         public RESULT loadBankCustom(BANK_INFO info, LOAD_BANK_FLAGS flags, out Bank bank)
         {
-            info.size = Marshal.SizeOf(info);
+            info.size = MarshalHelper.SizeOf(typeof(BANK_INFO));
             return FMOD_Studio_System_LoadBankCustom(this.handle, ref info, flags, out bank.handle);
         }
         public RESULT unloadAll()
@@ -968,6 +978,10 @@ namespace FMOD.Studio
         {
             return FMOD_Studio_EventDescription_Is3D(this.handle, out is3D);
         }
+        public RESULT isDopplerEnabled(out bool doppler)
+        {
+            return FMOD_Studio_EventDescription_IsDopplerEnabled(this.handle, out doppler);
+        }
         public RESULT hasCue(out bool cue)
         {
             return FMOD_Studio_EventDescription_HasCue(this.handle, out cue);
@@ -1090,6 +1104,8 @@ namespace FMOD.Studio
         [DllImport(STUDIO_VERSION.dll)]
         private static extern RESULT FMOD_Studio_EventDescription_Is3D                  (IntPtr eventdescription, out bool is3D);
         [DllImport(STUDIO_VERSION.dll)]
+        private static extern RESULT FMOD_Studio_EventDescription_IsDopplerEnabled      (IntPtr eventdescription, out bool doppler);
+        [DllImport(STUDIO_VERSION.dll)]
         private static extern RESULT FMOD_Studio_EventDescription_HasCue                (IntPtr eventdescription, out bool cue);
         [DllImport(STUDIO_VERSION.dll)]
         private static extern RESULT FMOD_Studio_EventDescription_CreateInstance        (IntPtr eventdescription, out IntPtr instance);
@@ -1136,8 +1152,7 @@ namespace FMOD.Studio
         }
         public RESULT getVolume(out float volume)
         {
-            float finalVolume;
-            return getVolume(out volume, out finalVolume);
+            return FMOD_Studio_EventInstance_GetVolume(this.handle, out volume, IntPtr.Zero);
         }
         public RESULT getVolume(out float volume, out float finalvolume)
         {
@@ -1149,8 +1164,7 @@ namespace FMOD.Studio
         }
         public RESULT getPitch(out float pitch)
         {
-            float finalPitch;
-            return getPitch(out pitch, out finalPitch);
+            return FMOD_Studio_EventInstance_GetPitch(this.handle, out pitch, IntPtr.Zero);
         }
         public RESULT getPitch(out float pitch, out float finalpitch)
         {
@@ -1298,9 +1312,13 @@ namespace FMOD.Studio
         [DllImport(STUDIO_VERSION.dll)]
         private static extern RESULT FMOD_Studio_EventInstance_GetDescription              (IntPtr _event, out IntPtr description);
         [DllImport(STUDIO_VERSION.dll)]
+        private static extern RESULT FMOD_Studio_EventInstance_GetVolume                   (IntPtr _event, out float volume, IntPtr zero);
+        [DllImport(STUDIO_VERSION.dll)]
         private static extern RESULT FMOD_Studio_EventInstance_GetVolume                   (IntPtr _event, out float volume, out float finalvolume);
         [DllImport(STUDIO_VERSION.dll)]
         private static extern RESULT FMOD_Studio_EventInstance_SetVolume                   (IntPtr _event, float volume);
+        [DllImport(STUDIO_VERSION.dll)]
+        private static extern RESULT FMOD_Studio_EventInstance_GetPitch                    (IntPtr _event, out float pitch, IntPtr zero);
         [DllImport(STUDIO_VERSION.dll)]
         private static extern RESULT FMOD_Studio_EventInstance_GetPitch                    (IntPtr _event, out float pitch, out float finalpitch);
         [DllImport(STUDIO_VERSION.dll)]

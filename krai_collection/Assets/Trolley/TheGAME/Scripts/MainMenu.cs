@@ -47,7 +47,7 @@ public class MainMenu : MonoBehaviour
 
 	public void Exit()
 	{
-		Application.Quit();
+		SceneManager.LoadScene("main menu");
 	}
 
 	public void ChangeVolume(float value)
