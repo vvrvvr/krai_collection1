@@ -85,7 +85,7 @@ public class NoInPutTimer : MonoBehaviour
         }
         if (minutes == 0 && seconds == 5)
         {
-            ScaleEffect();
+           // ScaleEffect();
         }
         miliseconds -= Time.unscaledDeltaTime * 100;
         timerText.text = string.Format("выход в меню через: {0}:{1}:{2}", minutes, seconds, (int)miliseconds);
