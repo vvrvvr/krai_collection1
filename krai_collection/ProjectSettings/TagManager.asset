@@ -9,6 +9,10 @@ TagManager:
   - button
   - slider
   - gun
+  - note
+  - doorClosed
+  - flower
+  - delete
   layers:
   - Default
   - TransparentFX

@@ -6,9 +6,21 @@ using UnityEngine.UI;
 public class LevelLoader : MonoBehaviour
 {
     [SerializeField] private GameObject loadingScreen;
-    public UnityEngine.UI.Slider slider;
+    public Slider slider;
 
-
+    private void Awake()
+    {
+        Time.timeScale = 1f;
+        
+        var endSingletone = GameObject.FindGameObjectsWithTag("delete");
+        if (endSingletone != null)
+        {
+            foreach (var item in endSingletone)
+            {
+                Destroy(item);
+            }
+        }
+    }
     public void LoadLevel(int sceneIndex)
     {
         StartCoroutine(LoadAsyncr(sceneIndex));
