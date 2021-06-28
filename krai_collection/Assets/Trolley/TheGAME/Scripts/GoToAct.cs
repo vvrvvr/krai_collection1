@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class GoToAct : MonoBehaviour
 {
 	[SerializeField] protected MainMenu _mainMenu;
-	[SerializeField] protected int _act;
+	[SerializeField] protected string _act;
 	private void OnTriggerEnter(Collider other)
 	{
 		_mainMenu.LoadScene(_act);

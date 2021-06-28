@@ -35,7 +35,7 @@ public class MainMenu : MonoBehaviour
 
 	public void StartNewGame()
 	{
-		StartCoroutine(LoadSceneWhithFade(8));
+		StartCoroutine(LoadSceneWhithFade("Act1_Testing"));
 		Time.timeScale = 1;
 	}
 
@@ -55,12 +55,12 @@ public class MainMenu : MonoBehaviour
 		musicBox.ChangeVolume(value);
 	}
 
-	public void LoadScene(int sceneIndex)
+	public void LoadScene(string sceneName)
 	{
-		StartCoroutine(LoadSceneWhithFade(sceneIndex));
+		StartCoroutine(LoadSceneWhithFade(sceneName));
 	}
 
-	private IEnumerator LoadSceneWhithFade(int sceneIndex)
+	private IEnumerator LoadSceneWhithFade(string sceneName)
 	{
 		if (_fade != null)
 		{
@@ -68,6 +68,6 @@ public class MainMenu : MonoBehaviour
 			_fade.FadeOut();
 			yield return new WaitForSeconds(_fade.FadeOutTime);
 		}
-		SceneManager.LoadScene(sceneIndex);
+		SceneManager.LoadScene(sceneName);
 	}
 }

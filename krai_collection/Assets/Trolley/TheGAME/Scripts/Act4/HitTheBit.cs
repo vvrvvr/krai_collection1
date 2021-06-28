@@ -11,7 +11,7 @@ public class HitTheBit : MonoBehaviour
 	[SerializeField] private float massGoal = 15;
 
 	[Space]
-	[SerializeField] private int nextScene;
+	[SerializeField] private string nextScene;
 	[SerializeField] private MainMenu mainMenu;
 
 

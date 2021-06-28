@@ -1199,6 +1199,17 @@ PrefabInstance:
       objectReference: {fileID: 84033873}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0de9e74cb242ee5478e06652faf8cff6, type: 3}
+--- !u!114 &228232839 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3078527733596932052, guid: 0de9e74cb242ee5478e06652faf8cff6, type: 3}
+  m_PrefabInstance: {fileID: 228232838}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43d977bfa25169c4d9b362991ae6905a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &253331069 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5345591816272246110, guid: 5852ce2f24adf5f4a8716f038eca1e98, type: 3}
@@ -8961,12 +8972,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 206094113027935831, guid: 55e6745eddd58db46aee4b0154e437b8, type: 3}
       propertyPath: _act
-      value: 2
+      value: Act2
       objectReference: {fileID: 0}
     - target: {fileID: 206094113027935831, guid: 55e6745eddd58db46aee4b0154e437b8, type: 3}
       propertyPath: _mainMenu
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 228232839}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55e6745eddd58db46aee4b0154e437b8, type: 3}
 --- !u!1001 &8223997079761485120

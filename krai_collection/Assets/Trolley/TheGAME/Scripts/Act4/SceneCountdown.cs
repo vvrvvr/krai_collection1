@@ -11,7 +11,7 @@ public class SceneCountdown : MonoBehaviour
 
 	[SerializeField] private float _musicPlaySeconds;
 	[SerializeField] private float _minMountainDistance;
-	[SerializeField] private int _loadAct;
+	[SerializeField] private string _loadAct;
 
 	[SerializeField] private MainMenu _mainMenu;
 

@@ -340,7 +340,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mainMenu: {fileID: 1312947669}
-  _act: 14
+  _act: Titles
   _musicLength: 60
   _timeAfterLeaveBus: 5
 --- !u!4 &232934630 stripped

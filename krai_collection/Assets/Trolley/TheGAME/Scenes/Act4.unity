@@ -938,7 +938,7 @@ MonoBehaviour:
   power: 1500
   timer: 23
   massGoal: 15
-  nextScene: 5
+  nextScene: Act5
   mainMenu: {fileID: 2072045757}
   anchor: {fileID: 486160004}
   wait1: 4.5
@@ -3308,7 +3308,7 @@ MonoBehaviour:
   _bus: {fileID: 200770199}
   _musicPlaySeconds: 1000
   _minMountainDistance: 700
-  _loadAct: 12
+  _loadAct: Act5
   _mainMenu: {fileID: 2072045757}
 --- !u!1 &1602025632
 GameObject:
