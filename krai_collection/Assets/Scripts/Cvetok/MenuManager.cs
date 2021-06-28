@@ -15,22 +15,24 @@ namespace krai_cvetok
         [SerializeField] private Text restartText;
         [SerializeField] private Text exitText;
         private bool isRussian;
-        [SerializeField] private GameObject endingSingleton;
 
         private void OnEnable()
         {
             FirstPersonAIO.OnPauseEvent += Pause;
+            TestScript.OnPauseEvent += Pause;
         }
 
         private void OnDisable()
         {
             FirstPersonAIO.OnPauseEvent -= Pause;
+            TestScript.OnPauseEvent -= Pause;
         }
 
 
         void Start()
         {
-            isRussian = Endings.Singleton.isRussian;
+            if(Endings.Singleton != null)
+                isRussian = Endings.Singleton.isRussian;
             pauseScreen.SetActive(false);
             gameScreen.SetActive(true);
             if(isRussian)

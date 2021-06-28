@@ -31,6 +31,9 @@ namespace krai_cvetok
         [SerializeField] VideoPlayer video;
         [SerializeField] GameObject videoScreen;
 
+        //pause
+        public static System.Action OnPauseEvent;
+
         //translation
         private bool isRussian;
         private void Awake()
@@ -185,7 +188,10 @@ namespace krai_cvetok
                     }
                 }
             }
-
+            if (Input.GetButtonDown("Cancel"))
+            {
+                OnPauseEvent?.Invoke();
+            }
         }
         private void Say(string s)
         {
