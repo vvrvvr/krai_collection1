@@ -13,6 +13,8 @@ TagManager:
   - doorClosed
   - flower
   - delete
+  - Bus
+  - GrandmasRP
   layers:
   - Default
   - TransparentFX
@@ -23,8 +25,8 @@ TagManager:
   - interactable
   - 
   - Image
-  - 
-  - 
+  - Grandmas
+  - GrandmaPushBus
   - 
   - 
   - 
