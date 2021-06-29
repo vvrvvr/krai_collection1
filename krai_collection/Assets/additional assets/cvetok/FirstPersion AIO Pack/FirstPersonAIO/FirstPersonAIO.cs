@@ -254,17 +254,17 @@ public class FirstPersonAIO : MonoBehaviour
     #endregion
 
     #endregion
-    private void OnEnable()
-    {
-        MenuManager.OnPauseMenuManager += PauseMenu;
-    }
+    //private void OnEnable()
+    //{
+    //    MenuManager.OnPauseMenuManager += PauseMenu;
+    //}
 
-    private void OnDisable()
-    {
-        MenuManager.OnPauseMenuManager -= PauseMenu;
-    }
+    //private void OnDisable()
+    //{
+    //    MenuManager.OnPauseMenuManager -= PauseMenu;
+    //}
 
-    private void PauseMenu()
+    public void PauseMenu()
     {
         controllerPauseState = !controllerPauseState;
     }

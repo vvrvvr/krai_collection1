@@ -88048,6 +88048,7 @@ MonoBehaviour:
   resumeText: {fileID: 82002444}
   restartText: {fileID: 1204729174}
   exitText: {fileID: 958723268}
+  player: {fileID: 231699517}
 --- !u!4 &1773571955
 Transform:
   m_ObjectHideFlags: 0

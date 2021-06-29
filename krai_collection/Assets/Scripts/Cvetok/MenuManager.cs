@@ -14,6 +14,7 @@ namespace krai_cvetok
         [SerializeField] private Text resumeText;
         [SerializeField] private Text restartText;
         [SerializeField] private Text exitText;
+        [SerializeField] private FirstPersonAIO player;
         private bool isRussian;
 
         private void OnEnable()
@@ -54,6 +55,7 @@ namespace krai_cvetok
             isPause = true;
             pauseScreen.SetActive(true);
             gameScreen.SetActive(false);
+            Cursor.visible = true;
             //Debug.Log("pause");
             Time.timeScale = 0f;
             //SoundManager.Singleton.PauseGame();
@@ -62,6 +64,7 @@ namespace krai_cvetok
         public void ResumeGame()
         {
             isPause = false;
+            Cursor.visible = false;
             pauseScreen.SetActive(false);
             gameScreen.SetActive(true);
             //Debug.Log("resume");
@@ -74,7 +77,8 @@ namespace krai_cvetok
             Cursor.visible = false;
             pauseScreen.SetActive(false);
             gameScreen.SetActive(true);
-            OnPauseMenuManager?.Invoke(); // pause event in firstPersonAIO script
+            //OnPauseMenuManager?.Invoke(); // pause event in firstPersonAIO script
+            player.PauseMenu();
             //Debug.Log("resume");
             Time.timeScale = 1f;
             //SoundManager.Singleton.ResumeGame();
