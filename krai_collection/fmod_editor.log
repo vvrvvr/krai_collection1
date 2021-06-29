@@ -7,7 +7,7 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x8000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0000023705C83D08 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 00000111CDB35628 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -18,37 +18,3 @@
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
-[LOG] SoundI::release                          : amb_night_loop (00000237121685B8)
-[LOG] SoundI::release                          :     amb_night_loop (00000239181FB8D8)
-[LOG] SoundI::release                          :     amb_night_loop (0000023712168918)
-[LOG] SystemI::createSound                     : filename = Assets/Trolley/TheGAME/Resource/Music/Build\Desktop/VO.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 00000237121663F8 : node = 00000239133AD6E0
-[LOG] SystemI::createSound                     : add node to async list : head = 00000239F9B9A5D8.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000237121663F8
-[LOG] SystemI::createSoundInternal             :     Create name='Assets/Trolley/TheGAME/Resource/Music/Build\Desktop/VO.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1521504
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 2624
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000239133AD7F0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='Song_Oy_Zarya', format=5, channels=2, frequency=48000, lengthbytes=1520416, lengthpcm=5838336, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.794617.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000237121663F8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000023712166758
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000023712166758
-[LOG] SoundI::release                          : Song_Oy_Zarya (00000237121663F8)
-[LOG] SoundI::release                          :     Song_Oy_Zarya (0000023705ECDC68)
-[LOG] SoundI::release                          :     Song_Oy_Zarya (0000023712166758)
-[LOG] Thread::callback                         : FMOD Studio update thread finished.
-[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
-[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
-[LOG] LiveUpdate::release                      : 
-[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
-[LOG] Thread::callback                         : FMOD stream thread finished.
-[LOG] Thread::callback                         : FMOD mixer thread finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
-[LOG] SystemI::close                           : Closed.
