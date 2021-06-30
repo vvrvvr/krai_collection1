@@ -77,10 +77,10 @@ namespace krai_shooter
                     //Debug.Log("time");
                 }
             }
-            if (Input.GetKeyDown(KeyCode.L))
-            {
-                StopSpawn();
-            }
+            //if (Input.GetKeyDown(KeyCode.L))
+            //{
+            //    StopSpawn();
+            //}
         }
 
         public void StartSpawn(float spawnR)
