@@ -17,9 +17,13 @@ public class CrashTriger : MonoBehaviour
     {
         if (other.gameObject.tag == "Tree" && _notTree)
             _notTree = false;
-        else if (other.gameObject.tag == "Tree" 
-            || other.gameObject.tag == "Bilding" 
+        else if (other.gameObject.tag == "Tree"
+            || other.gameObject.tag == "Bilding"
             || other.gameObject.tag == "Busstop")
+        {
             _musicBox.PlayScream();
+            Debug.Log("sound");
+        }
+
     }
 }

@@ -17,8 +17,8 @@ MonoBehaviour:
   Max: 3
   Default: 0
   ID:
-    data1: 0
-    data2: 0
+    data1: 3651039008
+    data2: 3735099248
   Type: 0
   IsGlobal: 0
   Exists: 1
@@ -315,8 +315,8 @@ MonoBehaviour:
   Max: 1
   Default: 0
   ID:
-    data1: 0
-    data2: 0
+    data1: 4190133500
+    data2: 3121572818
   Type: 0
   IsGlobal: 0
   Exists: 1
@@ -449,8 +449,8 @@ MonoBehaviour:
   Max: 2
   Default: 0
   ID:
-    data1: 0
-    data2: 0
+    data1: 3957412765
+    data2: 1502812825
   Type: 0
   IsGlobal: 0
   Exists: 1
@@ -651,8 +651,8 @@ MonoBehaviour:
   Max: 1
   Default: 0
   ID:
-    data1: 0
-    data2: 0
+    data1: 2299351613
+    data2: 2981259633
   Type: 0
   IsGlobal: 0
   Exists: 1

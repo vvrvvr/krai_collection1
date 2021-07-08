@@ -14,6 +14,7 @@ public class LeaveRoadTrigger : MonoBehaviour
     {
         if (other.gameObject.tag == "Road") 
             musicBox.PlayVoices();
+        Debug.Log("Offroad");
     }
 
 	private void OnTriggerEnter(Collider other)

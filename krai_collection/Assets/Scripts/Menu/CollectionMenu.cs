@@ -7,6 +7,7 @@ public class CollectionMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
         Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         var endSingletone = GameObject.FindGameObjectsWithTag("delete");
         if (endSingletone != null)
         {

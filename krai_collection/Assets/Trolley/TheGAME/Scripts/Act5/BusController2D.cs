@@ -18,8 +18,16 @@ public class BusController2D : MonoBehaviour
 
 	private void FixedUpdate()
 	{
+		var inputHorizontal = Input.GetAxis("Horizontal");
+		var inputVertical = Input.GetAxis("Vertical");
+		var inputTotal = inputHorizontal;
+		if(inputHorizontal == 0)
+        {
+			inputTotal = inputVertical;
+        }
+
 		if (wheel.IsTouching(ground))
-			rb2D.AddForce( gameObject.transform.rotation * Vector2.right * busSpeed * Input.GetAxis("Horizontal") * rb2D.mass);
+			rb2D.AddForce( gameObject.transform.rotation * Vector2.right * busSpeed * inputTotal * rb2D.mass);
 	}
 	
 
