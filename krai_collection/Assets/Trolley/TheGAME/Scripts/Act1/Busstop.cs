@@ -16,8 +16,23 @@ public class Busstop : MonoBehaviour
 	private Rigidbody _rb;
 	private GameObject _passengers;
 	private float _currentPassengersCount;
+	private bool isOnBusStop;
+	private void OnTriggerEnter(Collider other)
+	{
+		if (other.tag == "Bus")
+		{
+			isOnBusStop = true;
+		}
+	}
+    private void OnTriggerExit(Collider other)
+    {
+		if (other.tag == "Bus")
+		{
+			isOnBusStop = false;
+		}
+	}
 
-	private void OnTriggerStay(Collider other)
+    private void OnTriggerStay(Collider other)
 	{
 		if ( other.tag == "Bus")
 		{
@@ -35,15 +50,18 @@ public class Busstop : MonoBehaviour
 
 	public void SetPassenger ( GameObject passenger)
 	{
-		if (_passengers == null)
-			_passengers = Instantiate(_passengersObject, _swapPoint.transform);
-
-		if (_currentPassengersCount< _maxPassengers)
+		if (!isOnBusStop)
 		{
-			Instantiate(passenger, _passengers.transform).transform.localPosition =
-				new Vector3(Random.Range(-0.5f, 0.5f), 0, Random.Range(-1.5f, 0f));
+			if (_passengers == null)
+				_passengers = Instantiate(_passengersObject, _swapPoint.transform);
 
-			_currentPassengersCount++;
+			if (_currentPassengersCount < _maxPassengers)
+			{
+				Instantiate(passenger, _passengers.transform).transform.localPosition =
+					new Vector3(Random.Range(-0.5f, 0.5f), 0, Random.Range(-1.5f, 0f));
+
+				_currentPassengersCount++;
+			}
 		}
 	}
 }
