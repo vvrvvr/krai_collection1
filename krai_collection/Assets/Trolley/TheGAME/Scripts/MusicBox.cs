@@ -17,6 +17,9 @@ public class MusicBox : MonoBehaviour
 	[SerializeField] protected float _tireVolume = 1;
 
 	[Space]
+	[SerializeField] private GameObject player;
+
+	[Space]
 	[FMODUnity.EventRef] [SerializeField] protected string _ambience;
 	[FMODUnity.EventRef] [SerializeField] protected string _music;
 	[FMODUnity.EventRef] [SerializeField] protected string _voices;
@@ -102,20 +105,24 @@ public class MusicBox : MonoBehaviour
 		_screamEvent.start();
 	}
 
-	public void PlayTireSound(float intensity)
+
+	public void PlayEngineSound(float intensity)
 	{
 		if (_tire == "") return;
 
 		if (!_tireEvent.isValid())
 		{
 			_tireEvent = FMODUnity.RuntimeManager.CreateInstance(_tire);
-			_tireEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
+			if(player != null)
+				FMODUnity.RuntimeManager.AttachInstanceToGameObject(_tireEvent, player.transform);
+			else
+				_tireEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
 			_tireEvent.setVolume(_tireVolume * _masterVolume);
 			_tireEvent.start();
 		}
 		else
 		{
-			_tireEvent.setVolume(_tireVolume * intensity * _masterVolume);
+			//_tireEvent.setVolume(_tireVolume * intensity * _masterVolume);
 		}
 
 	}

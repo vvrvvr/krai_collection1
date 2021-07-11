@@ -499,8 +499,9 @@ MonoBehaviour:
   _masterVolume: 1
   _ambienceVolume: 1
   _musicVolume: 1
-  _voicesVolume: 5
+  _voicesVolume: 1
   _tireVolume: 1
+  player: {fileID: 1837725605}
   _ambience: event:/Ambience/City
   _music: 
   _voices: event:/Voices/GrandmasLoop
