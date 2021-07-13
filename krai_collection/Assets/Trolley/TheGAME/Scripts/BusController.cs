@@ -66,6 +66,7 @@ public class BusController : MonoBehaviour
 		{
             var rpm = Mathf.Max(carAxis[0].rightWheel.rpm, carAxis[0].leftWheel.rpm);
             _musicBox.PlayEngineSound(Mathf.Abs(rpm / _maxRPM));
+            Debug.Log(rpm);
             yield return new WaitForFixedUpdate();
 		} while (true);
 	}
