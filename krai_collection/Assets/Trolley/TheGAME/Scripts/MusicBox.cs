@@ -24,13 +24,16 @@ public class MusicBox : MonoBehaviour
 	[FMODUnity.EventRef] [SerializeField] protected string _music;
 	[FMODUnity.EventRef] [SerializeField] protected string _voices;
 	[FMODUnity.EventRef] [SerializeField] protected string _scream;
-	[FMODUnity.EventRef] [SerializeField] protected string _tire;
+	[FMODUnity.EventRef] [SerializeField] protected string _engine;
+	[FMODUnity.EventRef] [SerializeField] protected string _oneShotEngineLeft;
+	[FMODUnity.EventRef] [SerializeField] protected string _oneShotEngineRight;
+
 
 	protected FMOD.Studio.EventInstance _ambienceEvent;
 	protected FMOD.Studio.EventInstance _musicEvent;
 	protected FMOD.Studio.EventInstance _voiceEvent;
 	protected FMOD.Studio.EventInstance _screamEvent;
-	protected FMOD.Studio.EventInstance _tireEvent;
+	protected FMOD.Studio.EventInstance _engineEvent;
 
 	private void Start()
 	{
@@ -44,6 +47,10 @@ public class MusicBox : MonoBehaviour
 
 		if (_voicesOn)
 			PlayVoices();
+
+		//new 
+		PlayEngineSound(true);
+
 	}
 
 	private void OnDestroy()
@@ -52,7 +59,7 @@ public class MusicBox : MonoBehaviour
 		_musicEvent.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
 		_voiceEvent.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
 		_screamEvent.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-		_tireEvent.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+		_engineEvent.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
 	}
 
 	public void PlayAmbient()
@@ -106,26 +113,55 @@ public class MusicBox : MonoBehaviour
 	}
 
 
-	public void PlayEngineSound(float intensity)
+	public void PlayEngineSound(bool isPlay)
 	{
-		if (_tire == "") return;
+		if (_engine == "") return;
 
-		if (!_tireEvent.isValid())
+		if (!_engineEvent.isValid())
 		{
-			_tireEvent = FMODUnity.RuntimeManager.CreateInstance(_tire);
+			_engineEvent = FMODUnity.RuntimeManager.CreateInstance(_engine);
 			if(player != null)
-				FMODUnity.RuntimeManager.AttachInstanceToGameObject(_tireEvent, player.transform);
+				FMODUnity.RuntimeManager.AttachInstanceToGameObject(_engineEvent, player.transform);
 			else
-				_tireEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
-			_tireEvent.setVolume(_tireVolume * _masterVolume);
-			_tireEvent.start();
+				_engineEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
+			_engineEvent.setVolume(_tireVolume * _masterVolume);
+			_engineEvent.start();
 		}
 		else
 		{
-			//_tireEvent.setVolume(_tireVolume * intensity * _masterVolume);
+			if(isPlay)
+            {
+				_engineEvent.setParameterByName("rpm", 0.11f);
+            }
+			else
+            {
+				_engineEvent.setParameterByName("rpm", 0f);
+			}
 		}
 
 	}
+	public void PlayEngineTurns(int num, bool isOffroad)
+    {
+        switch (num)
+        {
+			case -1:
+				_engineEvent.setParameterByName("turn_left", 0.11f);
+				if (isOffroad)
+					FMODUnity.RuntimeManager.PlayOneShotAttached(_oneShotEngineLeft, player);
+				//Debug.Log("left sound");
+				break;
+			case 1:
+				_engineEvent.setParameterByName("turn_right", 0.11f);
+				if (isOffroad)
+					FMODUnity.RuntimeManager.PlayOneShotAttached(_oneShotEngineRight, player);
+				//Debug.Log("right sound");
+				break;
+			case 0:
+				_engineEvent.setParameterByName("turn_left", 0f);
+				_engineEvent.setParameterByName("turn_right", 0f);
+				break;
+        }
+    }
 
 	public void StopAmbient()
 	{
@@ -172,6 +208,6 @@ public class MusicBox : MonoBehaviour
 		_musicEvent.setVolume(_musicVolume * _masterVolume);
 		_voiceEvent.setVolume(_voicesVolume * _masterVolume);
 		_screamEvent.setVolume(_voicesVolume * _masterVolume);
-		_tireEvent.setVolume(_tireVolume * _masterVolume);
+		_engineEvent.setVolume(_tireVolume * _masterVolume);
 	}
 }

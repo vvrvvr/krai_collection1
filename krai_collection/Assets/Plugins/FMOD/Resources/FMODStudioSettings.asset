@@ -488,6 +488,8 @@ MonoBehaviour:
   MasterBanks:
   - Master
   Banks:
+  - Bank A
+  - Choir
   - Dialogue_CN
   - Dialogue_EN
   - Dialogue_JP
@@ -495,7 +497,6 @@ MonoBehaviour:
   - Music
   - SFX
   - Vehicles
-  - VO
   - Voices
   BanksToLoad: []
   LiveUpdatePort: 9264

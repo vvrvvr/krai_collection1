@@ -107,9 +107,6 @@
 		<property name="length">
 			<value>6</value>
 		</property>
-		<property name="volume">
-			<value>-3</value>
-		</property>
 		<property name="minimumTimeBetweenSounds">
 			<value>600</value>
 		</property>

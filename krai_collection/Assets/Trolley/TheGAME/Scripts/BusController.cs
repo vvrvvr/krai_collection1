@@ -11,12 +11,16 @@ public class BusController : MonoBehaviour
     protected float _horInput;
     protected float _vertInput;
     protected MusicBox _musicBox;
+    private bool isSetOnceVert;
+    private bool isSetOnceHor;
+    private LeaveRoadTrigger leaveRoadTrigger;
 
     protected readonly float _maxRPM = 32000;
 
 	protected void Start()
 	{
         _musicBox = GameObject.FindGameObjectWithTag("MusicBox").GetComponent<MusicBox>();
+        leaveRoadTrigger = GetComponent<LeaveRoadTrigger>();
         StartCoroutine(TireSound());
     }
 
@@ -25,10 +29,57 @@ public class BusController : MonoBehaviour
         _horInput = Input.GetAxis("Horizontal");
         _vertInput = Input.GetAxis("Vertical");
 
+        EngineSound();
+        
         Acclererate();
 	}
 
-
+    private void EngineSound()
+    {
+        var _rawHorInput = Input.GetAxisRaw("Horizontal");
+        var _rawVertInput = Input.GetAxisRaw("Vertical");
+        if (Mathf.Abs(_rawVertInput) > 0)
+        {
+            if (!isSetOnceVert)
+            {
+                _musicBox.PlayEngineSound(true);
+                isSetOnceVert = true;
+            }
+        }
+        else
+        {
+            if(isSetOnceVert)
+            {
+                _musicBox.PlayEngineSound(false);
+                isSetOnceVert = false;
+            }
+        }
+        switch (_rawHorInput)
+        {
+            case -1:
+                if (!isSetOnceHor)
+                {
+                    _musicBox.PlayEngineTurns(-1, leaveRoadTrigger.isOffroad);
+                    isSetOnceHor = true;
+                    //Debug.Log("turn left");
+                }
+  
+                break;
+            case 1:
+                if (!isSetOnceHor)
+                {
+                    _musicBox.PlayEngineTurns(1, leaveRoadTrigger.isOffroad);
+                    isSetOnceHor = true;
+                    //Debug.Log("turn right");
+                }
+                
+                break;
+            case 0:
+                _musicBox.PlayEngineTurns(0, false);
+                isSetOnceHor = false;
+                break;
+        }
+    }
     protected void Acclererate ()
 	{
 		foreach (AxleInfo axle in carAxis)
@@ -65,8 +116,8 @@ public class BusController : MonoBehaviour
 		do
 		{
             var rpm = Mathf.Max(carAxis[0].rightWheel.rpm, carAxis[0].leftWheel.rpm);
-            _musicBox.PlayEngineSound(Mathf.Abs(rpm / _maxRPM));
-            Debug.Log(rpm);
+            //_musicBox.PlayEngineSound(Mathf.Abs(rpm / _maxRPM));
+            //Debug.Log(rpm);
             yield return new WaitForFixedUpdate();
 		} while (true);
 	}

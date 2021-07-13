@@ -6,7 +6,7 @@ public class LeaveRoadTrigger : MonoBehaviour
 {
     private MusicBox musicBox;
     private float sphereRadius;
-    private bool isOffroad;
+    public bool isOffroad;
     [SerializeField] LayerMask layerMask;
     Vector3 origin;
 

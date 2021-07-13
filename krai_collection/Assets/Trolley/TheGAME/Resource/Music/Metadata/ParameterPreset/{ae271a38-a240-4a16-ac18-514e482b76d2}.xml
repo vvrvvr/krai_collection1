@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{ae271a38-a240-4a16-ac18-514e482b76d2}">
+		<property name="name">
+			<value>offroad</value>
+		</property>
+		<relationship name="folder">
+			<destination>{0393c670-55de-4d96-ba52-c1bd19a73513}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{235659ec-4001-4d37-b997-5cb4f5eda5ad}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{235659ec-4001-4d37-b997-5cb4f5eda5ad}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="seekSpeed">
+			<value>0.18999999761581421</value>
+		</property>
+	</object>
+</objects>

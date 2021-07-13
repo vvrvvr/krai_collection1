@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{c1941d31-e677-4271-9e23-e1e0c20545b4}">
+		<property name="name">
+			<value>turn_right</value>
+		</property>
+		<relationship name="folder">
+			<destination>{0393c670-55de-4d96-ba52-c1bd19a73513}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{ce64e100-d163-4c74-b4f7-65a65e00dffe}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{ce64e100-d163-4c74-b4f7-65a65e00dffe}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="seekSpeed">
+			<value>0.89999997615814209</value>
+		</property>
+	</object>
+</objects>

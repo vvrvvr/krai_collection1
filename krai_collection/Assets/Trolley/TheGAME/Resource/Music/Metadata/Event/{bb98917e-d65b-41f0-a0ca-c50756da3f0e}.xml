@@ -870,7 +870,7 @@ https://wingless-seraph.net</value>
 			<value>1</value>
 		</property>
 		<property name="value">
-			<value>0</value>
+			<value>10</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{e2664a61-f1bb-40a1-9812-9db7605274af}">
@@ -878,7 +878,7 @@ https://wingless-seraph.net</value>
 			<value>0</value>
 		</property>
 		<property name="value">
-			<value>-30</value>
+			<value>-6</value>
 		</property>
 		<property name="curveShape">
 			<value>0.5</value>
@@ -908,7 +908,7 @@ https://wingless-seraph.net</value>
 			<value>0.20000000000000001</value>
 		</property>
 		<property name="value">
-			<value>-80</value>
+			<value>-1.65142822</value>
 		</property>
 		<property name="curveShape">
 			<value>-1</value>
@@ -919,7 +919,7 @@ https://wingless-seraph.net</value>
 			<value>1</value>
 		</property>
 		<property name="value">
-			<value>0</value>
+			<value>10</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{c700dd03-b643-4a8c-a869-9598f82e167a}">
@@ -946,7 +946,7 @@ https://wingless-seraph.net</value>
 			<value>0.5</value>
 		</property>
 		<property name="value">
-			<value>0</value>
+			<value>-18.3755226</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{cc3fb3d9-237f-49a8-860a-b1033b3c25e0}">
@@ -954,7 +954,7 @@ https://wingless-seraph.net</value>
 			<value>0</value>
 		</property>
 		<property name="value">
-			<value>-80</value>
+			<value>-43</value>
 		</property>
 		<property name="curveShape">
 			<value>0.5</value>

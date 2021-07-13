@@ -506,7 +506,9 @@ MonoBehaviour:
   _music: 
   _voices: event:/Voices/GrandmasLoop
   _scream: event:/Voices/Grandma
-  _tire: event:/Vehicles/TireSound
+  _engine: event:/Engine/engine
+  _oneShotEngineLeft: event:/Engine/turn_left_sound
+  _oneShotEngineRight: event:/Engine/turn_right_sound
 --- !u!1 &133662582
 GameObject:
   m_ObjectHideFlags: 0
@@ -713,7 +715,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87840e0d75aa46046be01d54b96e3270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDistance: 0
   layerMask:
     serializedVersion: 2
     m_Bits: 0
@@ -7342,7 +7343,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87840e0d75aa46046be01d54b96e3270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDistance: 0
   layerMask:
     serializedVersion: 2
     m_Bits: 256
