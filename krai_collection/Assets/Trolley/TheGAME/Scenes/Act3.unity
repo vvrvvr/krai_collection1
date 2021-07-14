@@ -572,7 +572,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 0.02
+  m_Intensity: 6.45
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1811,7 +1811,7 @@ MonoBehaviour:
   _ambienceVolume: 0.4
   _musicVolume: 1
   _voicesVolume: 1
-  _engineVolume: 0.1
+  _engineVolume: 0.3
   player: {fileID: 529230757}
   _ambience: event:/Ambience/Country
   _music: 
