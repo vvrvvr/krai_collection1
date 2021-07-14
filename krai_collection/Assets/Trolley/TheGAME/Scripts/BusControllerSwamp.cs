@@ -18,6 +18,8 @@ public class BusControllerSwamp : BusController
 	{
         inputIndexMax = (int)(reactDelay / Time.fixedDeltaTime);
         horInputs = new float[inputIndexMax];
+        _musicBox = GameObject.FindGameObjectWithTag("MusicBox").GetComponent<MusicBox>();
+        leaveRoadTrigger = GetComponent<LeaveRoadTrigger>();
     }
 
     private new void FixedUpdate()

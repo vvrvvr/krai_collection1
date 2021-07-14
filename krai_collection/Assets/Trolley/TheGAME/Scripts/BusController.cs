@@ -13,7 +13,7 @@ public class BusController : MonoBehaviour
     protected MusicBox _musicBox;
     private bool isSetOnceVert;
     private bool isSetOnceHor;
-    private LeaveRoadTrigger leaveRoadTrigger;
+    protected LeaveRoadTrigger leaveRoadTrigger;
 
     protected readonly float _maxRPM = 32000;
 

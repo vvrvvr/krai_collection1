@@ -1813,11 +1813,11 @@ MonoBehaviour:
   _voicesVolume: 1
   _engineVolume: 0.1
   player: {fileID: 529230757}
-  _ambience: event:/Ambience/City_new
+  _ambience: event:/Ambience/Country
   _music: 
   _voices: event:/Voices/new_voices
   _scream: event:/Voices/Grandma
-  _engine: event:/Engine/engine
+  _engine: event:/Engine/engine_swamp
   _oneShotEngineLeft: event:/Engine/turn_left_sound
   _oneShotEngineRight: event:/Engine/turn_right_sound
 --- !u!4 &1824507018
