@@ -29,6 +29,7 @@ public class BusControllerSwamp : BusController
         _vertInput = engineDown? 0 : Input.GetAxis("Vertical");
 
         Acclererate();
+        EngineSound();
         EngineMalfunctions();
     }
 

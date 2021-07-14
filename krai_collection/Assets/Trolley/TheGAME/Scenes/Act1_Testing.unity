@@ -497,10 +497,10 @@ MonoBehaviour:
   _musicOn: 0
   _voicesOn: 1
   _masterVolume: 1
-  _ambienceVolume: 0.4
+  _ambienceVolume: 0.3
   _musicVolume: 1
   _voicesVolume: 1
-  _engineVolume: 0.1
+  _engineVolume: 0.3
   player: {fileID: 1837725605}
   _ambience: event:/Ambience/City_new
   _music: 
@@ -716,6 +716,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isOffroad: 0
+  isInCity: 1
   layerMask:
     serializedVersion: 2
     m_Bits: 0
@@ -7345,6 +7346,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isOffroad: 0
+  isInCity: 1
   layerMask:
     serializedVersion: 2
     m_Bits: 256

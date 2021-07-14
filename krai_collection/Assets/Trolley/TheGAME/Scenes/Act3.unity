@@ -282,7 +282,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 206094113027935824, guid: 55e6745eddd58db46aee4b0154e437b8, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 206094113027935824, guid: 55e6745eddd58db46aee4b0154e437b8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -359,7 +359,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 206094113027935824, guid: 55e6745eddd58db46aee4b0154e437b8, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 206094113027935824, guid: 55e6745eddd58db46aee4b0154e437b8, type: 3}
       propertyPath: m_LocalScale.x
@@ -478,6 +478,23 @@ MonoBehaviour:
   reactDelay: 0.5
   enginDownDelayMin: 25
   enginDownDelayMax: 30
+--- !u!114 &529230759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529230757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87840e0d75aa46046be01d54b96e3270, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOffroad: 1
+  isInCity: 0
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &543765133
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,65 +636,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &617042605
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 617042607}
-  - component: {fileID: 617042608}
-  m_Layer: 0
-  m_Name: ---MusicBox
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &617042607
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 617042605}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 26.345692, y: -6.4438086, z: 46.060097}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &617042608
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 617042605}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 644a94bd813f3044496f40a83f2ad2b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _ambienceOn: 1
-  _musicOn: 0
-  _voicesOn: 0
-  _masterVolume: 1
-  _ambienceVolume: 1
-  _musicVolume: 1
-  _voicesVolume: 1
-  _engineVolume: 1
-  player: {fileID: 0}
-  _ambience: event:/Ambience/Country
-  _music: 
-  _voices: 
-  _scream: event:/Voices/Grandma
-  _engine: 
-  _oneShotEngineLeft: 
-  _oneShotEngineRight: 
 --- !u!1001 &714423202
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -695,7 +653,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6306357496602791787, guid: 3f58082c10f875a49b957cde81e1260f, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6306357496602791787, guid: 3f58082c10f875a49b957cde81e1260f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -948,7 +906,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1180685933
 GameObject:
@@ -1345,7 +1303,7 @@ RectTransform:
   m_Children:
   - {fileID: 2142834570}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1717,7 +1675,7 @@ Transform:
   - {fileID: 2069882596}
   - {fileID: 336136137}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!146 &1711477351 stripped
 WheelCollider:
@@ -1817,6 +1775,65 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &1824507016
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1824507018}
+  - component: {fileID: 1824507017}
+  m_Layer: 0
+  m_Name: ---MusicBox
+  m_TagString: MusicBox
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1824507017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824507016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2357d453d15ba54458f9d4429f6e31f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _ambienceOn: 1
+  _musicOn: 0
+  _voicesOn: 0
+  _masterVolume: 1
+  _ambienceVolume: 0.4
+  _musicVolume: 1
+  _voicesVolume: 1
+  _engineVolume: 0.1
+  player: {fileID: 529230757}
+  _ambience: event:/Ambience/City_new
+  _music: 
+  _voices: event:/Voices/new_voices
+  _scream: event:/Voices/Grandma
+  _engine: event:/Engine/engine
+  _oneShotEngineLeft: event:/Engine/turn_left_sound
+  _oneShotEngineRight: event:/Engine/turn_right_sound
+--- !u!4 &1824507018
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824507016}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1911371872
 GameObject:
   m_ObjectHideFlags: 0
@@ -2231,7 +2248,7 @@ PrefabInstance:
     - target: {fileID: 3078527733596932052, guid: 0de9e74cb242ee5478e06652faf8cff6, type: 3}
       propertyPath: musicBox
       value: 
-      objectReference: {fileID: 617042608}
+      objectReference: {fileID: 0}
     - target: {fileID: 3078527734511292034, guid: 0de9e74cb242ee5478e06652faf8cff6, type: 3}
       propertyPath: m_AnchorMax.x
       value: 1

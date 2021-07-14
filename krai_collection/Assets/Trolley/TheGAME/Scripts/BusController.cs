@@ -34,7 +34,7 @@ public class BusController : MonoBehaviour
         Acclererate();
 	}
 
-    private void EngineSound()
+    protected void EngineSound()
     {
         var _rawHorInput = Input.GetAxisRaw("Horizontal");
         var _rawVertInput = Input.GetAxisRaw("Vertical");
