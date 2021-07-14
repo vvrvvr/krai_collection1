@@ -14,7 +14,7 @@ public class MusicBox : MonoBehaviour
 	[SerializeField] protected float _ambienceVolume = 1;
 	[SerializeField] protected float _musicVolume = 1;
 	[SerializeField] protected float _voicesVolume = 1;
-	[SerializeField] protected float _tireVolume = 1;
+	[SerializeField] protected float _engineVolume = 1;
 
 	[Space]
 	[SerializeField] private GameObject player;
@@ -55,11 +55,11 @@ public class MusicBox : MonoBehaviour
 
 	private void OnDestroy()
 	{
-		_ambienceEvent.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-		_musicEvent.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-		_voiceEvent.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-		_screamEvent.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-		_engineEvent.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+		_ambienceEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+		_musicEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+		_voiceEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+		_screamEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+		_engineEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
 	}
 
 	public void PlayAmbient()
@@ -87,33 +87,42 @@ public class MusicBox : MonoBehaviour
 		if (_voices == "") return;
 
 		_voiceEvent = FMODUnity.RuntimeManager.CreateInstance(_voices);
-		_voiceEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
+		//if (player != null)
+			FMODUnity.RuntimeManager.AttachInstanceToGameObject(_voiceEvent, Camera.main.transform);
+		//else
+		//	_voiceEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
 		_voiceEvent.setVolume(_voicesVolume * _masterVolume);
 		_voiceEvent.start();
 	}
-
-	public void PlayScream()
-	{
-		if (_scream == "") return;
-
-		_screamEvent = FMODUnity.RuntimeManager.CreateInstance(_scream);
-		_screamEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
-		_screamEvent.setVolume(_voicesVolume * _masterVolume);
-		_screamEvent.start();
+	public void OffroadSetParameters(float distance)
+    {		
+		_voiceEvent.setParameterByName("distance", distance);
+		_engineEvent.setParameterByName("offroad", distance);
+		Debug.Log("distance " + distance);
 	}
 
-	public void PlayScream(string scream, float volume)
-	{
-		if (_scream == "") return;
+    public void PlayScream()
+    {
+        if (_scream == "") return;
 
-		_screamEvent = FMODUnity.RuntimeManager.CreateInstance(scream);
-		_screamEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
-		_screamEvent.setVolume(_voicesVolume * _masterVolume * volume);
-		_screamEvent.start();
-	}
+        _screamEvent = FMODUnity.RuntimeManager.CreateInstance(_scream);
+        _screamEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
+        _screamEvent.setVolume(_voicesVolume * _masterVolume);
+        _screamEvent.start();
+    }
+
+    public void PlayScream(string scream, float volume)
+    {
+        if (_scream == "") return;
+
+        _screamEvent = FMODUnity.RuntimeManager.CreateInstance(scream);
+        _screamEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
+        _screamEvent.setVolume(_voicesVolume * _masterVolume * volume);
+        _screamEvent.start();
+    }
 
 
-	public void PlayEngineSound(bool isPlay)
+    public void PlayEngineSound(bool isPlay)
 	{
 		if (_engine == "") return;
 
@@ -124,7 +133,7 @@ public class MusicBox : MonoBehaviour
 				FMODUnity.RuntimeManager.AttachInstanceToGameObject(_engineEvent, player.transform);
 			else
 				_engineEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
-			_engineEvent.setVolume(_tireVolume * _masterVolume);
+			_engineEvent.setVolume(_engineVolume * _masterVolume);
 			_engineEvent.start();
 		}
 		else
@@ -132,10 +141,12 @@ public class MusicBox : MonoBehaviour
 			if(isPlay)
             {
 				_engineEvent.setParameterByName("rpm", 0.11f);
+				_engineEvent.setParameterByName("offroadrpm", 0.11f);
             }
 			else
             {
 				_engineEvent.setParameterByName("rpm", 0f);
+				_engineEvent.setParameterByName("offroadrpm", 0f);
 			}
 		}
 
@@ -146,14 +157,14 @@ public class MusicBox : MonoBehaviour
         {
 			case -1:
 				_engineEvent.setParameterByName("turn_left", 0.11f);
-				if (isOffroad)
-					FMODUnity.RuntimeManager.PlayOneShotAttached(_oneShotEngineLeft, player);
+				//if (isOffroad)
+				//	FMODUnity.RuntimeManager.PlayOneShotAttached(_oneShotEngineLeft, player);
 				//Debug.Log("left sound");
 				break;
 			case 1:
 				_engineEvent.setParameterByName("turn_right", 0.11f);
-				if (isOffroad)
-					FMODUnity.RuntimeManager.PlayOneShotAttached(_oneShotEngineRight, player);
+				//if (isOffroad)
+				//	FMODUnity.RuntimeManager.PlayOneShotAttached(_oneShotEngineRight, player);
 				//Debug.Log("right sound");
 				break;
 			case 0:
@@ -208,6 +219,6 @@ public class MusicBox : MonoBehaviour
 		_musicEvent.setVolume(_musicVolume * _masterVolume);
 		_voiceEvent.setVolume(_voicesVolume * _masterVolume);
 		_screamEvent.setVolume(_voicesVolume * _masterVolume);
-		_engineEvent.setVolume(_tireVolume * _masterVolume);
+		_engineEvent.setVolume(_engineVolume * _masterVolume);
 	}
 }

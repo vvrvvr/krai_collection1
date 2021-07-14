@@ -57,6 +57,8 @@ public class MainMenu : MonoBehaviour
 
 	public void LoadScene(string sceneName)
 	{
+		if(musicBox != null)
+			Destroy(musicBox);
 		StartCoroutine(LoadSceneWhithFade(sceneName));
 	}
 

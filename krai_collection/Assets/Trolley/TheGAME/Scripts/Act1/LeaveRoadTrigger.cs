@@ -7,6 +7,7 @@ public class LeaveRoadTrigger : MonoBehaviour
     private MusicBox musicBox;
     private float sphereRadius;
     public bool isOffroad;
+    public bool isInCity = true;
     [SerializeField] LayerMask layerMask;
     Vector3 origin;
 
@@ -27,8 +28,18 @@ public class LeaveRoadTrigger : MonoBehaviour
     private void Update()
     {
         origin = transform.position;
-        if(isOffroad)
-            CheckRoadDistance(origin);
+        if (isOffroad)
+        {
+            if (isInCity)
+            {
+                CheckRoadDistance(origin);
+                musicBox.OffroadSetParameters(sphereRadius);
+            }
+            else
+            {
+                musicBox.OffroadSetParameters(5f);
+            }
+        }
         
     }
     private void CheckRoadDistance(Vector3 position)
@@ -63,7 +74,7 @@ public class LeaveRoadTrigger : MonoBehaviour
     {
         if (other.gameObject.tag == "Road")
         {
-            musicBox.PlayVoices();
+            //musicBox.PlayVoices();
             Debug.Log("Offroad");
             isOffroad = true;
         }
@@ -73,9 +84,11 @@ public class LeaveRoadTrigger : MonoBehaviour
     {
         if (other.gameObject.tag == "Road")
         {
-            musicBox.StopVoices();
+            musicBox.OffroadSetParameters(0f);
+           // musicBox.StopVoices();
             isOffroad = false;
             sphereRadius = minSearchingRadius;
+            
 
         }
     }

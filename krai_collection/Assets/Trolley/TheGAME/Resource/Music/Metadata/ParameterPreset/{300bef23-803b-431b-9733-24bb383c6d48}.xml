@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{300bef23-803b-431b-9733-24bb383c6d48}">
+		<property name="name">
+			<value>offroadrpm</value>
+		</property>
+		<relationship name="folder">
+			<destination>{0393c670-55de-4d96-ba52-c1bd19a73513}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{2073a721-3977-45d8-acad-8affb346e5eb}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{2073a721-3977-45d8-acad-8affb346e5eb}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="seekSpeed">
+			<value>0.14000000059604645</value>
+		</property>
+	</object>
+</objects>
