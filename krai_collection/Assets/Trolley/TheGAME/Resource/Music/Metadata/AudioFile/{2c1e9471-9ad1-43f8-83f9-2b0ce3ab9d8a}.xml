@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="AudioFile" id="{2c1e9471-9ad1-43f8-83f9-2b0ce3ab9d8a}">
 		<property name="assetPath">
-			<value>акт 2 лес/Лес Les-9.wav</value>
+			<value>акт 2 лес/voices/Лес Les-9.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>
