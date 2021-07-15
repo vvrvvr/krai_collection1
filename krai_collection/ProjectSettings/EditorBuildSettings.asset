@@ -5,25 +5,25 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/main menu.unity
     guid: d1c3109bdb54ad54c8a2b2838528e640
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/shooter/shooter.unity
     guid: 5cbee82110ff211489d76550719114a9
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/cvetok/flower_choose_lang.unity
     guid: 964a3f2703f19244a9645826580eb1be
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/cvetok/flower_game.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/cvetok/flower_cafe.unity
     guid: 5074972af90846042832d5a50d651dc4
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/LifeCircle/room_MainMenu.unity
     guid: f2352d5223baf744abd2b848951e9a3a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/LifeCircle/room_GameScene.unity
     guid: 11527bf475b87a5488c4a64f785e63f1
   - enabled: 1
@@ -50,7 +50,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Trolley/TheGAME/Scenes/Titles.unity
     guid: 193a91e107d92f245ac8c906e99e060b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Trolley/TheGAME/Scenes/Act1.unity
     guid: d9169dc9e77b3d848980c9af3dd58c10
   m_configObjects: {}
