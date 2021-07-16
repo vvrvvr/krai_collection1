@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="AudioFile" id="{a210a511-bd47-49da-b36a-ebcfcb3f5508}">
 		<property name="assetPath">
-			<value>акт3 болото/Graviy_swamp.wav</value>
+			<value>акт 3 болото/Graviy_swamp.wav</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>

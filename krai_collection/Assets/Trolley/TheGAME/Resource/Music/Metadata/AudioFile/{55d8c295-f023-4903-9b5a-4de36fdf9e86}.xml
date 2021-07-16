@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="AudioFile" id="{55d8c295-f023-4903-9b5a-4de36fdf9e86}">
 		<property name="assetPath">
-			<value>акт3 болото/Wheels_swamp.wav</value>
+			<value>акт 3 болото/Wheels_swamp.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>

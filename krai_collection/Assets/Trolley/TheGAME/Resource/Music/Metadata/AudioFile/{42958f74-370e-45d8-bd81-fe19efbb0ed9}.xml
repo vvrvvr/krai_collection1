@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="AudioFile" id="{42958f74-370e-45d8-bd81-fe19efbb0ed9}">
 		<property name="assetPath">
-			<value>акт3 болото/frogs_noise.wav</value>
+			<value>акт 3 болото/frogs_noise.wav</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>

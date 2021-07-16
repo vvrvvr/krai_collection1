@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="DataFile" id="{3c418a57-b137-45a3-9142-9aeec6baba94}">
+		<property name="assetPath">
+			<value>акт 3 болото/voices/Сцена 3 болото Boloto-4.wav.meta</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{4c43130b-9186-4fb6-9d65-a9acdac70927}</destination>
+		</relationship>
+	</object>
+</objects>

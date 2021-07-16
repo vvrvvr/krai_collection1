@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="AudioFile" id="{cfdb3263-2e85-4cef-adf4-9a9b8a3b24fd}">
 		<property name="assetPath">
-			<value>акт3 болото/voices/Сцена 3 болото Boloto-12.wav</value>
+			<value>акт 3 болото/voices/Сцена 3 болото Boloto-12.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>

@@ -917,6 +917,23 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6513034844049619663, guid: bd2afd7920a59e444a404d230d10f660, type: 3}
   m_PrefabInstance: {fileID: 853614283}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &200770200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200770199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87840e0d75aa46046be01d54b96e3270, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOffroad: 1
+  isInCity: 0
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!54 &200770202 stripped
 Rigidbody:
   m_CorrespondingSourceObject: {fileID: 6513034844049619661, guid: bd2afd7920a59e444a404d230d10f660, type: 3}
@@ -1880,11 +1897,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6513034844049619662, guid: bd2afd7920a59e444a404d230d10f660, type: 3}
       propertyPath: carSpeed
-      value: 250
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 6513034844049619662, guid: bd2afd7920a59e444a404d230d10f660, type: 3}
       propertyPath: steerAngle
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6513034844049619663, guid: bd2afd7920a59e444a404d230d10f660, type: 3}
       propertyPath: m_Name
@@ -2125,13 +2142,13 @@ MonoBehaviour:
   _ambienceVolume: 1
   _musicVolume: 1
   _voicesVolume: 1
-  _engineVolume: 1
-  player: {fileID: 0}
+  _engineVolume: 0.4
+  player: {fileID: 200770199}
   _ambience: 
-  _music: event:/Music/Vo pole loop
+  _music: event:/Music/field_music
   _voices: 
   _scream: 
-  _engine: 
+  _engine: event:/Engine/engine
   _oneShotEngineLeft: 
   _oneShotEngineRight: 
 --- !u!65 &954667661
@@ -4278,6 +4295,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1567948339562057969, guid: d6bd4c98194a8034092454de97cc071d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4210758661233079474, guid: d6bd4c98194a8034092454de97cc071d, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5172880571519186085, guid: d6bd4c98194a8034092454de97cc071d, type: 3}
