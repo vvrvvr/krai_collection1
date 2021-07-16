@@ -8,7 +8,7 @@
 			<value>1</value>
 		</property>
 		<relationship name="folder">
-			<destination>{10626052-c98b-4665-b391-646f2512cecd}</destination>
+			<destination>{c2692448-301e-417a-8ade-796c6589bfa4}</destination>
 		</relationship>
 		<relationship name="mixer">
 			<destination>{10512783-dc26-4141-a5bf-41957db76ee6}</destination>
@@ -30,6 +30,9 @@
 		</relationship>
 		<relationship name="timeline">
 			<destination>{fb7e494a-ba44-49d6-b900-b9441ce89294}</destination>
+		</relationship>
+		<relationship name="banks">
+			<destination>{816d4737-171a-41e7-a9f0-32996ece71cb}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixer" id="{10512783-dc26-4141-a5bf-41957db76ee6}">

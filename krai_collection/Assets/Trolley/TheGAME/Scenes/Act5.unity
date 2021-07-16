@@ -1996,7 +1996,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1123758416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2697,12 +2697,15 @@ MonoBehaviour:
   _ambienceVolume: 1
   _musicVolume: 1
   _voicesVolume: 1
-  _tireVolume: 1
+  _engineVolume: 1
+  player: {fileID: 0}
   _ambience: event:/Ambience/Country
   _music: 
   _voices: 
   _scream: 
-  _tire: 
+  _engine: 
+  _oneShotEngineLeft: 
+  _oneShotEngineRight: 
 --- !u!4 &1519440297
 Transform:
   m_ObjectHideFlags: 0

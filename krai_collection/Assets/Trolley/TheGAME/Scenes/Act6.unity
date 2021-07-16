@@ -1846,15 +1846,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3078527732882266061, guid: 0de9e74cb242ee5478e06652faf8cff6, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3078527732882266061, guid: 0de9e74cb242ee5478e06652faf8cff6, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3078527732882266061, guid: 0de9e74cb242ee5478e06652faf8cff6, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3078527733124690953, guid: 0de9e74cb242ee5478e06652faf8cff6, type: 3}
       propertyPath: m_IsActive
@@ -1982,15 +1982,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3078527734511292034, guid: 0de9e74cb242ee5478e06652faf8cff6, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3078527734511292034, guid: 0de9e74cb242ee5478e06652faf8cff6, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5760665077129265574, guid: 0de9e74cb242ee5478e06652faf8cff6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0de9e74cb242ee5478e06652faf8cff6, type: 3}
@@ -2557,12 +2557,15 @@ MonoBehaviour:
   _ambienceVolume: 1
   _musicVolume: 1
   _voicesVolume: 1
-  _tireVolume: 1
+  _engineVolume: 1
+  player: {fileID: 0}
   _ambience: 
-  _music: event:/Voices/Song_Oy_Zarya
+  _music: event:/Music/Song_Oy_Zarya
   _voices: 
   _scream: 
-  _tire: 
+  _engine: 
+  _oneShotEngineLeft: 
+  _oneShotEngineRight: 
 --- !u!4 &1576031232
 Transform:
   m_ObjectHideFlags: 0
