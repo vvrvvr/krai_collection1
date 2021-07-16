@@ -11,7 +11,7 @@ public class MainMenu : MonoBehaviour
 	[SerializeField] private Slider volume;
 	[SerializeField] private MusicBox musicBox;
 
-	private readonly int Act1Index = 1; 
+	//private readonly int Act1Index = 1; 
 
 	private void Start()
 	{

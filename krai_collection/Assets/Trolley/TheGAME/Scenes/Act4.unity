@@ -17,7 +17,7 @@ RenderSettings:
   m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.01
+  m_FogDensity: 0.05
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.8773585, g: 0.8773585, b: 0.8773585, a: 1}
@@ -241,7 +241,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.9
+  m_Intensity: 1.36
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -656,7 +656,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &102332084
 Transform:
   m_ObjectHideFlags: 0
@@ -979,7 +979,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &251792707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1297,7 +1297,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &421368138
 Transform:
   m_ObjectHideFlags: 0
@@ -2142,7 +2142,7 @@ MonoBehaviour:
   _ambienceVolume: 1
   _musicVolume: 1
   _voicesVolume: 1
-  _engineVolume: 0.4
+  _engineVolume: 0.2
   player: {fileID: 200770199}
   _ambience: 
   _music: event:/Music/field_music
@@ -2828,7 +2828,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1372931852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3017,7 +3017,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1392718605
 Transform:
   m_ObjectHideFlags: 0
@@ -3202,7 +3202,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1502234596
 Transform:
   m_ObjectHideFlags: 0
@@ -3318,7 +3318,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1514651262}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c7fdd331df5e1424a8acc3cc324d6acb, type: 3}
   m_Name: 
@@ -3437,7 +3437,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!64 &1665781526
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4052,6 +4052,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6513034844049619660, guid: bd2afd7920a59e444a404d230d10f660, type: 3}
   m_PrefabInstance: {fileID: 853614283}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2035117137
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2035117139}
+  - component: {fileID: 2035117138}
+  m_Layer: 0
+  m_Name: music_trigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2035117138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2035117137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd1000ae13c678545a42815b0b08a830, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _musicBox: {fileID: 954667660}
+  _melody: event:/Music/field_music
+--- !u!4 &2035117139
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2035117137}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.98965305, y: 5.121305, z: -9.68426}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2072045755
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4180,6 +4225,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1184038286}
     m_Modifications:
+    - target: {fileID: 8223997078113528060, guid: bc10598f5be0ff946be32aa30203f4b4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8223997078512492013, guid: bc10598f5be0ff946be32aa30203f4b4, type: 3}
       propertyPath: m_Name
       value: MOUNTAIN (1)

@@ -98,7 +98,7 @@ public class MusicBox : MonoBehaviour
     {		
 		_voiceEvent.setParameterByName("distance", distance);
 		_engineEvent.setParameterByName("offroad", distance);
-		Debug.Log("distance " + distance);
+		//Debug.Log("distance " + distance);
 	}
 
     public void PlayScream()
@@ -116,8 +116,12 @@ public class MusicBox : MonoBehaviour
         if (_scream == "") return;
 
         _screamEvent = FMODUnity.RuntimeManager.CreateInstance(scream);
-        _screamEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
-        _screamEvent.setVolume(_voicesVolume * _masterVolume * volume);
+		//Debug.Log("should play");
+		if (player != null)
+			_screamEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(player.transform));
+		else
+			_screamEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
+		_screamEvent.setVolume(_voicesVolume * _masterVolume * volume);
         _screamEvent.start();
     }
 
@@ -151,6 +155,14 @@ public class MusicBox : MonoBehaviour
 		}
 
 	}
+	public float GetEngineEvenTRpm()
+    {
+		float val;
+		float finalval;
+		_engineEvent.getParameterByName("rpm", out val, out finalval);
+		return finalval;
+	}
+
 	public void PlayEngineTurns(int num, bool isOffroad)
     {
         switch (num)
