@@ -656,7 +656,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &102332084
 Transform:
   m_ObjectHideFlags: 0
@@ -704,7 +704,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 94eab1c7bc801b94fa1b36f0c6f06886, type: 2}
+  - {fileID: 2100000, guid: bed701e9fcba7254b85512179676d9ad, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -979,7 +979,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &251792707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1297,7 +1297,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &421368138
 Transform:
   m_ObjectHideFlags: 0
@@ -2136,7 +2136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _ambienceOn: 0
-  _musicOn: 1
+  _musicOn: 0
   _voicesOn: 0
   _masterVolume: 1
   _ambienceVolume: 1
@@ -2147,7 +2147,7 @@ MonoBehaviour:
   _ambience: 
   _music: event:/Music/field_music
   _voices: 
-  _scream: 
+  _scream: event:/Music/field_music
   _engine: event:/Engine/engine
   _oneShotEngineLeft: 
   _oneShotEngineRight: 
@@ -2828,7 +2828,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1372931852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3017,7 +3017,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1392718605
 Transform:
   m_ObjectHideFlags: 0
@@ -3202,7 +3202,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1502234596
 Transform:
   m_ObjectHideFlags: 0
@@ -3437,7 +3437,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &1665781526
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4247,7 +4247,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8223997078512492017, guid: bc10598f5be0ff946be32aa30203f4b4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 64
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 8223997078512492017, guid: bc10598f5be0ff946be32aa30203f4b4, type: 3}
       propertyPath: m_LocalPosition.z
