@@ -13,7 +13,7 @@ public class FieldMusicTrigger : MonoBehaviour
        // Debug.Log(currentRpm);
         if(currentRpm > 0.09f)
         {
-            Debug.Log("here");
+            //Debug.Log("here");
             _musicBox.PlayScream(_melody, 1);
             Destroy(gameObject);
         }

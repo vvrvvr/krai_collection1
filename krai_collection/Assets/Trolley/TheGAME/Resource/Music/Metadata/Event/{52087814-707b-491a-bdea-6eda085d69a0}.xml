@@ -70,9 +70,6 @@
 		<relationship name="modules">
 			<destination>{f3893144-73e6-476d-8f85-271aa047e564}</destination>
 		</relationship>
-		<relationship name="markers">
-			<destination>{f1fd3ecf-7b03-4ead-9db1-431e89aad260}</destination>
-		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{f37f1c8c-a201-441f-a8bc-defa6e696a87}">
 		<relationship name="modulators">
@@ -96,7 +93,7 @@
 	<object class="MixerBusPanner" id="{47f93e8b-2301-4756-8cc5-77440b163d49}" />
 	<object class="SingleSound" id="{f3893144-73e6-476d-8f85-271aa047e564}">
 		<property name="length">
-			<value>68.05083900226758</value>
+			<value>63</value>
 		</property>
 		<relationship name="fadeInCurve">
 			<destination>{4673bce0-63d2-49f6-8913-1103881c8967}</destination>
@@ -117,20 +114,6 @@
 		</relationship>
 		<relationship name="output">
 			<destination>{f37f1c8c-a201-441f-a8bc-defa6e696a87}</destination>
-		</relationship>
-	</object>
-	<object class="LoopRegion" id="{f1fd3ecf-7b03-4ead-9db1-431e89aad260}">
-		<property name="position">
-			<value>0</value>
-		</property>
-		<property name="length">
-			<value>68.05083900226758</value>
-		</property>
-		<relationship name="timeline">
-			<destination>{7030e1ad-62c8-4401-a99e-a4412189fb7a}</destination>
-		</relationship>
-		<relationship name="markerTrack">
-			<destination>{de42fb0c-0c60-4737-ab39-a7291fba584a}</destination>
 		</relationship>
 	</object>
 	<object class="ADSRModulator" id="{580e0e48-9225-4e5a-bd74-92c9190c7b8f}">
