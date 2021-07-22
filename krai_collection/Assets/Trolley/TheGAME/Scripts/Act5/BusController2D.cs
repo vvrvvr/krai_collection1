@@ -9,6 +9,9 @@ public class BusController2D : MonoBehaviour
 
 	public CircleCollider2D wheel;
 	public Collider2D ground;
+	private float inputTotal;
+	[HideInInspector] public bool HasControl = true;
+
 
 
 	private void Start()
@@ -18,19 +21,22 @@ public class BusController2D : MonoBehaviour
 
 	private void FixedUpdate()
 	{
-		var inputHorizontal = Input.GetAxis("Horizontal");
-		var inputVertical = Input.GetAxis("Vertical");
-		var inputTotal = inputHorizontal;
-		if(inputHorizontal == 0)
-        {
-			inputTotal = inputVertical;
-        }
-
-		if (wheel.IsTouching(ground))
-			rb2D.AddForce( gameObject.transform.rotation * Vector2.right * busSpeed * inputTotal * rb2D.mass);
+		if (HasControl)
+			MoveBus();
 	}
 	
 
-
+	private void MoveBus()
+    {
+		var inputHorizontal = Input.GetAxis("Horizontal");
+		var inputVertical = Input.GetAxis("Vertical");
+		inputTotal = inputHorizontal;
+		if (inputHorizontal == 0)
+		{
+			inputTotal = inputVertical;
+		}
+		if (wheel.IsTouching(ground))
+			rb2D.AddForce(gameObject.transform.rotation * Vector2.right * busSpeed * inputTotal * rb2D.mass);
+	}
 }
 
