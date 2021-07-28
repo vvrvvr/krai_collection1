@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MusicBoxAct3 : MusicBox
+namespace krai_trol
 {
-	private void Start()
+	public class MusicBoxAct3 : MusicBox
 	{
-		PlayAmbient();
+		private void Start()
+		{
+			PlayAmbient();
+		}
 	}
 }

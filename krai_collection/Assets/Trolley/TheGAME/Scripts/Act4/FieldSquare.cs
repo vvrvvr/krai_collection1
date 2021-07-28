@@ -3,21 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class FieldSquare : MonoBehaviour
+namespace krai_trol
 {
-	private FieldSquareMove fieldSquareMove;
-
-	private void Start()
+	public class FieldSquare : MonoBehaviour
 	{
-		fieldSquareMove = transform.parent.gameObject.GetComponent<FieldSquareMove>();
+		private FieldSquareMove fieldSquareMove;
 
-		if (fieldSquareMove == null)
-			throw new InvalidOperationException();
-	}
+		private void Start()
+		{
+			fieldSquareMove = transform.parent.gameObject.GetComponent<FieldSquareMove>();
 
-	private void OnTriggerEnter(Collider other)
-	{
-		if (other.gameObject.tag == "Bus")
-			fieldSquareMove.SetSquareAsCentar(this.gameObject);
+			if (fieldSquareMove == null)
+				throw new InvalidOperationException();
+		}
+
+		private void OnTriggerEnter(Collider other)
+		{
+			if (other.gameObject.tag == "Bus")
+				fieldSquareMove.SetSquareAsCentar(this.gameObject);
+		}
 	}
 }

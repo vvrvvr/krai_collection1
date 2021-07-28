@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RemoveTressCollider : MonoBehaviour
+namespace krai_trol
 {
-	private void OnTriggerEnter(Collider other)
+	public class RemoveTressCollider : MonoBehaviour
 	{
-		if (other.tag == "Bus") transform.parent.gameObject.SetActive(false);
+		private void OnTriggerEnter(Collider other)
+		{
+			if (other.tag == "Bus") transform.parent.gameObject.SetActive(false);
+		}
 	}
 }
-

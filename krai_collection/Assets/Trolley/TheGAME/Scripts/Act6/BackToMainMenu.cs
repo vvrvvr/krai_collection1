@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class BackToMainMenu : MonoBehaviour
+namespace krai_trol
 {
-	private void OnTriggerEnter(Collider other)
+	public class BackToMainMenu : MonoBehaviour
 	{
-		if (other.tag == "Player")
-			SceneManager.LoadScene(0);
+		private void OnTriggerEnter(Collider other)
+		{
+			if (other.tag == "Player")
+				SceneManager.LoadScene(0);
+		}
 	}
 }

@@ -2,55 +2,58 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BusControllerSwamp : BusController
+namespace krai_trol
 {
-    [SerializeField] private float reactDelay;
-    private float[] horInputs;
-    private int inputIndex;
-    private int inputIndexMax;
-
-    [SerializeField] private float enginDownDelayMin;
-    [SerializeField] private float enginDownDelayMax;
-    private bool engineDown;
-    private float enginTimeToEnginDown;
-
-    private new void Start()
-	{
-        inputIndexMax = (int)(reactDelay / Time.fixedDeltaTime);
-        horInputs = new float[inputIndexMax];
-        _musicBox = GameObject.FindGameObjectWithTag("MusicBox").GetComponent<MusicBox>();
-        leaveRoadTrigger = GetComponent<LeaveRoadTrigger>();
-    }
-
-    private new void FixedUpdate()
+    public class BusControllerSwamp : BusController
     {
-        horInputs[inputIndex] =  Input.GetAxis("Horizontal");
-        inputIndex = inputIndex == inputIndexMax - 1 ? 0 : inputIndex+1;
-        _horInput = horInputs[inputIndex];
+        [SerializeField] private float reactDelay;
+        private float[] horInputs;
+        private int inputIndex;
+        private int inputIndexMax;
 
-        _vertInput = engineDown? 0 : Input.GetAxis("Vertical");
+        [SerializeField] private float enginDownDelayMin;
+        [SerializeField] private float enginDownDelayMax;
+        private bool engineDown;
+        private float enginTimeToEnginDown;
 
-        Acclererate();
-        EngineSound();
-        EngineMalfunctions();
-    }
+        private new void Start()
+        {
+            inputIndexMax = (int)(reactDelay / Time.fixedDeltaTime);
+            horInputs = new float[inputIndexMax];
+            _musicBox = GameObject.FindGameObjectWithTag("MusicBox").GetComponent<MusicBox>();
+            leaveRoadTrigger = GetComponent<LeaveRoadTrigger>();
+        }
 
-    private void EngineMalfunctions()
-	{
-        if (!engineDown && enginTimeToEnginDown == 0)
-            enginTimeToEnginDown = (int)Random.Range(enginDownDelayMin * 50, enginDownDelayMax * 50);
+        private new void FixedUpdate()
+        {
+            horInputs[inputIndex] = Input.GetAxis("Horizontal");
+            inputIndex = inputIndex == inputIndexMax - 1 ? 0 : inputIndex + 1;
+            _horInput = horInputs[inputIndex];
 
-        if (!engineDown && enginTimeToEnginDown  > 0)
-            enginTimeToEnginDown--;
+            _vertInput = engineDown ? 0 : Input.GetAxis("Vertical");
 
-        if (!engineDown && enginTimeToEnginDown == 0)
-            engineDown = true;
+            Acclererate();
+            EngineSound();
+            EngineMalfunctions();
+        }
 
-        if (engineDown && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))   ||
-            engineDown && (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) ||
-            engineDown && (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) ||
-            engineDown && (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
-            )
-            engineDown = false;
+        private void EngineMalfunctions()
+        {
+            if (!engineDown && enginTimeToEnginDown == 0)
+                enginTimeToEnginDown = (int)Random.Range(enginDownDelayMin * 50, enginDownDelayMax * 50);
+
+            if (!engineDown && enginTimeToEnginDown > 0)
+                enginTimeToEnginDown--;
+
+            if (!engineDown && enginTimeToEnginDown == 0)
+                engineDown = true;
+
+            if (engineDown && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) ||
+                engineDown && (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) ||
+                engineDown && (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) ||
+                engineDown && (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
+                )
+                engineDown = false;
+        }
     }
 }

@@ -2,19 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GrandmasRotat : MonoBehaviour
+namespace krai_trol
 {
-	public BoxCollider2D boxCollider;
-	public SpriteRenderer render;
-
-
-	private void OnTriggerEnter2D(Collider2D collision)
+	public class GrandmasRotat : MonoBehaviour
 	{
-		if (collision.tag == "GrandmasRP")
+		public BoxCollider2D boxCollider;
+		public SpriteRenderer render;
+
+
+		private void OnTriggerEnter2D(Collider2D collision)
 		{
-			render.flipX = false;
-			boxCollider.enabled = true;
-			GetComponent<PowerOfGrandmas>().PowerModule();
+			if (collision.tag == "GrandmasRP")
+			{
+				render.flipX = false;
+				boxCollider.enabled = true;
+				GetComponent<PowerOfGrandmas>().PowerModule();
+			}
 		}
 	}
 }

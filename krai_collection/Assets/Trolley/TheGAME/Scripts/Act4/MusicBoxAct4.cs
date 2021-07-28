@@ -2,20 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MusicBoxAct4 : MusicBox
+namespace krai_trol
 {
-	[Space]
-	public float seconds;
-
-	private void Start()
+	public class MusicBoxAct4 : MusicBox
 	{
-		StartCoroutine(Delay());
-	}
+		[Space]
+		public float seconds;
 
-	private IEnumerator Delay()
-	{
-		yield return new WaitForSeconds(seconds);
-		PlayMusic();
-	}
+		private void Start()
+		{
+			StartCoroutine(Delay());
+		}
 
+		private IEnumerator Delay()
+		{
+			yield return new WaitForSeconds(seconds);
+			PlayMusic();
+		}
+
+	}
 }

@@ -3,33 +3,36 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GoToAct7 : MonoBehaviour
+namespace krai_trol
 {
-	[SerializeField] protected MainMenu _mainMenu;
-	[SerializeField] protected string _act;
-
-	[Space]
-	[SerializeField] private float _musicLength;
-	[SerializeField] private float _timeAfterLeaveBus;
-
-	private void Start()
+	public class GoToAct7 : MonoBehaviour
 	{
-		StartCoroutine(Delay(_musicLength));
-	}
+		[SerializeField] protected MainMenu _mainMenu;
+		[SerializeField] protected string _act;
 
-	private IEnumerator Delay (float seconds)
-	{
-		yield return new WaitForSeconds(seconds);
-		_mainMenu.LoadScene(_act);
-	}
+		[Space]
+		[SerializeField] private float _musicLength;
+		[SerializeField] private float _timeAfterLeaveBus;
 
-	public void PlayerExit()
-	{
-		StartCoroutine (Delay(_timeAfterLeaveBus));
-	}
+		private void Start()
+		{
+			StartCoroutine(Delay(_musicLength));
+		}
 
-	private void OnDestroy()
-	{
-		StopAllCoroutines();
+		private IEnumerator Delay(float seconds)
+		{
+			yield return new WaitForSeconds(seconds);
+			_mainMenu.LoadScene(_act);
+		}
+
+		public void PlayerExit()
+		{
+			StartCoroutine(Delay(_timeAfterLeaveBus));
+		}
+
+		private void OnDestroy()
+		{
+			StopAllCoroutines();
+		}
 	}
 }

@@ -2,41 +2,44 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BusController2D : MonoBehaviour
+namespace krai_trol
 {
-    public float busSpeed;
-	Rigidbody2D rb2D;
-
-	public CircleCollider2D wheel;
-	public Collider2D ground;
-	private float inputTotal;
-	[HideInInspector] public bool HasControl = true;
-
-
-
-	private void Start()
+	public class BusController2D : MonoBehaviour
 	{
-		rb2D = gameObject.GetComponent<Rigidbody2D>();
-	}
+		public float busSpeed;
+		Rigidbody2D rb2D;
 
-	private void FixedUpdate()
-	{
-		if (HasControl)
-			MoveBus();
-	}
-	
+		public CircleCollider2D wheel;
+		public Collider2D ground;
+		private float inputTotal;
+		[HideInInspector] public bool HasControl = true;
 
-	private void MoveBus()
-    {
-		var inputHorizontal = Input.GetAxis("Horizontal");
-		var inputVertical = Input.GetAxis("Vertical");
-		inputTotal = inputHorizontal;
-		if (inputHorizontal == 0)
+
+
+		private void Start()
 		{
-			inputTotal = inputVertical;
+			rb2D = gameObject.GetComponent<Rigidbody2D>();
 		}
-		if (wheel.IsTouching(ground))
-			rb2D.AddForce(gameObject.transform.rotation * Vector2.right * busSpeed * inputTotal * rb2D.mass);
+
+		private void FixedUpdate()
+		{
+			if (HasControl)
+				MoveBus();
+		}
+
+
+		private void MoveBus()
+		{
+			var inputHorizontal = Input.GetAxis("Horizontal");
+			var inputVertical = Input.GetAxis("Vertical");
+			inputTotal = inputHorizontal;
+			if (inputHorizontal == 0)
+			{
+				inputTotal = inputVertical;
+			}
+			if (wheel.IsTouching(ground))
+				rb2D.AddForce(gameObject.transform.rotation * Vector2.right * busSpeed * inputTotal * rb2D.mass);
+		}
 	}
 }
 

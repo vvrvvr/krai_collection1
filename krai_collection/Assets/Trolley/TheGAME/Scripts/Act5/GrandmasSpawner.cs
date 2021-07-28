@@ -2,40 +2,43 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GrandmasSpawner : MonoBehaviour
+namespace krai_trol
 {
-	public float spawnDealay;
-	public float maxGrandmasCount;
-	public GameObject[] grandmas;
-	public GameObject[] spawnPoints;
-
-
-	private void Start()
+	public class GrandmasSpawner : MonoBehaviour
 	{
-		//StartCoroutine(SpawnCoroutine());
-	}
+		public float spawnDealay;
+		public float maxGrandmasCount;
+		public GameObject[] grandmas;
+		public GameObject[] spawnPoints;
 
 
-	private IEnumerator SpawnCoroutine()
-	{
-		do
+		private void Start()
 		{
-			yield return new WaitForSeconds(spawnDealay);
-		
-			var spawn = spawnPoints[Random.Range(0,spawnPoints.Length-1)];
-			var grandma = grandmas[Random.Range(0, grandmas.Length-1)];
+			//StartCoroutine(SpawnCoroutine());
+		}
 
-			Instantiate(grandma,spawn.transform.position, new Quaternion(), transform);
 
-		} while (transform.childCount < maxGrandmasCount);
-	}
+		private IEnumerator SpawnCoroutine()
+		{
+			do
+			{
+				yield return new WaitForSeconds(spawnDealay);
 
-	public void Spawn()
-	{
-		var spawn = spawnPoints[Random.Range(0, spawnPoints.Length - 1)];
-		var grandma = grandmas[Random.Range(0, grandmas.Length - 1)];
+				var spawn = spawnPoints[Random.Range(0, spawnPoints.Length - 1)];
+				var grandma = grandmas[Random.Range(0, grandmas.Length - 1)];
 
-		Instantiate(grandma, spawn.transform.position, new Quaternion(), transform);
+				Instantiate(grandma, spawn.transform.position, new Quaternion(), transform);
+
+			} while (transform.childCount < maxGrandmasCount);
+		}
+
+		public void Spawn()
+		{
+			var spawn = spawnPoints[Random.Range(0, spawnPoints.Length - 1)];
+			var grandma = grandmas[Random.Range(0, grandmas.Length - 1)];
+
+			Instantiate(grandma, spawn.transform.position, new Quaternion(), transform);
+		}
 	}
 }
 

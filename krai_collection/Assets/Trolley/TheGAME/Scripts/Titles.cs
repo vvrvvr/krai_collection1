@@ -5,39 +5,42 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class Titles : MonoBehaviour
+namespace krai_trol
 {
-	[SerializeField] private Fade _fade;
-	[SerializeField] private int _act;
-	[Space]
-	[SerializeField] private float _titelShowTime;
-
-	private TextMeshProUGUI [] _titles;
-
-	private void Start()
+	public class Titles : MonoBehaviour
 	{
-		_titles = gameObject.GetComponentsInChildren<TextMeshProUGUI>();
-		foreach (var title in _titles) title.gameObject.SetActive(false);
-		StartCoroutine(ShowTitles());
-	}
+		[SerializeField] private Fade _fade;
+		[SerializeField] private int _act;
+		[Space]
+		[SerializeField] private float _titelShowTime;
 
+		private TextMeshProUGUI[] _titles;
 
-	private IEnumerator ShowTitles()
-	{
-		foreach (var title in _titles)
+		private void Start()
 		{
-			title.gameObject.SetActive(true);
-
-			_fade.FadeIn();
-			yield return new WaitForSeconds(_fade.FadeInTime);
-
-			yield return new WaitForSeconds(_titelShowTime);
-
-			_fade.FadeOut();
-			yield return new WaitForSeconds(_fade.FadeOutTime);
-
-			title.gameObject.SetActive(false);
+			_titles = gameObject.GetComponentsInChildren<TextMeshProUGUI>();
+			foreach (var title in _titles) title.gameObject.SetActive(false);
+			StartCoroutine(ShowTitles());
 		}
-		SceneManager.LoadScene(_act);
+
+
+		private IEnumerator ShowTitles()
+		{
+			foreach (var title in _titles)
+			{
+				title.gameObject.SetActive(true);
+
+				_fade.FadeIn();
+				yield return new WaitForSeconds(_fade.FadeInTime);
+
+				yield return new WaitForSeconds(_titelShowTime);
+
+				_fade.FadeOut();
+				yield return new WaitForSeconds(_fade.FadeOutTime);
+
+				title.gameObject.SetActive(false);
+			}
+			SceneManager.LoadScene(_act);
+		}
 	}
 }

@@ -2,55 +2,58 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KeepDistance : MonoBehaviour
+namespace krai_trol
 {
-    [SerializeField] private Transform target;
-
-    private Vector3 _offset;
-    private Coroutine changePosition;
-
-    void Start()
+    public class KeepDistance : MonoBehaviour
     {
-        _offset = target.position - transform.position;
-        changePosition = StartCoroutine(ChangePosition());  
-    }
+        [SerializeField] private Transform target;
 
-    public void YouCanComeToTargetZ ()
-	{
-        StopCoroutine(changePosition);
-        StartCoroutine(GetCloserZ());
-	}
+        private Vector3 _offset;
+        private Coroutine changePosition;
 
-    private IEnumerator ChangePosition()
-	{
-        float x,y,z;
-		do
-		{
-            x = target.position.x - _offset.x;
-            y = transform.position.y;
-            z = target.position.z - _offset.z;
-
-            transform.position = new Vector3(x,y,z);
-            
-            yield return new WaitForFixedUpdate();
-		} while (true);
-	}
-
-    private IEnumerator GetCloserZ()
-	{
-        float x, y, z;
-        do
+        void Start()
         {
+            _offset = target.position - transform.position;
+            changePosition = StartCoroutine(ChangePosition());
+        }
 
-            if (Mathf.Abs(target.position.z - transform.position.z) < Mathf.Abs(_offset.z))
-                _offset.z = target.position.z - transform.position.z;
+        public void YouCanComeToTargetZ()
+        {
+            StopCoroutine(changePosition);
+            StartCoroutine(GetCloserZ());
+        }
 
-            x = target.position.x - _offset.x;
-            y = transform.position.y;
-            z = target.position.z - _offset.z;
-            transform.position = new Vector3(x, y, z);
+        private IEnumerator ChangePosition()
+        {
+            float x, y, z;
+            do
+            {
+                x = target.position.x - _offset.x;
+                y = transform.position.y;
+                z = target.position.z - _offset.z;
 
-            yield return new WaitForFixedUpdate();
-        } while (true);
+                transform.position = new Vector3(x, y, z);
+
+                yield return new WaitForFixedUpdate();
+            } while (true);
+        }
+
+        private IEnumerator GetCloserZ()
+        {
+            float x, y, z;
+            do
+            {
+
+                if (Mathf.Abs(target.position.z - transform.position.z) < Mathf.Abs(_offset.z))
+                    _offset.z = target.position.z - transform.position.z;
+
+                x = target.position.x - _offset.x;
+                y = transform.position.y;
+                z = target.position.z - _offset.z;
+                transform.position = new Vector3(x, y, z);
+
+                yield return new WaitForFixedUpdate();
+            } while (true);
+        }
     }
 }

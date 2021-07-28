@@ -2,23 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OpenDoor : MonoBehaviour
+namespace krai_trol
 {
-	[SerializeField] private GameObject trlleybusClosedDoor;
-	[SerializeField] private GameObject trlleybusOpenDoor;
-
-	[SerializeField] private float delay;
-
-	private void Start()
+	public class OpenDoor : MonoBehaviour
 	{
-		StartCoroutine(OpenWithDelay());
-	}
+		[SerializeField] private GameObject trlleybusClosedDoor;
+		[SerializeField] private GameObject trlleybusOpenDoor;
 
-	private IEnumerator OpenWithDelay()
-	{
-		yield return new WaitForSeconds(delay);
-		trlleybusOpenDoor.SetActive(true);
-		trlleybusClosedDoor.SetActive(false);
-	}
+		[SerializeField] private float delay;
 
+		private void Start()
+		{
+			StartCoroutine(OpenWithDelay());
+		}
+
+		private IEnumerator OpenWithDelay()
+		{
+			yield return new WaitForSeconds(delay);
+			trlleybusOpenDoor.SetActive(true);
+			trlleybusClosedDoor.SetActive(false);
+		}
+
+	}
 }

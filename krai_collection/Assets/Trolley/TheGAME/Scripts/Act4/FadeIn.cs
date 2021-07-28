@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FadeIn : MonoBehaviour
+namespace krai_trol
 {
-	private void Start()
+	public class FadeIn : MonoBehaviour
 	{
-		
+		private void Start()
+		{
+
+		}
 	}
 }

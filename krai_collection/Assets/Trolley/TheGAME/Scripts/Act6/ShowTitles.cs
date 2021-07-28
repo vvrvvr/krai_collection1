@@ -3,71 +3,74 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class ShowTitles : MonoBehaviour
+namespace krai_trol
 {
-	[SerializeField] private float startDelay = 4;
-	[SerializeField] private float stay = 3;
-	[SerializeField] private float fadeIn = 1;
-	[SerializeField] private float fadeOut = 1;
-	[SerializeField] private TextMeshProUGUI [] titles;
-
-	private void Start()
+	public class ShowTitles : MonoBehaviour
 	{
-		//titles[0].color = new Color();
-		StartCoroutine(ShowTitel());
-	}
+		[SerializeField] private float startDelay = 4;
+		[SerializeField] private float stay = 3;
+		[SerializeField] private float fadeIn = 1;
+		[SerializeField] private float fadeOut = 1;
+		[SerializeField] private TextMeshProUGUI[] titles;
 
-	private IEnumerator ShowTitel()
-	{
-		yield return new WaitForSeconds(startDelay);
-
-		for (int i = 0; i < titles.Length; i++)
+		private void Start()
 		{
-			StartCoroutine(FadeIn(titles[i], fadeIn));
-			yield return new WaitForSeconds(fadeIn);
-
-			yield return new WaitForSeconds(stay);
-
-			StartCoroutine(FadeOut(titles[i], fadeOut));
-			yield return new WaitForSeconds(fadeOut);
+			//titles[0].color = new Color();
+			StartCoroutine(ShowTitel());
 		}
-	}
 
-	private IEnumerator FadeIn(TextMeshProUGUI titel, float seconds)
-	{
-		var color = titel.color;
-		color.a = 0;
-		titel.color = color;
-
-		var shift = seconds * Time.fixedDeltaTime;
-
-		do
+		private IEnumerator ShowTitel()
 		{
-			color.a += shift;
+			yield return new WaitForSeconds(startDelay);
+
+			for (int i = 0; i < titles.Length; i++)
+			{
+				StartCoroutine(FadeIn(titles[i], fadeIn));
+				yield return new WaitForSeconds(fadeIn);
+
+				yield return new WaitForSeconds(stay);
+
+				StartCoroutine(FadeOut(titles[i], fadeOut));
+				yield return new WaitForSeconds(fadeOut);
+			}
+		}
+
+		private IEnumerator FadeIn(TextMeshProUGUI titel, float seconds)
+		{
+			var color = titel.color;
+			color.a = 0;
 			titel.color = color;
 
-			seconds -= Time.fixedDeltaTime;
+			var shift = seconds * Time.fixedDeltaTime;
 
-			yield return new WaitForFixedUpdate();
-		} while (seconds > 0);
-	}
+			do
+			{
+				color.a += shift;
+				titel.color = color;
 
-	private IEnumerator FadeOut(TextMeshProUGUI titel, float seconds)
-	{
-		var color = titel.color;
-		color.a = 1;
-		titel.color = color;
+				seconds -= Time.fixedDeltaTime;
 
-		var shift = seconds * Time.fixedDeltaTime;
+				yield return new WaitForFixedUpdate();
+			} while (seconds > 0);
+		}
 
-		do
+		private IEnumerator FadeOut(TextMeshProUGUI titel, float seconds)
 		{
-			color.a -= shift;
+			var color = titel.color;
+			color.a = 1;
 			titel.color = color;
 
-			seconds -= Time.fixedDeltaTime;
+			var shift = seconds * Time.fixedDeltaTime;
 
-			yield return new WaitForFixedUpdate();
-		} while (seconds > 0);
+			do
+			{
+				color.a -= shift;
+				titel.color = color;
+
+				seconds -= Time.fixedDeltaTime;
+
+				yield return new WaitForFixedUpdate();
+			} while (seconds > 0);
+		}
 	}
 }

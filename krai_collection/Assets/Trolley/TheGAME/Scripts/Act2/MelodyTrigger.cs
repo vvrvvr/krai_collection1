@@ -2,17 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MelodyTrigger : MonoBehaviour
+namespace krai_trol
 {
-    [SerializeField] private MusicBox _musicBox;
-    [FMODUnity.EventRef] [SerializeField] protected string _melody;
-
-    private void OnTriggerEnter(Collider other)
+    public class MelodyTrigger : MonoBehaviour
     {
-        if (other.tag == "Bus")
+        [SerializeField] private MusicBox _musicBox;
+        [FMODUnity.EventRef] [SerializeField] protected string _melody;
+
+        private void OnTriggerEnter(Collider other)
         {
-            _musicBox.PlayScream(_melody, 1);
-            Destroy(gameObject);
+            if (other.tag == "Bus")
+            {
+                _musicBox.PlayScream(_melody, 1);
+                Destroy(gameObject);
+            }
         }
     }
 }

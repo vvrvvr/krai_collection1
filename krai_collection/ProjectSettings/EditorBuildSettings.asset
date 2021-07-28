@@ -53,4 +53,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Trolley/TheGAME/Scenes/Act1.unity
     guid: d9169dc9e77b3d848980c9af3dd58c10
+  - enabled: 1
+    path: Assets/Running word/Scenes/MenuScene.unity
+    guid: 6061ad9a56de7194eb88d4634d1c0c85
+  - enabled: 1
+    path: Assets/Running word/Scenes/SampleScene.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}

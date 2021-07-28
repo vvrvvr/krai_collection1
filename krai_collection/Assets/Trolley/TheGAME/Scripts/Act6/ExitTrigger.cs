@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ExitTrigger : MonoBehaviour
+namespace krai_trol
 {
-	[SerializeField] private GoToAct7 _goToAct7;
-	private void OnTriggerEnter(Collider other)
+	public class ExitTrigger : MonoBehaviour
 	{
-		_goToAct7.PlayerExit();
+		[SerializeField] private GoToAct7 _goToAct7;
+		private void OnTriggerEnter(Collider other)
+		{
+			_goToAct7.PlayerExit();
+		}
 	}
 }

@@ -2,17 +2,20 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GoToAct : MonoBehaviour
+namespace krai_trol
 {
-	[SerializeField] protected MainMenu _mainMenu;
-	[SerializeField] protected string _act;
-	private void OnTriggerEnter(Collider other)
+	public class GoToAct : MonoBehaviour
 	{
-		_mainMenu.LoadScene(_act);
-	}
+		[SerializeField] protected MainMenu _mainMenu;
+		[SerializeField] protected string _act;
+		private void OnTriggerEnter(Collider other)
+		{
+			_mainMenu.LoadScene(_act);
+		}
 
-	private void OnTriggerEnter2D(Collider2D collision)
-	{
-		_mainMenu.LoadScene(_act);
+		private void OnTriggerEnter2D(Collider2D collision)
+		{
+			_mainMenu.LoadScene(_act);
+		}
 	}
 }

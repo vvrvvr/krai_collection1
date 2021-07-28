@@ -1,19 +1,22 @@
 ﻿using UnityEngine;
 
-public class LAC : MonoBehaviour
+namespace krai_trol
 {
-    private Transform mainCamera;
-    private float saveX;
-
-    private void Start()
+    public class LAC : MonoBehaviour
     {
-        mainCamera = GameObject.FindGameObjectWithTag("MainCamera").transform;
-    }
+        private Transform mainCamera;
+        private float saveX;
 
-    private void Update()
-    {
-        saveX = transform.eulerAngles.x;
-        transform.LookAt(mainCamera);
-        transform.eulerAngles = new Vector3(saveX, transform.eulerAngles.y, transform.eulerAngles.z);
+        private void Start()
+        {
+            mainCamera = GameObject.FindGameObjectWithTag("MainCamera").transform;
+        }
+
+        private void Update()
+        {
+            saveX = transform.eulerAngles.x;
+            transform.LookAt(mainCamera);
+            transform.eulerAngles = new Vector3(saveX, transform.eulerAngles.y, transform.eulerAngles.z);
+        }
     }
 }

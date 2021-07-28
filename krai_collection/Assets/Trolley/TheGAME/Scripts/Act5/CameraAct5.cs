@@ -2,40 +2,43 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraAct5 : MonoBehaviour
+namespace krai_trol
 {
-	private Vector3 _offset;
-	private Transform _target;
-	private Coroutine _followCoroutine;
-	
-	public float speed;
-
-	public void StartFollow (Transform target)
+	public class CameraAct5 : MonoBehaviour
 	{
-		if (_followCoroutine == null)
+		private Vector3 _offset;
+		private Transform _target;
+		private Coroutine _followCoroutine;
+
+		public float speed;
+
+		public void StartFollow(Transform target)
 		{
-			_target = target;
-			_offset = transform.position - _target.position;
-			_followCoroutine = StartCoroutine(Follow());
+			if (_followCoroutine == null)
+			{
+				_target = target;
+				_offset = transform.position - _target.position;
+				_followCoroutine = StartCoroutine(Follow());
+			}
 		}
-	}
 
-	private IEnumerator Follow()
-	{
-		do
+		private IEnumerator Follow()
 		{
-			transform.position = Vector3.Lerp(transform.position, _target.position + _offset, speed * Time.fixedDeltaTime);
-			yield return new WaitForFixedUpdate();
-		} while (true);
-	}
-
-	public void  StopFollow (Transform target)
-	{
-		if (_followCoroutine!=null)
-		{
-			StopCoroutine(_followCoroutine);
-			_followCoroutine = null;
+			do
+			{
+				transform.position = Vector3.Lerp(transform.position, _target.position + _offset, speed * Time.fixedDeltaTime);
+				yield return new WaitForFixedUpdate();
+			} while (true);
 		}
-	}
 
+		public void StopFollow(Transform target)
+		{
+			if (_followCoroutine != null)
+			{
+				StopCoroutine(_followCoroutine);
+				_followCoroutine = null;
+			}
+		}
+
+	}
 }

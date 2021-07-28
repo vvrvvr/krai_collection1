@@ -2,26 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpawnPassengers : MonoBehaviour
+namespace krai_trol
 {
-	[SerializeField] private float spawnRate;
-
-	[SerializeField] private GameObject[] passengers;
-
-    private Busstop[] _busstops;
-
-	private void Start()
+	public class SpawnPassengers : MonoBehaviour
 	{
-		_busstops = GetComponentsInChildren<Busstop>();
-		StartCoroutine(Spawn());
-	}
+		[SerializeField] private float spawnRate;
 
-	private IEnumerator Spawn()
-	{
-		do
+		[SerializeField] private GameObject[] passengers;
+
+		private Busstop[] _busstops;
+
+		private void Start()
 		{
-			_busstops[Random.Range(0, _busstops.Length)].SetPassenger(passengers[Random.Range(0, passengers.Length)]);
-			yield return new WaitForSeconds(1 / spawnRate);
-		} while (true);
+			_busstops = GetComponentsInChildren<Busstop>();
+			StartCoroutine(Spawn());
+		}
+
+		private IEnumerator Spawn()
+		{
+			do
+			{
+				_busstops[Random.Range(0, _busstops.Length)].SetPassenger(passengers[Random.Range(0, passengers.Length)]);
+				yield return new WaitForSeconds(1 / spawnRate);
+			} while (true);
+		}
 	}
 }
