@@ -2800,7 +2800,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2357d453d15ba54458f9d4429f6e31f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ambienceOn: 0
+  _ambienceOn: 1
   _musicOn: 1
   _voicesOn: 0
   _masterVolume: 1
@@ -2809,8 +2809,8 @@ MonoBehaviour:
   _voicesVolume: 1
   _engineVolume: 1
   player: {fileID: 0}
-  _ambience: 
-  _music: event:/Music/Song_Oy_Zarya
+  _ambience: event:/Ambience/mountain_ambience
+  _music: event:/Music/mountain_song_1
   _voices: 
   _scream: 
   _engine: 
