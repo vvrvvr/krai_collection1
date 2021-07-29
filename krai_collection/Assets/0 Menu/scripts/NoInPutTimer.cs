@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class NoInPutTimer : MonoBehaviour
 {
     [SerializeField] GameObject timerScreen;
+    [SerializeField] private float maxTime = 30f;
     private Text timerText;
     private float currentTime = 0f;
     Vector3 lastMousePosition;
@@ -28,7 +29,7 @@ public class NoInPutTimer : MonoBehaviour
         if (!Input.anyKey && Input.mousePosition == lastMousePosition) //not pressed
         {
             currentTime += Time.unscaledDeltaTime;
-            if (currentTime >= 30f)
+            if (currentTime >= maxTime)
             {
                 if (!isTimerScreen)
                 {
