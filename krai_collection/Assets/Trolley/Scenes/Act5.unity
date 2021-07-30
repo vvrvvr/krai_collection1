@@ -335,6 +335,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawner: {fileID: 2045796049}
+  climbingVoicesNumber: 1
+  changeVoices: 0
 --- !u!61 &163156333
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -975,6 +977,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawner: {fileID: 2045796049}
+  climbingVoicesNumber: 3
+  changeVoices: 1
 --- !u!61 &415264312
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1283,6 +1287,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawner: {fileID: 2045796049}
+  climbingVoicesNumber: 1
+  changeVoices: 0
 --- !u!61 &626399054
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2251,6 +2257,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawner: {fileID: 2045796049}
+  climbingVoicesNumber: 5
+  changeVoices: 1
 --- !u!61 &1036056021
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2322,6 +2330,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawner: {fileID: 2045796049}
+  climbingVoicesNumber: 1
+  changeVoices: 1
 --- !u!61 &1091395882
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3044,7 +3054,7 @@ GameObject:
   - component: {fileID: 1519440296}
   m_Layer: 0
   m_Name: ---MusicBox
-  m_TagString: Untagged
+  m_TagString: MusicBox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3063,7 +3073,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ambienceOn: 1
   _musicOn: 1
-  _voicesOn: 0
+  _voicesOn: 1
   _masterVolume: 1
   _ambienceVolume: 1
   _musicVolume: 1
@@ -3072,7 +3082,7 @@ MonoBehaviour:
   player: {fileID: 1903572481}
   _ambience: event:/Ambience/Climbing_ambience
   _music: event:/Music/climbing_music
-  _voices: 
+  _voices: event:/Voices/voices_climbing
   _scream: 
   _engine: event:/Engine/engine_mountain
   _oneShotEngineLeft: 
@@ -3423,6 +3433,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawner: {fileID: 2045796049}
+  climbingVoicesNumber: 1
+  changeVoices: 0
 --- !u!61 &1740783193
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3915,6 +3927,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawner: {fileID: 2045796049}
+  climbingVoicesNumber: 2
+  changeVoices: 1
 --- !u!61 &1917966564
 BoxCollider2D:
   m_ObjectHideFlags: 0

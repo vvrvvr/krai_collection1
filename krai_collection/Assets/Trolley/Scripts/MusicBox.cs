@@ -103,6 +103,11 @@ namespace krai_trol
 			//Debug.Log("distance " + distance);
 		}
 
+		public void ClimbingSetVoicesParameter(float param)
+        {
+			_voiceEvent.setParameterByName("climbing_distance", param);
+		}
+
 		public void PlayScream()
 		{
 			if (_scream == "") return;
