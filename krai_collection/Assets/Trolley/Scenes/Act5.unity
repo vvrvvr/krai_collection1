@@ -3074,7 +3074,7 @@ MonoBehaviour:
   _music: event:/Music/climbing_music
   _voices: 
   _scream: 
-  _engine: 
+  _engine: event:/Engine/engine_mountain
   _oneShotEngineLeft: 
   _oneShotEngineRight: 
 --- !u!4 &1519440297
@@ -3751,6 +3751,7 @@ MonoBehaviour:
   wheel: {fileID: 958823107}
   ground: {fileID: 340929207}
   HasControl: 1
+  _musicBox: {fileID: 1519440296}
 --- !u!50 &1903572483
 Rigidbody2D:
   serializedVersion: 4
@@ -4037,6 +4038,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 3078527733596932050, guid: 0de9e74cb242ee5478e06652faf8cff6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3078527733596932051, guid: 0de9e74cb242ee5478e06652faf8cff6, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -4135,7 +4140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5760665077129265574, guid: 0de9e74cb242ee5478e06652faf8cff6, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0de9e74cb242ee5478e06652faf8cff6, type: 3}

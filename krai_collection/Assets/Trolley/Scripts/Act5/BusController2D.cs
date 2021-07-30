@@ -13,6 +13,7 @@ namespace krai_trol
 		public Collider2D ground;
 		private float inputTotal;
 		[HideInInspector] public bool HasControl = true;
+		[SerializeField] private MusicBox _musicBox;
 
 
 
@@ -24,7 +25,14 @@ namespace krai_trol
 		private void FixedUpdate()
 		{
 			if (HasControl)
+			{
 				MoveBus();
+				EngineSound();
+			}
+			else
+			{
+				_musicBox.PlaySlippingSound(0);
+			}
 		}
 
 
@@ -39,6 +47,16 @@ namespace krai_trol
 			}
 			if (wheel.IsTouching(ground))
 				rb2D.AddForce(gameObject.transform.rotation * Vector2.right * busSpeed * inputTotal * rb2D.mass);
+		}
+
+		private void EngineSound()
+        {
+			var _rawHorInput = Input.GetAxisRaw("Horizontal");
+			var _rawVertInput = Input.GetAxisRaw("Vertical");
+			int inputTotal = 0;
+			if (_rawHorInput != 0 || _rawVertInput != 0)
+				inputTotal = 1;
+			_musicBox.PlaySlippingSound(inputTotal);
 		}
 	}
 }

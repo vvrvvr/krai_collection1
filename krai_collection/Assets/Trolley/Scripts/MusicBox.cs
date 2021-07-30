@@ -126,7 +126,37 @@ namespace krai_trol
 			_screamEvent.setVolume(_voicesVolume * _masterVolume * volume);
 			_screamEvent.start();
 		}
+		public void PlaySlippingSound(int condition)
+        {
+			if (_engine == "") return;
 
+			if (!_engineEvent.isValid())
+			{
+				_engineEvent = FMODUnity.RuntimeManager.CreateInstance(_engine);
+				if (player != null)
+					FMODUnity.RuntimeManager.AttachInstanceToGameObject(_engineEvent, player.transform);
+				else
+					_engineEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
+				_engineEvent.setVolume(_engineVolume * _masterVolume);
+				
+			}
+			else
+			{
+				if (IsPlaying(_engineEvent))
+				{
+					_engineEvent.setParameterByName("mountain", condition); 
+				}
+				else
+                {
+					if (condition == 1)
+					{
+						_engineEvent.setParameterByName("mountain", 1); //pressed
+						_engineEvent.start();
+					}
+					
+				}
+			}
+		}
 
 		public void PlayEngineSound(bool isPlay)
 		{
@@ -234,6 +264,14 @@ namespace krai_trol
 			_voiceEvent.setVolume(_voicesVolume * _masterVolume);
 			_screamEvent.setVolume(_voicesVolume * _masterVolume);
 			_engineEvent.setVolume(_engineVolume * _masterVolume);
+		}
+
+
+		private bool IsPlaying(FMOD.Studio.EventInstance instance)
+		{
+			FMOD.Studio.PLAYBACK_STATE state;
+			instance.getPlaybackState(out state);
+			return state != FMOD.Studio.PLAYBACK_STATE.STOPPED;
 		}
 	}
 }

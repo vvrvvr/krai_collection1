@@ -18,7 +18,9 @@ namespace krai_trol
 		private void Start()
 		{
 			_fade.FadeIn();
+			PlayerPrefs.SetFloat("Volume", 1f);
 			volume.value = PlayerPrefs.GetFloat("Volume", 1);
+			
 		}
 
 		private void Update()
