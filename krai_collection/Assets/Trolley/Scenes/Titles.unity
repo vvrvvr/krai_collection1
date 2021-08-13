@@ -468,9 +468,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Game Developer - Dmitry Zhdanov
-
-    Vocal - Unique choir'
+  m_text: "\u0410\u043D\u0441\u0430\u043C\u0431\u043B\u044C \xAB\u041A\u043B\u0430\u0434\u0435\u0446\xBB\r\n\r\n\u0414\u0443\u043D\u044F
+    \u0424\u0435\u0434\u043E\u0440\u043E\u0432\u0430\r\n\u0421\u0430\u0448\u0430
+    \u0424\u0435\u0434\u043E\u0440\u043E\u0432\u0430\r\n\u041E\u043B\u044F \u0424\u043E\u043A\u0438\u043D\u0430\r\n\u041A\u0430\u0442\u044F
+    \u0410\u0431\u0434\u0443\u043B\u043B\u0430\u0435\u0432\u0430"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -867,12 +868,15 @@ MonoBehaviour:
   _ambienceVolume: 1
   _musicVolume: 1
   _voicesVolume: 1
-  _tireVolume: 1
+  _engineVolume: 1
+  player: {fileID: 0}
   _ambience: 
   _music: 
   _voices: 
   _scream: 
-  _tire: 
+  _engine: 
+  _oneShotEngineLeft: 
+  _oneShotEngineRight: 
 --- !u!4 &1663871745
 Transform:
   m_ObjectHideFlags: 0
@@ -946,7 +950,12 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Game Designer - Konstantin Kushko
 
-    2D Artist -  Mariya Saakyan'
+    2D Artist -  Mariya Saakyan
+
+    Programmer
+    - Vlad Svistunov
+
+    Game Developer - Dmitry Zhdanov'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1080,7 +1089,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Thank you for playing!
+  m_text: "\u0421\u043F\u0430\u0441\u0438\u0431\u043E, \u0447\u0442\u043E \u0431\u044B\u043B\u0438
+    \u0442\u0440\u043E\u043B\u043B\u0435\u0439\u0431\u0443\u0441\u043E\u043C"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

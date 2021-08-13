@@ -647,6 +647,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3325583467913471700, guid: 3f58082c10f875a49b957cde81e1260f, type: 3}
+      propertyPath: maxTime
+      value: 120
+      objectReference: {fileID: 0}
     - target: {fileID: 6273779975960405830, guid: 3f58082c10f875a49b957cde81e1260f, type: 3}
       propertyPath: m_Name
       value: timer
