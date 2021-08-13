@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.01.00">
 	<object class="Event" id="{c0a1ba43-e175-461b-bfcd-28ba7e7b49df}">
 		<property name="name">
-			<value>talks213</value>
+			<value>PESHKOM I TO BYSTREE</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
@@ -60,7 +60,7 @@
 	<object class="MarkerTrack" id="{fc421f9f-28a1-49b6-9623-30ae478f16a0}" />
 	<object class="GroupTrack" id="{65195ad2-e9fe-4d81-96fb-783596b37c98}">
 		<relationship name="modules">
-			<destination>{6268bb24-8334-4f7b-ac17-b26342a23585}</destination>
+			<destination>{eb0360ae-25b3-4a5e-bc3b-f6fd4d26e15b}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{7abe9a86-1188-47f2-b538-b421885f5e18}</destination>
@@ -68,7 +68,7 @@
 	</object>
 	<object class="Timeline" id="{8428bbfa-b6ae-4df7-b390-71c5651fa0bb}">
 		<relationship name="modules">
-			<destination>{6268bb24-8334-4f7b-ac17-b26342a23585}</destination>
+			<destination>{eb0360ae-25b3-4a5e-bc3b-f6fd4d26e15b}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{c3eeb52f-6268-4502-96ea-c47183a8f818}">
@@ -88,12 +88,12 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{8dc453b5-12ee-4de3-bfbe-07647bc856ef}" />
-	<object class="SingleSound" id="{6268bb24-8334-4f7b-ac17-b26342a23585}">
+	<object class="SingleSound" id="{eb0360ae-25b3-4a5e-bc3b-f6fd4d26e15b}">
 		<property name="length">
-			<value>2.6485833333333333</value>
+			<value>2.9403854875283448</value>
 		</property>
 		<relationship name="audioFile">
-			<destination>{927f5c15-4534-4dcd-8d20-3c29472f5394}</destination>
+			<destination>{152f0801-d735-4dfe-963f-4b10f3d8d797}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{7abe9a86-1188-47f2-b538-b421885f5e18}">

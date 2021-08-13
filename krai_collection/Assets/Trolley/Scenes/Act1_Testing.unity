@@ -132,7 +132,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3908901976127347651, guid: eb404c4d0fb92f5408097147999408b3, type: 3}
       propertyPath: _scream
-      value: event:/GrandmasTalk/talks213
+      value: event:/GrandmasTalk/PESHKOM I TO BYSTREE
       objectReference: {fileID: 0}
     - target: {fileID: 3908901976127347651, guid: eb404c4d0fb92f5408097147999408b3, type: 3}
       propertyPath: _musicBox
@@ -4462,7 +4462,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3908901976127347651, guid: eb404c4d0fb92f5408097147999408b3, type: 3}
       propertyPath: _scream
-      value: event:/GrandmasTalk/talks213
+      value: event:/GrandmasTalk/PESHKOM I TO BYSTREE
       objectReference: {fileID: 0}
     - target: {fileID: 3908901976127347651, guid: eb404c4d0fb92f5408097147999408b3, type: 3}
       propertyPath: _musicBox
@@ -10379,7 +10379,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3908901976127347651, guid: eb404c4d0fb92f5408097147999408b3, type: 3}
       propertyPath: _scream
-      value: event:/GrandmasTalk/talks213
+      value: event:/GrandmasTalk/PESHKOM I TO BYSTREE
       objectReference: {fileID: 0}
     - target: {fileID: 3908901976127347651, guid: eb404c4d0fb92f5408097147999408b3, type: 3}
       propertyPath: _musicBox
