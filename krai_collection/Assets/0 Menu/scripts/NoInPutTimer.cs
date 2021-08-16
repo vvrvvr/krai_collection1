@@ -63,6 +63,7 @@ public class NoInPutTimer : MonoBehaviour
             {
                 sceneText.text = $"текущая сцена:{SceneManager.GetActiveScene().buildIndex}";
             }
+            Cursor.lockState = isGDActive ? CursorLockMode.None : CursorLockMode.Locked;
             //if (isGDActive)
             //{
             //    Cursor.visible = true;
