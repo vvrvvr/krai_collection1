@@ -7,6 +7,9 @@ public class NoInPutTimer : MonoBehaviour
 {
     [SerializeField] GameObject timerScreen;
     [SerializeField] private float maxTime = 30f;
+    [SerializeField] private GameObject gDPanel;
+    [SerializeField] private Text sceneText;
+    private bool isGDActive = false;
     private Text timerText;
     private float currentTime = 0f;
     Vector3 lastMousePosition;
@@ -51,6 +54,22 @@ public class NoInPutTimer : MonoBehaviour
             lastMousePosition = Input.mousePosition;
             currentTime = 0f;
         }
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            isGDActive = !isGDActive;
+            gDPanel.SetActive(isGDActive);
+            Cursor.visible = isGDActive;
+            if (isGDActive)
+            {
+                sceneText.text = $"текущая сцена:{SceneManager.GetActiveScene().buildIndex}";
+            }
+            //if (isGDActive)
+            //{
+            //    Cursor.visible = true;
+            //    Cursor.lockState = controllerPauseState ? CursorLockMode.None : CursorLockMode.Locked;
+            //    Cursor.visible = controllerPauseState;
+            //}
+        }
     }
 
 
@@ -86,7 +105,7 @@ public class NoInPutTimer : MonoBehaviour
         }
         if (minutes == 0 && seconds == 5)
         {
-           // ScaleEffect();
+            // ScaleEffect();
         }
         miliseconds -= Time.unscaledDeltaTime * 100;
         timerText.text = string.Format("выход в меню через: {0}:{1}:{2}", minutes, seconds, (int)miliseconds);
@@ -98,6 +117,11 @@ public class NoInPutTimer : MonoBehaviour
         scale.Append(timerText.transform.DOScale(new Vector3(1.2f, 1.2f, 1.2f), 0.5f));
         scale.Append(timerText.transform.DOScale(Vector3.one, 0.5f));
         scale.SetLoops(5);
+    }
+
+    public void ChangeScene(int number)
+    {
+        SceneManager.LoadScene(number);
     }
 }
 

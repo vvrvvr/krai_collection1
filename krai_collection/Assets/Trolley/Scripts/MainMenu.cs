@@ -20,7 +20,10 @@ namespace krai_trol
 			_fade.FadeIn();
 			PlayerPrefs.SetFloat("Volume", 1f);
 			volume.value = PlayerPrefs.GetFloat("Volume", 1);
-			
+			if(SceneManager.GetActiveScene().buildIndex == 7)
+				Cursor.visible = true;
+			else
+				Cursor.visible = false;
 		}
 
 		private void Update()
