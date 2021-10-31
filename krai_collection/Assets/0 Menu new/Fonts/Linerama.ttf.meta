@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 3c2f04835aae8c74e9c58788da086ed2
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Linerama
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 1b8aba1a5b7a3a04fa89d2a40cc28ce0, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
