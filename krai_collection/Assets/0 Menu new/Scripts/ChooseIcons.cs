@@ -6,6 +6,7 @@ namespace krai_menu
     public class ChooseIcons : MonoBehaviour
     {
         [SerializeField] private GameObject[] iconsCollection;
+        [SerializeField] private LevelLoader levelLoader;
         private int previousChoosen = -1;
         void Start()
         {
@@ -20,6 +21,26 @@ namespace krai_menu
             {
                 Debug.Log(index);
                 //double click functionality here
+                switch (index)
+                {
+                    case 0:
+                        levelLoader.LoadLevel(7);
+                        break;
+                    case 1:
+                        levelLoader.LoadLevel(5);
+                        break;
+                    case 2:
+                        levelLoader.LoadLevel(2);
+                        break;
+                    case 3:
+                        levelLoader.LoadLevel(15);
+                        break;
+                    case 4:
+                        levelLoader.LoadLevel(1);
+                        break;
+                    default:
+                        break;
+                }
             }
             else if (previousChoosen == index)
                 return;
