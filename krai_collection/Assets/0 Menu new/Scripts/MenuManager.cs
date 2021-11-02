@@ -2,6 +2,7 @@ using UnityEngine.UI;
 using UnityEngine;
 using DG.Tweening;
 using krai_menu;
+using System.Collections;
 
 namespace krai_menu
 {
@@ -25,14 +26,22 @@ namespace krai_menu
 
         void Update()
         {
+            
+        }
+        private void LateUpdate()
+        {
             if (Input.anyKey && canHideTitles)
             {
+                StartCoroutine(WaitTime());
                 
-                if (isTitlesShown)
-                    HideTitles();
             }
         }
-
+        private  IEnumerator WaitTime()
+        {
+            yield return new WaitForSeconds(0.15f);
+            if (isTitlesShown)
+                HideTitles();
+        }
         public void ShowTitles()
         {
             StopAll();
