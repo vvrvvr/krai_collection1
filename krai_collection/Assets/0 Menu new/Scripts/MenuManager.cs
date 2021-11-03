@@ -26,17 +26,14 @@ namespace krai_menu
 
         void Update()
         {
-            
-        }
-        private void LateUpdate()
-        {
-            if (Input.anyKey && canHideTitles)
+            if (Input.anyKeyDown && canHideTitles)
             {
                 StartCoroutine(WaitTime());
-                
+
             }
         }
-        private  IEnumerator WaitTime()
+        //GetKeyDown(KeyCode.Space)
+        private IEnumerator WaitTime()
         {
             yield return new WaitForSeconds(0.15f);
             if (isTitlesShown)

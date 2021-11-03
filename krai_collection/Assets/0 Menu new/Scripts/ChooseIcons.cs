@@ -19,24 +19,29 @@ namespace krai_menu
         {
             if (previousChoosen == index && isDoubleclick)
             {
-                Debug.Log(index);
+                //Debug.Log(index);
                 //double click functionality here
                 switch (index)
                 {
                     case 0:
-                        levelLoader.LoadLevel(7);
+                        levelLoader.LoadLevel("MainMenu");
+                        Debug.Log("troll");
                         break;
                     case 1:
-                        levelLoader.LoadLevel(5);
+                        levelLoader.LoadLevel("room_MainMenu");
+                        Debug.Log("room");
                         break;
                     case 2:
-                        levelLoader.LoadLevel(2);
+                        levelLoader.LoadLevel("flower_choose_lang");
+                        Debug.Log("cvetok");
                         break;
                     case 3:
-                        levelLoader.LoadLevel(15);
+                        levelLoader.LoadLevel("MenuScene");
+                        Debug.Log("running word");
                         break;
                     case 4:
-                        levelLoader.LoadLevel(1);
+                        levelLoader.LoadLevel("shooter");
+                        Debug.Log("org");
                         break;
                     default:
                         break;

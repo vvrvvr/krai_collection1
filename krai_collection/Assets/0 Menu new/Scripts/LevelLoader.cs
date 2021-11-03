@@ -10,15 +10,16 @@ namespace krai_menu
         [SerializeField] private GameObject loadingScreen;
         public Slider slider;
 
-        public void LoadLevel(int sceneIndex)
+        public void LoadLevel(string level)
         {
-            StartCoroutine(LoadAsyncr(sceneIndex));
             Cursor.visible = true;
+            StartCoroutine(LoadAsyncr(level));
+            
         }
 
-        IEnumerator LoadAsyncr(int index)
+        IEnumerator LoadAsyncr(string levelName)
         {
-            AsyncOperation operation = SceneManager.LoadSceneAsync(index);
+            AsyncOperation operation = SceneManager.LoadSceneAsync(levelName);
             loadingScreen.SetActive(true);
             while (!operation.isDone)
             {
