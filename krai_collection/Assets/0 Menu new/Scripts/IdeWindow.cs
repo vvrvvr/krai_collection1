@@ -10,6 +10,7 @@ namespace krai_menu
     {
         [SerializeField] private Text screenText;
         [SerializeField] private Scrollbar scrollbar;
+        [SerializeField] private MenuMusic music;
         private bool isScrollbarLocked;
         private bool isTimerActive = true;
         private float waitingTime = 0;
@@ -56,6 +57,7 @@ namespace krai_menu
 
         private void PrintCode()
         {
+            music.PlayTypingSound(true);
             isScrollbarLocked = true;
             var i = Random.Range(0, code.Length);
             //Debug.Log(i);
@@ -64,6 +66,7 @@ namespace krai_menu
         }
         private void CompleteCode()
         {
+            music.PlayTypingSound(false);
             isScrollbarLocked = false;
             isTimerActive = true;
             waitingTime = Random.Range(8, 15);

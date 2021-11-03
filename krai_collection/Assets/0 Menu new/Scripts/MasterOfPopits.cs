@@ -12,6 +12,7 @@ namespace krai_menu
     public class MasterOfPopits : MonoBehaviour
     {
         [SerializeField] private GameObject popitPrafab;
+        [SerializeField] private MenuMusic music;
         [SerializeField] private Transform[] anchors;
         public List<GameObject> popitsList = new List<GameObject>();
         private GameObject currentPopit;
@@ -53,6 +54,7 @@ namespace krai_menu
         private void CreatePopit()
         {
             var newPopit = Instantiate(popitPrafab, anchors[0].position, Quaternion.identity);
+            music.PlayMessageSound();
             indexOfPhrases++;
             if (indexOfPhrases >= phrases.Length)
             {

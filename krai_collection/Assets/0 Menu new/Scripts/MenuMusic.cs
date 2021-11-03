@@ -1,66 +1,98 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using krai_menu;
 
-public class MenuMusic : MonoBehaviour
+namespace krai_menu
 {
-    [Space]
-    [SerializeField] protected bool _musicOn;
 
-    [Space]
-    [SerializeField] protected float _masterVolume = 1;
-    [SerializeField] protected float _musicVolume = 1;
-    [SerializeField] protected float _typingVolume = 1;
-    [SerializeField] protected float _messageVolume = 1;
-
-    [Space]
-    //[FMODUnity.EventRef] [SerializeField] protected string _typing;
-    [FMODUnity.EventRef] [SerializeField] protected string _music;
-    [FMODUnity.EventRef] [SerializeField] protected string _messageOneShot;
-
-    protected FMOD.Studio.EventInstance _musicEvent;
-    protected FMOD.Studio.EventInstance _typingEvent;
-
-
-    void Start()
+    public class MenuMusic : MonoBehaviour
     {
-        if (_musicOn)
-            PlayMusic();
-    }
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Space))
+        [Space]
+        [SerializeField] protected bool _musicOn;
+
+        [Space]
+        [SerializeField] protected float _masterVolume = 1;
+        [SerializeField] protected float _musicVolume = 1;
+        [SerializeField] protected float _typingVolume = 1;
+        [SerializeField] protected float _messageVolume = 1;
+
+        [Space]
+        //[FMODUnity.EventRef] [SerializeField] protected string _typing;
+        [FMODUnity.EventRef] [SerializeField] protected string _music;
+        [FMODUnity.EventRef] [SerializeField] protected string _typing;
+        [FMODUnity.EventRef] [SerializeField] protected string _messageOneShot;
+
+        protected FMOD.Studio.EventInstance _musicEvent;
+        protected FMOD.Studio.EventInstance _typingEvent;
+
+
+        void Start()
         {
-            FadeMusic(true);
+            if (_musicOn)
+                PlayMusic();
+            StartTypingEvent();
+
         }
-        if (Input.GetKeyDown(KeyCode.V))
+
+        private void OnDestroy()
         {
-            FadeMusic(false);
+            _typingEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            _musicEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         }
-    }
+
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                FadeMusic(true);
+            }
+            if (Input.GetKeyDown(KeyCode.V))
+            {
+                FadeMusic(false);
+            }
+        }
 
 
-    public void PlayMusic()
-    {
-        if (_music == "") return;
+        public void PlayMusic()
+        {
+            if (_music == "") return;
 
-        _musicEvent = FMODUnity.RuntimeManager.CreateInstance(_music);
-        _musicEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
-        _musicEvent.setVolume(_musicVolume * _masterVolume);
-        _musicEvent.start();
-        _musicEvent.setParameterByName("music_fade", 1f);
-    }
-
-    public void FadeMusic(bool isFade)
-    {
-        if (isFade)
-            _musicEvent.setParameterByName("music_fade", 0f);
-        else
+            _musicEvent = FMODUnity.RuntimeManager.CreateInstance(_music);
+            _musicEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
+            _musicEvent.setVolume(_musicVolume * _masterVolume);
+            _musicEvent.start();
             _musicEvent.setParameterByName("music_fade", 1f);
+        }
+        public void StartTypingEvent()
+        {
+            if (_typing == "") return;
 
-    }
-    public void PlayMessageSound()
-    {
+            _typingEvent = FMODUnity.RuntimeManager.CreateInstance(_typing);
+            _typingEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
+            _typingEvent.setVolume(_typingVolume * _masterVolume);
+            _typingEvent.start();
+            _typingEvent.setPaused(true);
+        }
+        public void PlayTypingSound(bool isPlay)
+        {
+            if (isPlay)
+                _typingEvent.setPaused(false);
+            else
+                _typingEvent.setPaused(true);
+        }
 
+        public void FadeMusic(bool isFade)
+        {
+            if (isFade)
+                _musicEvent.setParameterByName("music_fade", 0f);
+            else
+                _musicEvent.setParameterByName("music_fade", 1f);
+
+        }
+        public void PlayMessageSound()
+        {
+            FMODUnity.RuntimeManager.PlayOneShotAttached(_messageOneShot, this.gameObject);
+        }
     }
 }
