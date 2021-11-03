@@ -10,6 +10,7 @@ namespace krai_menu
     public class CustomCursor : MonoBehaviour
     {
         [SerializeField] private ChooseIcons chooseIcons;
+        [SerializeField] private MenuMusic music;
         private Transform tr;
         public LayerMask iconLayer;
 
@@ -57,5 +58,19 @@ namespace krai_menu
 
         }
 
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if(collision.CompareTag("shootable"))
+            {
+                music.FadeMusic(true);
+            }
+        }
+        private void OnTriggerExit2D(Collider2D collision)
+        {
+            if (collision.CompareTag("shootable"))
+            {
+                music.FadeMusic(false);
+            }
+        }
     }
 }

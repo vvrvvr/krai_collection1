@@ -45,12 +45,14 @@ namespace krai_menu
         }
         private void OnMouseEnter()
         {
+            
             pointerMain.SetActive(true);
             pointerSecondary.SetActive(true);
             Cursor.visible = false;
         }
         private void OnMouseExit()
         {
+            
             isCursorVisible = false;
             pointerMain.SetActive(false);
             pointerSecondary.SetActive(false);

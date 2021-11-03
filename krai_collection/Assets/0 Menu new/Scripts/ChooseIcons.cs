@@ -69,5 +69,6 @@ namespace krai_menu
                 iconsCollection[i].SetActive(false);
             }
         }
+        
     }
 }

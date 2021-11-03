@@ -41,17 +41,17 @@ namespace krai_menu
             _musicEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         }
 
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                FadeMusic(true);
-            }
-            if (Input.GetKeyDown(KeyCode.V))
-            {
-                FadeMusic(false);
-            }
-        }
+        //private void Update()
+        //{
+        //    if (Input.GetKeyDown(KeyCode.Space))
+        //    {
+        //        FadeMusic(true);
+        //    }
+        //    if (Input.GetKeyDown(KeyCode.V))
+        //    {
+        //        FadeMusic(false);
+        //    }
+        //}
 
 
         public void PlayMusic()
