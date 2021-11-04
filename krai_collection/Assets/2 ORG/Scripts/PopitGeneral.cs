@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine.Video;
 using UnityEngine.Audio;
 using krai_shooter;
+using System.Collections;
 
 namespace krai_shooter
 {
@@ -160,11 +161,18 @@ namespace krai_shooter
                 Disappear(disappearSpeed);
                 if (isIntro)
                 {
-                    GameManager.Singleton.isStart = true;
-                    GameManager.Singleton.MovePlayer();
-                    SoundManager.Singleton.StartMusic();
+                    StartCoroutine(StartDelay());
                 }
             }
+        }
+        private IEnumerator StartDelay()
+        {
+            yield return new WaitForSeconds(0.2f);
+            Debug.Log("sdfsdf");
+            GameManager.Singleton.isStart = true;
+
+            GameManager.Singleton.MovePlayer();
+            SoundManager.Singleton.StartMusic();
         }
 
         private void Update()

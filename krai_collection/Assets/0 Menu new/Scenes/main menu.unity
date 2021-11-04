@@ -2178,7 +2178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _musicOn: 1
   _masterVolume: 1
-  _musicVolume: 0.1
+  _musicVolume: 1
   _typingVolume: 1
   _messageVolume: 1
   _music: event:/Menu_music
