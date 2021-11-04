@@ -2716,6 +2716,7 @@ GameObject:
   - component: {fileID: 968190755}
   - component: {fileID: 968190754}
   - component: {fileID: 968190753}
+  - component: {fileID: 968190757}
   m_Layer: 5
   m_Name: button link (1)
   m_TagString: Untagged
@@ -2757,6 +2758,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   link: http://residencekrai.ru/
+  cursor1: {fileID: 2800000, guid: cd65adcf0924f2049899e2926340b919, type: 3}
 --- !u!114 &968190754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2851,6 +2853,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 968190751}
   m_CullTransparentMesh: 1
+--- !u!114 &968190757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 968190751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 968190753}
+          m_TargetAssemblyTypeName: ButtonLink, Assembly-CSharp
+          m_MethodName: OnMouseOver
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 968190753}
+          m_TargetAssemblyTypeName: ButtonLink, Assembly-CSharp
+          m_MethodName: OnMouseExit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &989142905
 GameObject:
   m_ObjectHideFlags: 0
@@ -4322,6 +4369,7 @@ GameObject:
   - component: {fileID: 1674026549}
   - component: {fileID: 1674026548}
   - component: {fileID: 1674026551}
+  - component: {fileID: 1674026552}
   m_Layer: 5
   m_Name: button link
   m_TagString: Untagged
@@ -4457,6 +4505,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   link: http://iliamazo.ru/
+  cursor1: {fileID: 2800000, guid: cd65adcf0924f2049899e2926340b919, type: 3}
+--- !u!114 &1674026552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674026546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1674026551}
+          m_TargetAssemblyTypeName: ButtonLink, Assembly-CSharp
+          m_MethodName: OnMouseOver
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1674026551}
+          m_TargetAssemblyTypeName: ButtonLink, Assembly-CSharp
+          m_MethodName: OnMouseExit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1728502125
 GameObject:
   m_ObjectHideFlags: 0
@@ -4835,7 +4929,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1898871485
 RectTransform:
   m_ObjectHideFlags: 0
