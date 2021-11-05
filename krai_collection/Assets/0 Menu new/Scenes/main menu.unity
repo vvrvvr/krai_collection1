@@ -2161,7 +2161,7 @@ MonoBehaviour:
   _masterVolume: 1
   _musicVolume: 1
   _typingVolume: 1
-  _messageVolume: 1
+  _messageVolume: 0.3
   _ambienceVolume: 1
   _music: event:/Menu/menu_music
   _typing: event:/Menu/typing
@@ -3416,7 +3416,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1240574007}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: d862cc4904841e44e956b7d5cc90d35d, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: a39c7ec22a1184d4db222a628a23e6ae, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -3428,7 +3428,7 @@ VideoPlayer:
   m_AspectRatio: 2
   m_DataSource: 0
   m_PlaybackSpeed: 1
-  m_AudioOutputMode: 2
+  m_AudioOutputMode: 0
   m_TargetAudioSources: []
   m_DirectAudioVolumes: []
   m_Url: 
