@@ -2157,13 +2157,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _musicOn: 1
+  _ambienceOn: 1
   _masterVolume: 1
-  _musicVolume: 0.1
+  _musicVolume: 1
   _typingVolume: 1
   _messageVolume: 1
-  _music: event:/Menu_music
-  _typing: event:/typing
-  _messageOneShot: event:/Message_oneshot
+  _ambienceVolume: 1
+  _music: event:/Menu/menu_music
+  _typing: event:/Menu/typing
+  _ambience: event:/Menu/menu_ambience
+  _messageOneShot: event:/Menu/message_oneshot
 --- !u!4 &671984397
 Transform:
   m_ObjectHideFlags: 0
