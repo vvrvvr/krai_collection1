@@ -39,7 +39,7 @@ namespace krai_menu
                 PlayAmbience();
 
             StartTypingEvent();
-
+            
         }
 
         private void OnDestroy()
