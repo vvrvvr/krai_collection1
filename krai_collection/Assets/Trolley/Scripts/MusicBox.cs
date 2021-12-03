@@ -36,6 +36,8 @@ namespace krai_trol
 		protected FMOD.Studio.EventInstance _voiceEvent;
 		protected FMOD.Studio.EventInstance _screamEvent;
 		protected FMOD.Studio.EventInstance _engineEvent;
+		protected FMOD.Studio.EventInstance _hummingMelodyEvent;
+
 
 		private void Start()
 		{
@@ -62,7 +64,8 @@ namespace krai_trol
 			_voiceEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
 			_screamEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
 			_engineEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-			Debug.Log("ыщгтвы вуыекщнув");
+			_hummingMelodyEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+
 		}
 
 		public void PlayAmbient()
@@ -131,7 +134,20 @@ namespace krai_trol
 				_screamEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
 			_screamEvent.setVolume(_voicesVolume * _masterVolume * volume);
 			_screamEvent.start();
-			Debug.Log("should play");
+			
+		}
+		public void PlayHummingMelody(string scream, float volume)
+		{
+
+			_hummingMelodyEvent = FMODUnity.RuntimeManager.CreateInstance(scream);
+
+			if (player != null)
+				_hummingMelodyEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(player.transform));
+			else
+				_hummingMelodyEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
+			_hummingMelodyEvent.setVolume(_voicesVolume * _masterVolume * volume);
+			_hummingMelodyEvent.start();
+
 		}
 		public void PlaySlippingSound(int condition)
         {

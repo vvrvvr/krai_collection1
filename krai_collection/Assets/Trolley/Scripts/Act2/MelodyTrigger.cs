@@ -13,7 +13,7 @@ namespace krai_trol
         {
             if (other.tag == "Bus")
             {
-                _musicBox.PlayScream(_melody, 1);
+                _musicBox.PlayHummingMelody(_melody, 1);
                 Destroy(gameObject);
             }
         }
