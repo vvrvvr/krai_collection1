@@ -62,6 +62,7 @@ namespace krai_trol
 			_voiceEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
 			_screamEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
 			_engineEvent.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+			Debug.Log("ыщгтвы вуыекщнув");
 		}
 
 		public void PlayAmbient()
@@ -108,28 +109,29 @@ namespace krai_trol
 			_voiceEvent.setParameterByName("climbing_distance", param);
 		}
 
-		public void PlayScream()
-		{
-			if (_scream == "") return;
+        public void PlayScream()
+        {
+            if (_scream == "") return;
 
-			_screamEvent = FMODUnity.RuntimeManager.CreateInstance(_scream);
-			_screamEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
-			_screamEvent.setVolume(_voicesVolume * _masterVolume);
-			_screamEvent.start();
-		}
+            _screamEvent = FMODUnity.RuntimeManager.CreateInstance(_scream);
+            _screamEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
+            _screamEvent.setVolume(_voicesVolume * _masterVolume);
+            _screamEvent.start();
+        }
 
-		public void PlayScream(string scream, float volume)
+        public void PlayScream(string scream, float volume)
 		{
 			if (_scream == "") return;
 
 			_screamEvent = FMODUnity.RuntimeManager.CreateInstance(scream);
-			//Debug.Log("should play");
+			
 			if (player != null)
 				_screamEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(player.transform));
 			else
 				_screamEvent.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
 			_screamEvent.setVolume(_voicesVolume * _masterVolume * volume);
 			_screamEvent.start();
+			Debug.Log("should play");
 		}
 		public void PlaySlippingSound(int condition)
         {
