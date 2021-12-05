@@ -63,3 +63,5 @@ crashlytics-build.properties
 
 
 krai_collection/fmod_editor.log
+
+krai_collection/Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset
