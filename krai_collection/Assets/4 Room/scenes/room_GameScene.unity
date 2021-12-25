@@ -1257,7 +1257,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 69090771}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 556d93bb8d3d08c498ca227d2a4ea3c1, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 195f2823dc213af4b9943296619aecf6, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -1270,14 +1270,12 @@ VideoPlayer:
   m_DataSource: 0
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
-  m_TargetAudioSources:
-  - {fileID: 0}
-  m_DirectAudioVolumes:
-  - 1
+  m_TargetAudioSources: []
+  m_DirectAudioVolumes: []
   m_Url: 
-  m_EnabledAudioTracks: 00
-  m_DirectAudioMutes: 00
-  m_ControlledAudioTrackCount: 1
+  m_EnabledAudioTracks: 
+  m_DirectAudioMutes: 
+  m_ControlledAudioTrackCount: 0
   m_PlayOnAwake: 1
   m_SkipOnDrop: 1
   m_Looping: 1
@@ -5844,6 +5842,8 @@ PlayableDirector:
   m_SceneBindings:
   - key: {fileID: 126204168729715990, guid: 91b30747a8bfdb340a04b8d4ce2b4ac4, type: 2}
     value: {fileID: 963194233}
+  - key: {fileID: 2288629909601584247, guid: 91b30747a8bfdb340a04b8d4ce2b4ac4, type: 2}
+    value: {fileID: 1948495443}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &534138569
@@ -16695,6 +16695,7 @@ GameObject:
   - component: {fileID: 1948495441}
   - component: {fileID: 1948495440}
   - component: {fileID: 1948495439}
+  - component: {fileID: 1948495443}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -16770,8 +16771,8 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1948495438}
-  m_LocalRotation: {x: -0, y: 0.0000004172325, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.65}
+  m_LocalRotation: {x: 0, y: 0.0000004172325, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 2.7}
   m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_Children:
   - {fileID: 2001906433}
@@ -16783,6 +16784,25 @@ RectTransform:
   m_AnchoredPosition: {x: 0.02, y: 0.29}
   m_SizeDelta: {x: 726, y: 408}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &1948495443
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948495438}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1960122258
 GameObject:
   m_ObjectHideFlags: 0
