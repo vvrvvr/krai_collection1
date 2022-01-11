@@ -3722,7 +3722,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ambienceOn: 1
   _musicOn: 1
-  _voicesOn: 1
+  _voicesOn: 0
   _masterVolume: 1
   _ambienceVolume: 1
   _musicVolume: 1
