@@ -7,6 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     private static MainMenu instance;
     public static MainMenu Instance => instance;
+    
 
     private void OnLevelWasLoaded(int level)
     {
@@ -16,10 +17,12 @@ public class MainMenu : MonoBehaviour
                 Destroy(_go[i].gameObject);
     }
 
+
     private void Awake()
     {
         instance = this;
     }
+
 
     private void Update()
     {
