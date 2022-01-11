@@ -54,13 +54,13 @@ public class RunWriteController : MonoBehaviour
     {
         if (!playGame) return;
 
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
         {
             Move(1, gameObject);
             angle = Mathf.Clamp((angle + 0.3f), -8, 8);
         }
         else
-        if (Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
         {
             Move(-1, gameObject);
             angle = Mathf.Clamp((angle - 0.3f), -8, 8);
