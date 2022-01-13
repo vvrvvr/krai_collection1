@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: acfad6dd7f9b486468dbdf08de7f249c
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Dobrozrachniy
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 075e7198a1fb2af4996c5268172c82e1, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
