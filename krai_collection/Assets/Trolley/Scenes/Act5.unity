@@ -450,10 +450,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 825940730}
   busController: {fileID: 1903572482}
-  staminaMaxValue: 2
-  decreaseSpeed: 0.6
-  increaseSpeed: 1
-  sliderRecoveryIncreaseSpeed: 0.5
+  staminaMaxValue: 4
+  decreaseSpeed: 0.4
+  increaseSpeed: 2
+  sliderRecoveryIncreaseSpeed: 2
 --- !u!1 &163156330
 GameObject:
   m_ObjectHideFlags: 0
@@ -695,7 +695,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.19740295, y: 0.4361}
+  m_AnchoredPosition: {x: -0.1973877, y: 0.4360962}
   m_SizeDelta: {x: -5.5488, y: -4.5335}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &317977865
@@ -888,20 +888,20 @@ PolygonCollider2D:
       - {x: 44.983917, y: 4.8932886}
       - {x: 44.583294, y: 4.664363}
       - {x: 39.14631, y: 1.4021704}
-      - {x: 38.402298, y: 0.8870874}
+      - {x: 38.402298, y: 0.88708746}
       - {x: 37.772755, y: 0.3720044}
       - {x: 37.314903, y: 0.08584717}
-      - {x: 36.685356, y: -0.3720044}
-      - {x: 36.51366, y: -0.5436987}
+      - {x: 36.685356, y: -0.37200442}
+      - {x: 36.51366, y: -0.54369867}
       - {x: 35.826885, y: -1.0015503}
       - {x: 35.65519, y: -1.1732446}
       - {x: 34.968414, y: -1.6310961}
-      - {x: 34.79672, y: -1.8027905}
+      - {x: 34.79672, y: -1.8027904}
       - {x: 34.10994, y: -2.260642}
       - {x: 33.25147, y: -2.890188}
       - {x: 32.793617, y: -3.2335765}
       - {x: 32.278534, y: -3.5769653}
-      - {x: 31.534527, y: -3.920354}
+      - {x: 31.534527, y: -3.9203537}
       - {x: 30.676054, y: -4.320974}
       - {x: 29.3025, y: -5.0077515}
       - {x: 29.188036, y: -5.0077515}
@@ -911,10 +911,10 @@ PolygonCollider2D:
       - {x: 24.723984, y: -7.1253147}
       - {x: 24.609522, y: -7.1253147}
       - {x: 23.751049, y: -7.525935}
-      - {x: 23.00704, y: -7.8693237}
+      - {x: 23.00704, y: -7.869324}
       - {x: 21.633486, y: -8.556101}
-      - {x: 21.519024, y: -8.556101}
-      - {x: 19.573154, y: -9.529036}
+      - {x: 21.519024, y: -8.575108}
+      - {x: 19.5985, y: -9.497356}
       - {x: 19.45869, y: -9.529036}
       - {x: 17.283895, y: -10.559201}
       - {x: 16.082035, y: -11.131516}
@@ -978,9 +978,9 @@ PolygonCollider2D:
       - {x: -37.60106, y: -24.580906}
       - {x: -40.233707, y: -24.924294}
       - {x: -41.09218, y: -25.038757}
-      - {x: -42.294037, y: -25.09599}
+      - {x: -42.229942, y: -25.115711}
       - {x: -42.35127, y: -25.15322}
-      - {x: -50.535366, y: -25.15322}
+      - {x: -50.505783, y: -25.16801}
       - {x: -50.592598, y: -25.210451}
       - {x: -54.598797, y: -25.210451}
       - {x: -55.85789, y: -25.324915}
@@ -2100,10 +2100,10 @@ RectTransform:
   m_Father: {fileID: 70431698}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -492}
-  m_SizeDelta: {x: 200, y: 30.000977}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 31.673203}
+  m_SizeDelta: {x: 200, y: 16.1654}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &825940730
 MonoBehaviour:
@@ -2881,7 +2881,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -4728,7 +4728,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5760665077129265574, guid: 0de9e74cb242ee5478e06652faf8cff6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0de9e74cb242ee5478e06652faf8cff6, type: 3}
