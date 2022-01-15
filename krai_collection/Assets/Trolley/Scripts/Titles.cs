@@ -14,11 +14,11 @@ namespace krai_trol
 		[Space]
 		[SerializeField] private float _titelShowTime;
 
-		private TextMeshProUGUI[] _titles;
+		private Text[] _titles;
 
 		private void Start()
 		{
-			_titles = gameObject.GetComponentsInChildren<TextMeshProUGUI>();
+			_titles = gameObject.GetComponentsInChildren<Text>();
 			foreach (var title in _titles) title.gameObject.SetActive(false);
 			StartCoroutine(ShowTitles());
 		}
