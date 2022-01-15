@@ -178,8 +178,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _image: {fileID: 1915825143}
-  FadeInTime: 1
-  FadeOutTime: 1
+  FadeInTime: 1.2
+  FadeOutTime: 1.2
 --- !u!114 &36481750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,7 +194,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _fade: {fileID: 36481748}
   _act: 0
-  _titelShowTime: 2
+  _titelShowTime: 2.35
 --- !u!1 &58901824
 GameObject:
   m_ObjectHideFlags: 0
@@ -1112,7 +1112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _ambienceOn: 0
-  _musicOn: 0
+  _musicOn: 1
   _voicesOn: 0
   _masterVolume: 1
   _ambienceVolume: 1
@@ -1121,7 +1121,7 @@ MonoBehaviour:
   _engineVolume: 1
   player: {fileID: 0}
   _ambience: 
-  _music: event:/Music/mountain_song_1
+  _music: event:/Music/titles_song
   _voices: 
   _scream: 
   _engine: 
