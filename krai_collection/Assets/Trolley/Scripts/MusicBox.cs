@@ -38,9 +38,16 @@ namespace krai_trol
 		protected FMOD.Studio.EventInstance _engineEvent;
 		protected FMOD.Studio.EventInstance _hummingMelodyEvent;
 
-
-		private void Start()
+        private void Awake()
+        {
+			if (!PlayerPrefs.HasKey("Volume"))
+			{
+				PlayerPrefs.SetFloat("Volume", 1);
+			}
+		}
+        private void Start()
 		{
+            
 			_masterVolume = PlayerPrefs.GetFloat("Volume");
 
 			if (_ambienceOn)
