@@ -1,6 +1,5 @@
 using UnityEngine.SceneManagement;
 using UnityEngine;
-using DG.Tweening;
 
 public class Endings : MonoBehaviour
 {
