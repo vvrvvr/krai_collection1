@@ -27,6 +27,8 @@ public class AssetText : MonoBehaviour
     }
 
     public wordCollection[] word = new wordCollection[3];
+    public wordCollection[] wordRussian = new wordCollection[3];
+    public wordCollection[] wordEnglish = new wordCollection[3];
 
     private void Awake()
     {
