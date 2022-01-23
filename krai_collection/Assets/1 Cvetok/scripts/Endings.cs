@@ -15,6 +15,8 @@ public class Endings : MonoBehaviour
             return;
         }
         Singleton = this;
+        if(LanguageSettings.Singleton != null)
+            isRussian = LanguageSettings.Singleton.isRussian;
         DontDestroyOnLoad(gameObject);
     }
     public void WriteEnding(int i)
@@ -22,14 +24,14 @@ public class Endings : MonoBehaviour
         Ending = i;
         openedEndings[i] = 1;
     }
-    public void SetLanguageEnglishAndStart()
-    {
-        isRussian = false;
-        SceneManager.LoadScene("flower_game");
-    }
-    public void StartGame()
-    {
-        isRussian = true;
-        SceneManager.LoadScene("flower_game");
-    }
+    //public void SetLanguageEnglishAndStart()
+    //{
+    //    isRussian = false;
+    //    SceneManager.LoadScene("flower_game");
+    //}
+    //public void StartGame()
+    //{
+    //    isRussian = true;
+    //    SceneManager.LoadScene("flower_game");
+    //}
 }
