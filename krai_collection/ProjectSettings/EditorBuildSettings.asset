@@ -60,7 +60,7 @@ EditorBuildSettings:
     path: Assets/5 Running word/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Localization/testLang.unity
+    path: Assets/Localization/ChooseLanguage.unity
     guid: f21907a4dd85eb54e8c7821c1ca7060f
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 844dc227af371de4f9857c08c95222ed, type: 2}

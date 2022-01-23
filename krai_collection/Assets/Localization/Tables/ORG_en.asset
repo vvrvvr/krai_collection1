@@ -26,5 +26,27 @@ MonoBehaviour:
     m_Localized: no
     m_Metadata:
       m_Items: []
+  - m_Id: 22508474011648
+    m_Localized: 'Congratulations! You have just got a promotion. From now on you
+      are responsible for the art transfer through CAD (Culture Assurance Department),
+      including sorting and screening.
+
+      Be careful not to skip unwanted elements
+      or make gross expert errors, remember: the cultural enrichment of our clients
+      lies in your hands.
+
+      
+
+      Your new identification number is 93882.
+      Office No. 3684 is assigned to you. From the next working week, you need to
+      pick up Tool No. 78433. You will be guided in your work by Agent No. 10002,
+      he is your closest friend and mentor. Good luck!
+
+      
+
+      The future
+      is CAD. CAD is the Future.'
+    m_Metadata:
+      m_Items: []
   references:
     version: 1

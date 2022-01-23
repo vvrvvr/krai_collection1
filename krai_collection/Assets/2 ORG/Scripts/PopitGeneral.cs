@@ -54,7 +54,8 @@ namespace krai_shooter
         private AudioSource _audio;
 
 
-        private string from = "\n\nÓÚ ¿√≈Õ“¿ 10002";
+        //private string from = "\n\nÓÚ ¿√≈Õ“¿ 10002";
+        //private string fromEnglish = "\n\nfrom AGENT 10002";
 
         //intro
         [SerializeField] private bool isIntro;
@@ -107,7 +108,7 @@ namespace krai_shooter
             if (isNotification)
             {
                 var currentText = text.GetComponent<Text>();
-                currentText.text = ArtSource.Singleton.GetRandomNotification() + from;
+                currentText.text = ArtSource.Singleton.GetRandomNotification();// + from;
             }
 
             if (lifetime > 0)

@@ -14,10 +14,21 @@ namespace krai_shooter
         [SerializeField] private string[] texts = new string[0];
         [SerializeField] private string[] genres = new string[0];
         [SerializeField] private string[] notifications = new string[0];
+        [SerializeField] private string[] textsEnglish = new string[0];
+        [SerializeField] private string[] genresEnglish = new string[0];
+        [SerializeField] private string[] notificationsEnglish = new string[0];
+        private bool isRussian = true;
+        private string from = "\n\nÓÚ ¿√≈Õ“¿ 10002";
+        private string fromEnglish = "\n\nfrom AGENT 10002";
 
         private void Awake()
         {
             Singleton = this;
+        }
+        private void Start()
+        {
+            if(LanguageSettings.Singleton != null)
+                isRussian = LanguageSettings.Singleton.isRussian;
         }
         public Sprite GetRandomSprite()
         {
@@ -32,18 +43,42 @@ namespace krai_shooter
         }
         public string GetRandomText()
         {
-            var numb = Random.Range(0, texts.Length);
-            return texts[numb];
+            if(isRussian)
+            {
+                var numb = Random.Range(0, texts.Length);
+                return texts[numb];
+            }
+            else
+            {
+                var numb = Random.Range(0, textsEnglish.Length);
+                return textsEnglish[numb];
+            }
         }
         public string GetRandomGenre()
         {
-            var numb = Random.Range(0, genres.Length);
-            return genres[numb];
+            if (isRussian)
+            {
+                var numb = Random.Range(0, genres.Length);
+                return genres[numb];
+            }
+            else
+            {
+                var numb = Random.Range(0, genresEnglish.Length);
+                return genresEnglish[numb];
+            }
         }
         public string GetRandomNotification()
         {
-            var numb = Random.Range(0, notifications.Length);
-            return notifications[numb];
+            if (isRussian)
+            {
+                var numb = Random.Range(0, notifications.Length);
+                return notifications[numb] + from;
+            }
+            else
+            {
+                var numb = Random.Range(0, notificationsEnglish.Length);
+                return notificationsEnglish[numb] + fromEnglish;
+            }
         }
 
     }
