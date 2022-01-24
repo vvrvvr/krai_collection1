@@ -33,6 +33,14 @@ public class AssetText : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        if(LanguageSettings.Singleton != null)
+        {
+            if (!LanguageSettings.Singleton.isRussian)
+            {
+                word = wordEnglish;
+                Debug.Log("running word english");
+            }
+        }
     }
 
 
