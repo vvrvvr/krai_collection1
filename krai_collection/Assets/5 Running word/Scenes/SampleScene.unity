@@ -2901,355 +2901,355 @@ MonoBehaviour:
       - in
       - Clean
   - write:
-    - originWrite: "\u043F\u043E\u0434\u043A\u043E\u0432\u043A\u0430\u043C\u0438"
-      anonimWrite: "\u043D\u0435\u0432\u0435\u0437\u0435\u043D\u0438\u0435"
+    - originWrite: horseshoes
+      anonimWrite: bad luck
       translateWrite:
-      - "\u043A\u043E\u043D\u0438"
-      - "\u043B\u043E\u0448\u0430\u0434\u0438"
+      - horses
+      - horse
       anonimlateWrite:
-      - "\u043B\u043E\u0448\u0430\u0434\u0438"
-      - "\u0438\u0437 \u0441\u0442\u0440\u043E\u044F"
-    - originWrite: "\u043C\u0435\u0434\u043D\u044B\u043C\u0438"
-      anonimWrite: "\u0436\u0435\u043B\u0435\u0437\u043D\u043E\u0435"
+      - horses
+      - out of service
+    - originWrite: copper
+      anonimWrite: iron
       translateWrite:
-      - "\u043B\u0430\u0442\u0443\u043D\u043D\u044B\u0435"
-      - "\u043B\u043E\u0448\u0430\u0434\u0438"
+      - brass
+      - horse
       anonimlateWrite:
-      - "\u044D\u043C\u043E\u0446\u0438\u0438"
-      - "\u0432\u044B\u0448\u043B\u043E"
-    - originWrite: "\u0438"
-      anonimWrite: "\u043D\u0435"
+      - emotions
+      - came out
+    - originWrite: and
+      anonimWrite: not
       translateWrite:
-      - "\u0438"
-      - "\u0438"
+      - and
+      - and
       anonimlateWrite:
-      - "\u041F\u043E\u043E\u0449\u0440\u044F\u0439\u0442\u0435"
-      - "\u0416\u0435\u043B\u0435\u0437\u043E"
+      - Encourage
+      - Iron
   - write:
-    - originWrite: "\u0448\u0430\u043F\u043A\u0443"
-      anonimWrite: "\u0432\u0430\u0440\u0435\u0436\u043A\u0443"
+    - originWrite: hat
+      anonimWrite: mitten
       translateWrite:
-      - "\u0448\u043B\u044F\u043F\u0430"
-      - "\u0448\u043B\u0435\u043C"
+      - hat
+      - helmet
       anonimlateWrite:
-      - "\u043C\u0438\u0444"
-      - "\u0433\u0438\u0434"
-    - originWrite: "\u043D\u043E\u0432\u0443\u044E"
-      anonimWrite: "\u0441\u0442\u0430\u0440\u0443\u044E"
+      - myth
+      - guide
+    - originWrite: new
+      anonimWrite: old
       translateWrite:
-      - "\u0441\u0442\u0430\u0440\u0430\u044F"
-      - "\u043D\u043E\u0432\u044B\u0439"
+      - old
+      - new
       anonimlateWrite:
-      - "\u0441\u0442\u0430\u0440\u044B\u0439"
-      - "\u0441\u0442\u0430\u0440\u044B\u0439"
-    - originWrite: "\u0441\u0430\u043F\u043E\u0433\u0438"
-      anonimWrite: "\u043F\u0438\u043C\u044B"
+      - old
+      - old
+    - originWrite: boots
+      anonimWrite: pimas
       translateWrite:
-      - "\u0421\u0430\u043F\u043E\u0433\u0438"
-      - "\u041E\u0431\u0443\u0432\u044C"
+      - Boots,
+      - Shoes,
       anonimlateWrite:
-      - "\u041E \u041F\u0438\u043C\u0430"
-      - "\u0411\u0445\u0438\u043C\u0430"
+      - Oh Pima,
+      - Bhima,
   - write:
-    - originWrite: "\u043F\u0440\u0430\u0437\u0434\u043D\u0438\u0447\u043D\u0443\u044E"
-      anonimWrite: "\u0440\u0430\u0431\u043E\u0447\u0438\u0439"
+    - originWrite: festive
+      anonimWrite: worker
       translateWrite:
-      - "\u0445\u0430\u043B\u0430\u0442"
-      - "\u0432 \u043E\u043A\u043D\u0435"
+      - bathrobe
+      - in the window
       anonimlateWrite:
-      - "\u0440\u0430\u0431\u043E\u0442\u043D\u0438\u043A"
-      - "\u0441\u0440\u0430\u0431\u043E\u0442\u0430\u0442\u044C"
-    - originWrite: "\u0436\u0438\u043B\u0435\u0442\u043A\u0443"
-      anonimWrite: "\u0445\u043E\u0437\u044F\u0438\u043D"
+      - worker
+      - work
+    - originWrite: vest
+      anonimWrite: master
       translateWrite:
-      - "\u0441\u0447\u0430\u0441\u0442\u043B\u0438\u0432\u044B\u0439"
-      - "\u0442\u0435\u043B\u044C\u043D\u044F\u0448\u043A\u0430"
+      - happy
+      - frock
       anonimlateWrite:
-      - "\u0432\u043B\u0430\u0434\u0435\u043B\u0435\u0446"
-      - "\u0434\u043E\u043B\u0436\u043D\u043E"
-    - originWrite: "\u0438"
-      anonimWrite: "\u043D\u043E"
+      - owner -
+      - must
+    - originWrite: and
+      anonimWrite: but
       translateWrite:
-      - "\u0438"
-      - "\u0438"
+      - and
+      - and
       anonimlateWrite:
-      - "\u041D\u043E"
-      - "\u041D\u043E \u044D\u0442\u043E"
+      - But
+      - But this,
   - write:
-    - originWrite: "\u0432 \u0431\u0430\u043D\u044E"
-      anonimWrite: "\u0440\u0430\u0437\u0431\u0430\u043D\u0438\u0432\u0430\u0442\u044C"
+    - originWrite: to bathhouse
+      anonimWrite: unban
       translateWrite:
-      - "\u0432 \u0432\u0430\u043D\u043D\u0443\u044E"
-      - "\u0441\u043E\u0431\u043E\u0439"
+      - to bathroom
+      - yourself
       anonimlateWrite:
-      - "\u043E\u0442\u043A\u0440\u044B\u0442\u044C \u0435\u0433\u043E"
-      - "\u0432 \u0410\u043D\u0431\u0430\u043D"
-    - originWrite: "\u043F\u043E\u0448\u0435\u043B"
-      anonimWrite: "\u0432\u0441\u0442\u0430\u0442\u044C"
+      - open it
+      - in Unban
+    - originWrite: went
+      anonimWrite: stand up
       translateWrite:
-      - "\u0441 \u043D\u0438\u043C"
-      - "\u0433\u043E\u0440\u0434\u0438\u0442\u044C\u0441\u044F"
+      - with him
+      - fit
       anonimlateWrite:
-      - "\u0447\u0442\u043E\u0431\u044B"
-      - "\u0438\u0434\u0451\u0442"
-    - originWrite: "\u0421 \u043D\u0435\u044E"
-      anonimWrite: "\u041E\u043D"
+      - to
+      - goes
+    - originWrite: With her
+      anonimWrite: He
       translateWrite:
-      - "\u042F \u043F\u043E\u0448\u043B\u0430"
-      - "\u042F \u0431\u0443\u0434\u0443"
+      - I went
+      - I will
       anonimlateWrite:
-      - "\u041E\u043D \u0432\u0441\u0442\u0430\u0451\u0442,"
-      - "\u041E\u043D"
+      - He stands up,
+      - He
   - write:
-    - originWrite: "\u0412\u043E\u043B\u0433\u0438"
-      anonimWrite: "\u0442\u043E\u0440\u043C\u043E\u0437"
+    - originWrite: Volga
+      anonimWrite: brake
       translateWrite:
-      - "\"\u0412\u043E\u043B\u0433\u0430\""
-      - "\u0434\u043E\u043A\u043E\u0432"
+      - '"Volga"'
+      - docks
       anonimlateWrite:
-      - "\u0442\u043E\u0440\u043C\u043E\u0437\u0430"
-      - "\u0442\u043E\u0440\u043C\u043E\u0437\u0430"
-    - originWrite: "\u043F\u0440\u0438\u0441\u0442\u0430\u043D\u0435\u0439"
-      anonimWrite: "\u043E\u0442\u0441\u0442\u0430\u0432\u0448\u0438\u0439"
+      - break
+      - break
+    - originWrite: piers
+      anonimWrite: straggler
       translateWrite:
-      - "\u0441 \u0432\u043E\u043A\u0437\u0430\u043B\u043E\u043C"
-      - "\u0432\u043E\u043B\u0436\u0430\u043D\u0441\u043A\u0438\u0445"
+      - railway station
+      - Volzhan
       anonimlateWrite:
-      - "\u0441\u0443\u0445\u0438\u0435"
-      - "\u0441\u0443\u0445\u0438\u0435"
-    - originWrite: "\u043E\u043A\u043E\u043B\u043E"
-      anonimWrite: "\u0412\u0434\u0430\u043B\u0438"
+      - dry
+      - dry
+    - originWrite: near
+      anonimWrite: Beyond
       translateWrite:
-      - "\u0420\u044F\u0434\u043E\u043C"
-      - "\u0423"
+      - Nearby
+      - At
       anonimlateWrite:
-      - "\u0412\u0434\u0430\u043B\u0435\u043A\u0435"
-      - "\u0412\u0434\u0430\u043B\u0435\u043A\u0435"
+      - Afar,
+      - Afar,
   - write:
-    - originWrite: "\u0443\u0442\u043A\u0438"
-      anonimWrite: "\u0433\u0443\u0441\u044F"
+    - originWrite: ducks
+      anonimWrite: goose
       translateWrite:
-      - "\u0443\u0442\u043A\u0438"
-      - "\u0443\u0442\u043A\u0430"
+      - ducks
+      - duck
       anonimlateWrite:
-      - "\u043F\u0440\u043E\u0433\u0443\u043B\u043A\u0438"
-      - "\u0433\u0443\u0441\u044C"
-    - originWrite: "\u0436\u0430\u043B\u043A\u043E\u0439"
-      anonimWrite: "\u0434\u043E\u0441\u0442\u043E\u0439\u043D\u043E\u0433\u043E"
+      - walks
+      - goose
+    - originWrite: pathetic
+      anonimWrite: worthy
       translateWrite:
-      - "\u0433\u043B\u0443\u043F\u043E\u0439"
-      - "\u043F\u043B\u043E\u0445\u0430\u044F"
+      - silly
+      - bad
       anonimlateWrite:
-      - "\u043F\u0440\u0438\u043B\u0438\u0447\u043D\u043E\u0439"
-      - "\u0435\u0441\u0442\u044C"
-    - originWrite: "\u0443\u0441\u0442\u0440\u043E\u0439\u0447\u0438\u0432\u043E\u0441\u0442\u044C"
-      anonimWrite: "\u0438\u0437\u043C\u0435\u043D\u0447\u0438\u0432\u043E\u0441\u0442\u044C"
+      - decent
+      - there is
+    - originWrite: sustainability
+      anonimWrite: variability
       translateWrite:
-      - "\u0441\u0442\u0430\u0431\u0438\u043B\u044C\u043D\u043E\u0441\u0442\u044C"
-      - "\u0432\u044B\u043D\u043E\u0441\u043B\u0438\u0432\u0430\u044F"
+      - stability
+      - hardy
       anonimlateWrite:
-      - "\u0432\u043E\u043B\u0430\u0442\u0438\u043B\u044C\u043D\u043E\u0441\u0442\u044C"
-      - "\u0432\u0440\u0435\u043C\u044F"
+      - volatility
+      - time
   - write:
-    - originWrite: "\u0431\u043E\u043B\u0438"
-      anonimWrite: "\u0443\u0434\u043E\u0432\u043E\u043B\u044C\u0441\u0442\u0432\u0438\u044F"
+    - originWrite: pains
+      anonimWrite: pleasures
       translateWrite:
-      - "\u0431\u043E\u043B\u0438"
-      - "\u0434\u0432\u043E\u0440\u0435"
+      - pains
+      - yard
       anonimlateWrite:
-      - "\u0436\u0435\u043B\u0430\u043D\u0438\u044F"
-      - "\u043C\u0443\u0436\u0447\u0438\u043D\u0430"
-    - originWrite: "\u0436\u0435\u043D\u0441\u043A\u043E\u0439"
-      anonimWrite: "\u043C\u0443\u0436\u0441\u043A\u043E\u0433\u043E"
+      - desires
+      - male
+    - originWrite: feminine
+      anonimWrite: male
       translateWrite:
-      - "\u0436\u0435\u043D\u0441\u043A\u043E\u0439"
-      - "\u0432\u043E"
+      - female
+      - in
       anonimlateWrite:
-      - "\u043C\u0443\u0436\u0441\u043A\u0438\u0435"
-      - "\u0438"
-    - originWrite: "\u0434\u0430\u043B\u044C\u043D\u043E\u0441\u0442\u044C"
-      anonimWrite: "\u0431\u043B\u0438\u0437\u043E\u0441\u0442\u044C"
+      - male
+      - and
+    - originWrite: distance
+      anonimWrite: proximity
       translateWrite:
-      - "\u0434\u0438\u0430\u043F\u0430\u0437\u043E\u043D"
-      - "\u0441\u043E\u043F\u0440\u043E\u0442\u0438\u0432\u043B\u044F\u0442\u044C\u0441\u044F"
+      - range
+      - resist
       anonimlateWrite:
-      - "\u043F\u0440\u0438\u0431\u043B\u0438\u0436\u0430\u044E\u0442\u0441\u044F"
-      - "\u0447\u0442\u043E"
+      - approach
+      - what
   - write:
-    - originWrite: "\u0440\u0443\u043A\u0430\u043C\u0438"
-      anonimWrite: "\u043D\u043E\u0433\u0430\u043C\u0438"
+    - originWrite: hands
+      anonimWrite: feet
       translateWrite:
-      - "\u0440\u0443\u043A\u043E\u0439"
-      - "\u0440\u0443\u043A\u0430\u043C\u0438"
+      - hand
+      - hands
       anonimlateWrite:
-      - "\u043D\u043E\u0433\u0438"
-      - "\u0444\u0443\u0442\u043E\u0432"
-    - originWrite: "\u043A\u043E\u0442\u0430"
-      anonimWrite: "\u0441\u043E\u0431\u0430\u043A\u0443"
+      - feet
+      - feet
+    - originWrite: cat
+      anonimWrite: dog
       translateWrite:
-      - "\u043A\u043E\u0448\u043A\u0443"
-      - "\u043A\u043E\u0448\u043A\u0438"
+      - cat
+      - cats
       anonimlateWrite:
-      - "\u0441\u043E\u0431\u0430\u0447\u044C\u0435\u0439 "
-      - "\u043D\u0435\u0441\u043A\u043E\u043B\u044C\u043A\u043E"
-    - originWrite: "\u043B\u0435\u0447\u0443"
-      anonimWrite: "\u0442\u0440\u0430\u0432\u043C\u0438\u0440\u0443\u044E"
+      - canine
+      - several
+    - originWrite: fly
+      anonimWrite: traumatize
       translateWrite:
-      - "\u0443\u0433\u043E\u0441\u0442\u0438\u0442\u0435 "
-      - "\u0443\u0431\u0435\u0433\u0430\u044F"
+      - treat
+      - run away
       anonimlateWrite:
-      - "\u0442\u0440\u0430\u0432\u043C\u0430"
-      - "\u043F\u043E\u0432\u0440\u0435\u0434\u0438\u0442\u0435"
+      - trauma
+      - damage
   - write:
-    - originWrite: "\u0434\u0435\u043F\u0440\u0435\u0441\u0441\u0438\u0438"
-      anonimWrite: "\u043F\u043E\u0434\u044A\u0435\u043C\u0430"
+    - originWrite: depression
+      anonimWrite: rise
       translateWrite:
-      - "\u0434\u0435\u043F\u0440\u0435\u0441\u0441\u0438\u0438"
-      - "\u0446\u0435\u043D\u0430"
+      - depressions
+      - price
       anonimlateWrite:
-      - "\u043F\u043E\u0432\u044B\u0448\u0435\u043D\u0438\u044E"
-      - "\u043F\u043E\u0434\u044A\u0435\u043C\u0430"
-    - originWrite: "\u0432\u0435\u043B\u0438\u043A\u043E\u0439"
-      anonimWrite: "\u043D\u0438\u0447\u0442\u043E\u0436\u043D\u043E\u0433\u043E"
+      - augmentation
+      - rise
+    - originWrite: great
+      anonimWrite: paltry
       translateWrite:
-      - "\u0431\u043E\u043B\u044C\u0448\u043E\u0439"
-      - "\u0447\u0435\u043C"
+      - big
+      - than
       anonimlateWrite:
-      - "\u043F\u043E\u0434\u043E\u0431\u043D\u0430"
-      - "\u0434\u043B\u044F"
-    - originWrite: "\u044D\u043F\u0438\u0446\u0435\u043D\u0442\u0440"
-      anonimWrite: "\u043F\u0435\u0440\u0438\u0444\u0435\u0440\u0438\u044F"
+      - similar to
+      - for
+    - originWrite: epicenter
+      anonimWrite: periphery
       translateWrite:
-      - "\u044D\u043F\u0438\u0446\u0435\u043D\u0442\u0440"
-      - "\u043F\u0440\u0435\u0436\u0434\u0435"
+      - epicenter
+      - before
       anonimlateWrite:
-      - "\u043F\u0435\u0440\u0438\u0444\u0435\u0440\u0438\u044F"
-      - "\u043C\u0430\u043B\u043E\u0435"
+      - periphery
+      - small
   - write:
-    - originWrite: "\u043B\u044E\u0431\u043E\u0432\u044C"
-      anonimWrite: "\u043D\u0435\u043D\u0430\u0432\u0438\u0441\u0442\u044C"
+    - originWrite: love
+      anonimWrite: hate
       translateWrite:
-      - "\u043B\u044E\u0431\u043E\u0432\u044C"
-      - "\u043B\u044E\u0431\u043E\u0432\u044C"
+      - love
+      - love
       anonimlateWrite:
-      - "\u043D\u0435\u043F\u0440\u0438\u044F\u0442\u0438\u044F"
-      - "\u0436\u0430\u0434\u043D\u044B\u0439"
-    - originWrite: "\u0430\u043D\u0430\u043B\u043E\u0433\u043E\u0432\u0443\u044E"
-      anonimWrite: "\u0446\u0438\u0444\u0440\u043E\u0432\u0443\u044E"
+      - rejection
+      - greedy
+    - originWrite: analogue
+      anonimWrite: digital
       translateWrite:
-      - "\u0430\u043D\u0430\u043B\u043E\u0433\u043E\u0432\u0430\u044F"
-      - "\u0430\u043D\u0430\u043B\u043E\u0433\u043E\u0432\u0430\u044F"
+      - analogue
+      - analogue
       anonimlateWrite:
-      - "\u0446\u0438\u0444\u0440\u043E\u0432\u043E\u0433\u043E"
-      - "\u0446\u0438\u0444\u0440\u043E\u0432\u043E\u0439"
-    - originWrite: "\u0443\u043A\u0440\u0430\u043B\u0430"
-      anonimWrite: "\u0432\u0435\u0440\u043D\u0443\u043B\u0430"
+      - digital
+      - digital
+    - originWrite: stolen
+      anonimWrite: returned
       translateWrite:
-      - "\u0443\u043A\u0440\u0430\u0434\u0435\u043D\u0430"
-      - "\u043D\u0430\u0441\u0438\u043B\u0438\u0435"
+      - stole
+      - violence
       anonimlateWrite:
-      - "\u0432\u043E\u0437\u0432\u0440\u0430\u0449\u0435\u043D\u0438\u0435"
-      - "\u044F"
+      - comeback
+      - I
   - write:
-    - originWrite: "\u0433\u0440\u043E\u0445\u043E\u0447\u0435\u0442"
-      anonimWrite: "\u0448\u0443\u0440\u0448\u0438\u0442"
+    - originWrite: rumbles
+      anonimWrite: rustle
       translateWrite:
-      - "\u043F\u0430\u0440\u043E\u043B\u044C"
-      - "\u0433\u0440\u043E\u0431\u0430"
+      - password
+      - coffin
       anonimlateWrite:
-      - "\u0448\u043E\u0440\u043E\u0445"
-      - "\u0448\u043E\u0440\u043E\u0445\u0430"
-    - originWrite: "\u0441\u0442\u043E\u0438\u0442"
-      anonimWrite: "\u0434\u0432\u0438\u0436\u0435\u0442\u0441\u044F"
+      - rustle
+      - rustle
+    - originWrite: stands
+      anonimWrite: moves
       translateWrite:
-      - "\u043F\u0440\u043E"
-      - "\u0441\u0442\u043E\u0438\u0442"
+      - about
+      - worths
       anonimlateWrite:
-      - "\u0434\u0432\u0438\u0436\u0435\u0442\u0441\u044F"
-      - "\u0435\u0437\u0434\u0430"
-    - originWrite: "\u0442\u0430\u0439\u043D\u043E\u0435"
-      anonimWrite: "\u044F\u0432\u043D\u043E\u0435"
+      - moves
+      - riding
+    - originWrite: secret
+      anonimWrite: explicit
       translateWrite:
-      - "\u0440\u0430\u0437\u0433\u043E\u0432\u043E\u0440"
-      - "\u0441\u0435\u043A\u0440\u0435\u0442"
+      - conversation
+      - secret
       anonimlateWrite:
-      - "\u0447\u0435\u0442\u043A\u043E"
-      - "\u0440\u0430\u0437\u0434\u0430\u0435\u0442\u0441\u044F"
+      - clearly
+      - is distributed
   - write:
-    - originWrite: "\u0432\u043C\u0435\u0441\u0442\u0435"
-      anonimWrite: "\u043F\u043E\u0440\u043E\u0437\u043D\u044C"
+    - originWrite: together
+      anonimWrite: apart
       translateWrite:
-      - "\u0432\u043C\u0435\u0441\u0442\u0435"
-      - "\u043F\u0440\u043E\u0434\u0430\u0436\u0438"
+      - together
+      - sales
       anonimlateWrite:
-      - "\u043F\u043E\u0440\u043E\u0437\u043D\u044C"
-      - "\u043D\u0430\u0447\u0430\u0442\u044C"
-    - originWrite: "\u0431\u0440\u043E\u0441\u0430\u0442\u044C"
-      anonimWrite: "\u043D\u0430\u0447\u0438\u043D\u0430\u0442\u044C"
+      - apart
+      - begin
+    - originWrite: throw
+      anonimWrite: start
       translateWrite:
-      - "\u043A\u0438\u0434\u0430\u0442\u044C"
-      - "\u043C\u0430\u0435"
+      - throw
+      - may
       anonimlateWrite:
-      - "\u043D\u0430\u0447\u0438\u043D\u0430\u044F"
-      - "\u043C\u043E\u0433\u0443"
-    - originWrite: "\u043C\u043E\u0436\u043D\u043E"
-      anonimWrite: "\u043D\u0435\u043B\u044C\u0437\u044F"
+      - starting
+      - I can
+    - originWrite: possible
+      anonimWrite: forbidden
       translateWrite:
-      - "\u0440\u0430\u0437\u0440\u0435\u0448\u0435\u043D\u043E"
-      - "\u0432"
+      - allowed
+      - in
       anonimlateWrite:
-      - "\u043D\u0435"
-      - "\u043D\u0435"
+      - not
+      - not
   - write:
-    - originWrite: "\u043D\u0430\u0447\u0430\u043B\u043E\u043C"
-      anonimWrite: "\u043A\u043E\u043D\u0446\u043E\u043C"
+    - originWrite: beginning
+      anonimWrite: ending
       translateWrite:
-      - "\u043D\u0430\u0447\u0430\u043B\u043E\u043C"
-      - "\u043D\u0430\u0447\u0430\u043B\u043E"
+      - beginning
+      - beginning
       anonimlateWrite:
-      - "\u0442\u0443\u043F\u0438\u043A"
-      - "\u043A\u043E\u043D\u0435\u0446"
-    - originWrite: "\u0443\u0432\u043B\u0430\u0436\u043D\u0451\u043D\u043D\u044B\u043C"
-      anonimWrite: "\u0441\u0443\u0445\u0438\u043C"
+      - deadlock
+      - end
+    - originWrite: moisturized
+      anonimWrite: dry
       translateWrite:
-      - "\u043C\u043E\u043A\u0440\u044B\u043C"
-      - "\u041F\u0435\u0442\u0440\u0430"
+      - wet
+      - Peter
       anonimlateWrite:
-      - "\u0441\u0443\u0445\u043E\u0439"
-      - "\u0432\u044B\u0441\u043E\u043A\u0438\u0439"
-    - originWrite: "\u043E\u0441\u0442\u0430\u0432\u0430\u0439\u0441\u044F "
-      anonimWrite: "\u043C\u0435\u043D\u044F\u0439\u0441\u044F"
+      - dry
+      - high
+    - originWrite: stay
+      anonimWrite: change
       translateWrite:
-      - "\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0441\u044C"
-      - "\u0434\u0435\u0440\u0436\u0438\u0442\u0435"
+      - become
+      - take
       anonimlateWrite:
-      - "\u0441\u0430\u043C\u044B\u0439"
-      - "\u0441\u043C\u0435\u043D\u0430"
+      - most
+      - shift
   - write:
-    - originWrite: "\u0441\u043C\u0435\u0440\u0442\u0438"
-      anonimWrite: "\u0436\u0438\u0437\u043D\u0438"
+    - originWrite: death
+      anonimWrite: of life
       translateWrite:
-      - "\u0436\u0438\u0437\u043D\u0438"
-      - "\u0438\u0441\u043F\u043E\u0440\u0447\u0435\u043D"
+      - lives
+      - rotten
       anonimlateWrite:
-      - "\u0436\u0438\u0432\u043E\u0439"
-      - "\u0436\u0438\u0442\u044C"
-    - originWrite: "\u0432\u0440\u0435\u0434\u043D\u044B\u0435"
-      anonimWrite: "\u0432\u0440\u0435\u0434\u043D\u044B\u0435"
+      - alive
+      - to live
+    - originWrite: harmful
+      anonimWrite: pleasant
       translateWrite:
-      - "\u0434\u044B\u0445\u0430\u043D\u0438\u044F"
-      - "\u043D\u0435\u0442"
+      - breath
+      - no
       anonimlateWrite:
-      - "\u043C\u0438\u043B\u044B\u0439"
-      - "\u0432\u043A\u0443\u0441\u043D\u043E"
-    - originWrite: "\u043A\u0440\u0430\u0441\u0438\u0432\u044B\u0435"
-      anonimWrite: "\u0443\u0440\u043E\u0434\u043B\u0438\u0432\u044B\u0435"
+      - nice
+      - tasty
+    - originWrite: beautiful
+      anonimWrite: ugly
       translateWrite:
-      - "\u0441\u0435\u0442\u044C"
-      - "\u0445\u043E\u0440\u043E\u0448\u0438\u0439"
+      - net
+      - good
       anonimlateWrite:
-      - "\u043C\u0435\u0440\u0437\u043A\u0438\u0439"
-      - "\u043F\u0440\u0430\u0432\u0434\u0430"
+      - nasty
+      - truth
   - write:
     - originWrite: "\u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044E"
       anonimWrite: "\u044D\u043D\u0442\u0440\u043E\u043F\u0438\u044E"
