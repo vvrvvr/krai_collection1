@@ -34,13 +34,13 @@ public class ChooseLanguageLocale : MonoBehaviour
     {
         LocalizationSettings.SelectedLocale = locales[0];
         LanguageSettings.Singleton.isRussian = false;
-        SceneManager.LoadScene("room_MainMenu");
+        SceneManager.LoadScene("MenuScene");
     }
     public void ChooseRus()
     {
         LocalizationSettings.SelectedLocale = locales[1];
         LanguageSettings.Singleton.isRussian = true;
-        SceneManager.LoadScene("room_MainMenu");
+        SceneManager.LoadScene("MenuScene");
     }
 
 

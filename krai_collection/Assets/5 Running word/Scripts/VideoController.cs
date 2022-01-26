@@ -6,19 +6,28 @@ using UnityEngine.Video;
 
 public class VideoController : MonoBehaviour
 {
-    [SerializeField] private VideoPlayer video;
+    [SerializeField] private VideoPlayer videoPlayer;
+    [SerializeField] private VideoClip videoRus;
+    [SerializeField] private VideoClip videoEng;
     [SerializeField] private float videoPlayTime;
 
     [SerializeField] private GameObject menuButton;
     private Coroutine playingVideoCoroutine;
     private bool isVideoPlaying;
+    private void Awake()
+    {
+        if (!LanguageSettings.Singleton.isRussian)
+        {
+            videoPlayer.clip = videoEng;
+        }
+    }
     private void Start()
     {
         if (videoBool.Singleton.isVideoPlaying)
         {
-            videoPlayTime = (float)video.length;
+            videoPlayTime = (float)videoPlayer.length;
             menuButton.SetActive(false);
-            video.gameObject.SetActive(true);
+            videoPlayer.gameObject.SetActive(true);
             playingVideoCoroutine = StartCoroutine(VideoPlay());
         }
 
@@ -59,11 +68,11 @@ public class VideoController : MonoBehaviour
         //}
         if (Input.anyKeyDown && videoBool.Singleton.isVideoPlaying)
         {
-            if(playingVideoCoroutine != null)
+            if (playingVideoCoroutine != null)
                 StopCoroutine(playingVideoCoroutine);
             videoBool.Singleton.isVideoPlaying = false;
             menuButton.SetActive(true);
-            video.gameObject.SetActive(false);
+            videoPlayer.gameObject.SetActive(false);
             Debug.Log("pressed");
         }
     }
@@ -74,7 +83,7 @@ public class VideoController : MonoBehaviour
 
         videoBool.Singleton.isVideoPlaying = false;
         menuButton.SetActive(true);
-        video.gameObject.SetActive(false);
+        videoPlayer.gameObject.SetActive(false);
     }
 
 }

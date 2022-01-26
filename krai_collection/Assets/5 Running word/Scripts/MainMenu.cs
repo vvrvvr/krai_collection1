@@ -32,6 +32,7 @@ public class MainMenu : MonoBehaviour
     public void LoadGame()
     {
         SceneManager.LoadScene("SampleScene");
+        Debug.Log("sample scene");
     }
 
     public void ExitGame()

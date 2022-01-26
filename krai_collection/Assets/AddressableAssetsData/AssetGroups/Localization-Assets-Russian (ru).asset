@@ -28,6 +28,16 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-ru
+  - m_GUID: 0cbb0bf1590f38649a8a84966fca1259
+    m_Address: StartGame
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ru
+  - m_GUID: 2b01904b8d9fc40488cfd6bdfe1e7231
+    m_Address: Exit
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-ru
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 3946577e8d148014cb4fc420b4fe2b5a, type: 2}
   m_SchemaSet:
