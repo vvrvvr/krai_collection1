@@ -23,6 +23,38 @@ MonoBehaviour:
     m_Key: Pause
     m_Metadata:
       m_Items: []
+  - m_Id: 4356097974013952
+    m_Key: SettingsMenu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4358535690915840
+    m_Key: ApplyMenu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4358834027565056
+    m_Key: CancelMenu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4360329217249280
+    m_Key: CloseText1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4360943389184000
+    m_Key: CloseText3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4361256363954176
+    m_Key: CloseText2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4361798398054400
+    m_Key: CloseText4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4362874434162688
+    m_Key: SettingsInGame
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items:
     - id: 0
@@ -39,6 +71,38 @@ MonoBehaviour:
           - ru
           - en
         - m_KeyId: 3851521953792
+          m_TableCodes:
+          - ru
+          - en
+        - m_KeyId: 4356097974013952
+          m_TableCodes:
+          - ru
+          - en
+        - m_KeyId: 4358535690915840
+          m_TableCodes:
+          - en
+          - ru
+        - m_KeyId: 4358834027565056
+          m_TableCodes:
+          - ru
+          - en
+        - m_KeyId: 4360329217249280
+          m_TableCodes:
+          - ru
+          - en
+        - m_KeyId: 4360943389184000
+          m_TableCodes:
+          - en
+          - ru
+        - m_KeyId: 4361256363954176
+          m_TableCodes:
+          - en
+          - ru
+        - m_KeyId: 4361798398054400
+          m_TableCodes:
+          - en
+          - ru
+        - m_KeyId: 4362874434162688
           m_TableCodes:
           - ru
           - en
