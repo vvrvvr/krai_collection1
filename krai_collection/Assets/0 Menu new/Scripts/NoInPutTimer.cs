@@ -29,31 +29,31 @@ public class NoInPutTimer : MonoBehaviour
     void Update()
     {
 
-        if (!Input.anyKey && Input.mousePosition == lastMousePosition) //not pressed
-        {
-            currentTime += Time.unscaledDeltaTime;
-            if (currentTime >= maxTime)
-            {
-                if (!isTimerScreen)
-                {
-                    timerScreen.SetActive(true);
-                    isTimerScreen = true;
-                }
-                CountTime();
-            }
-        }
-        else //pressed
-        {
-            if (isTimerScreen)
-            {
-                timerScreen.SetActive(false);
-                isTimerScreen = false;
-            }
-            seconds = 10f;
-            miliseconds = 0f;
-            lastMousePosition = Input.mousePosition;
-            currentTime = 0f;
-        }
+        //if (!Input.anyKey && Input.mousePosition == lastMousePosition) //not pressed
+        //{
+        //    currentTime += Time.unscaledDeltaTime;
+        //    if (currentTime >= maxTime)
+        //    {
+        //        if (!isTimerScreen)
+        //        {
+        //            timerScreen.SetActive(true);
+        //            isTimerScreen = true;
+        //        }
+        //        CountTime();
+        //    }
+        //}
+        //else //pressed
+        //{
+        //    if (isTimerScreen)
+        //    {
+        //        timerScreen.SetActive(false);
+        //        isTimerScreen = false;
+        //    }
+        //    seconds = 10f;
+        //    miliseconds = 0f;
+        //    lastMousePosition = Input.mousePosition;
+        //    currentTime = 0f;
+        //}
         if (Input.GetKeyDown(KeyCode.P))
         {
             isGDActive = !isGDActive;
