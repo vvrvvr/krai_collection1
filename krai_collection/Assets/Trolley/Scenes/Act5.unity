@@ -501,6 +501,7 @@ MonoBehaviour:
   spawner: {fileID: 2045796049}
   climbingVoicesNumber: 1
   changeVoices: 0
+  spawnDelay: 0
 --- !u!61 &163156333
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1208,6 +1209,7 @@ MonoBehaviour:
   spawner: {fileID: 2045796049}
   climbingVoicesNumber: 3
   changeVoices: 1
+  spawnDelay: 0
 --- !u!61 &415264312
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1600,6 +1602,7 @@ MonoBehaviour:
   spawner: {fileID: 2045796049}
   climbingVoicesNumber: 1
   changeVoices: 0
+  spawnDelay: 0
 --- !u!61 &626399054
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2734,6 +2737,7 @@ MonoBehaviour:
   spawner: {fileID: 2045796049}
   climbingVoicesNumber: 5
   changeVoices: 1
+  spawnDelay: 0
 --- !u!61 &1036056021
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2807,6 +2811,7 @@ MonoBehaviour:
   spawner: {fileID: 2045796049}
   climbingVoicesNumber: 1
   changeVoices: 1
+  spawnDelay: 0
 --- !u!61 &1091395882
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4074,6 +4079,7 @@ MonoBehaviour:
   spawner: {fileID: 2045796049}
   climbingVoicesNumber: 1
   changeVoices: 0
+  spawnDelay: 0
 --- !u!61 &1740783193
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4503,6 +4509,7 @@ MonoBehaviour:
   spawner: {fileID: 2045796049}
   climbingVoicesNumber: 2
   changeVoices: 1
+  spawnDelay: 0
 --- !u!61 &1917966564
 BoxCollider2D:
   m_ObjectHideFlags: 0

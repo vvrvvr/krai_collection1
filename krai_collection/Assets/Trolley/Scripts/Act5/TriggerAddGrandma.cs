@@ -9,8 +9,10 @@ namespace krai_trol
 		[SerializeField] private GrandmasSpawner spawner;
 		[SerializeField] private float climbingVoicesNumber = 1f;
 		[SerializeField] private bool changeVoices = false;
+		[SerializeField] private float spawnDelay = 0f;
 		private MusicBox _musicBox;
 		private bool isOnce;
+		private Coroutine spawnCoroutine;
 
 		private void OnTriggerEnter2D(Collider2D collision)
 		{
@@ -22,9 +24,18 @@ namespace krai_trol
 					_musicBox.ClimbingSetVoicesParameter(climbingVoicesNumber);
 					isOnce = true;
 				}
-				spawner.Spawn();
-				
+				spawnCoroutine = StartCoroutine(Spawn());
 			}
 		}
-	}
+		private IEnumerator Spawn()
+		{
+			yield return new WaitForSeconds(spawnDelay);
+			spawner.Spawn();
+		}
+        private void OnDestroy()
+        {
+			if(spawnCoroutine != null)
+				StopCoroutine(spawnCoroutine);
+        }
+    }
 }
