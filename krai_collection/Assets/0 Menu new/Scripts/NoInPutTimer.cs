@@ -29,48 +29,48 @@ public class NoInPutTimer : MonoBehaviour
     void Update()
     {
 
-        //if (!Input.anyKey && Input.mousePosition == lastMousePosition) //not pressed
-        //{
-        //    currentTime += Time.unscaledDeltaTime;
-        //    if (currentTime >= maxTime)
-        //    {
-        //        if (!isTimerScreen)
-        //        {
-        //            timerScreen.SetActive(true);
-        //            isTimerScreen = true;
-        //        }
-        //        CountTime();
-        //    }
-        //}
-        //else //pressed
-        //{
-        //    if (isTimerScreen)
-        //    {
-        //        timerScreen.SetActive(false);
-        //        isTimerScreen = false;
-        //    }
-        //    seconds = 10f;
-        //    miliseconds = 0f;
-        //    lastMousePosition = Input.mousePosition;
-        //    currentTime = 0f;
-        //}
-        if (Input.GetKeyDown(KeyCode.P))
+        if (!Input.anyKey && Input.mousePosition == lastMousePosition) //not pressed
         {
-            isGDActive = !isGDActive;
-            gDPanel.SetActive(isGDActive);
-            Cursor.visible = isGDActive;
-            if (isGDActive)
+            currentTime += Time.unscaledDeltaTime;
+            if (currentTime >= maxTime)
             {
-                sceneText.text = $"текущая сцена:{SceneManager.GetActiveScene().buildIndex}";
+                if (!isTimerScreen)
+                {
+                    timerScreen.SetActive(true);
+                    isTimerScreen = true;
+                }
+                CountTime();
             }
-            Cursor.lockState = isGDActive ? CursorLockMode.None : CursorLockMode.Locked;
-            //if (isGDActive)
-            //{
-            //    Cursor.visible = true;
-            //    Cursor.lockState = controllerPauseState ? CursorLockMode.None : CursorLockMode.Locked;
-            //    Cursor.visible = controllerPauseState;
-            //}
         }
+        else //pressed
+        {
+            if (isTimerScreen)
+            {
+                timerScreen.SetActive(false);
+                isTimerScreen = false;
+            }
+            seconds = 10f;
+            miliseconds = 0f;
+            lastMousePosition = Input.mousePosition;
+            currentTime = 0f;
+        }
+        //if (Input.GetKeyDown(KeyCode.P))
+        //{
+        //    isGDActive = !isGDActive;
+        //    gDPanel.SetActive(isGDActive);
+        //    Cursor.visible = isGDActive;
+        //    if (isGDActive)
+        //    {
+        //        sceneText.text = $"текущая сцена:{SceneManager.GetActiveScene().buildIndex}";
+        //    }
+        //    Cursor.lockState = isGDActive ? CursorLockMode.None : CursorLockMode.Locked;
+        //    //if (isGDActive)
+        //    //{
+        //    //    Cursor.visible = true;
+        //    //    Cursor.lockState = controllerPauseState ? CursorLockMode.None : CursorLockMode.Locked;
+        //    //    Cursor.visible = controllerPauseState;
+        //    //}
+        //}
     }
 
 
@@ -100,13 +100,13 @@ public class NoInPutTimer : MonoBehaviour
                 timerText.text = string.Format("выход в меню через: {0}:{1}:{2}", minutes, seconds, (int)miliseconds);
                 Cursor.visible = true;
                 Cursor.lockState = CursorLockMode.None;
-                SceneManager.LoadScene("main menu");
+                SceneManager.LoadScene("MainMenu");
                 return;
             }
         }
-        if (minutes == 0 && seconds == 5)
+        if (minutes == 0 && seconds == 10)
         {
-            // ScaleEffect();
+            ScaleEffect();
         }
         miliseconds -= Time.unscaledDeltaTime * 100;
         timerText.text = string.Format("выход в меню через: {0}:{1}:{2}", minutes, seconds, (int)miliseconds);
@@ -120,10 +120,10 @@ public class NoInPutTimer : MonoBehaviour
         scale.SetLoops(5);
     }
 
-    public void ChangeScene(int number)
-    {
-        SceneManager.LoadScene(number);
-    }
+    //public void ChangeScene(int number)
+    //{
+    //    SceneManager.LoadScene(number);
+    //}
 }
 
 

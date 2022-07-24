@@ -10,7 +10,7 @@ namespace krai_trol
 	public class Titles : MonoBehaviour
 	{
 		[SerializeField] private Fade _fade;
-		[SerializeField] private int _act;
+		[SerializeField] private string _actName;
 		[Space]
 		[SerializeField] private float _titelShowTime;
 
@@ -40,7 +40,7 @@ namespace krai_trol
 
 				title.gameObject.SetActive(false);
 			}
-			SceneManager.LoadScene(_act);
+			SceneManager.LoadScene(_actName);
 		}
 	}
 }
