@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.01.00">
+<objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{bb98917e-d65b-41f0-a0ca-c50756da3f0e}">
 		<property name="note">
 			<value>This is an example of a multi-layered ambience event using parameters, scatterer instruments, modulation, and automation.
@@ -747,8 +747,8 @@ https://wingless-seraph.net</value>
 			<destination>{35dee4f7-9565-4215-8ca7-3eb446a2ab8c}</destination>
 		</relationship>
 		<relationship name="automationPoints">
-			<destination>{c700dd03-b643-4a8c-a869-9598f82e167a}</destination>
 			<destination>{77b248f2-bc58-44de-b574-b4517d285e56}</destination>
+			<destination>{c700dd03-b643-4a8c-a869-9598f82e167a}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{2506f267-a56d-487c-a2be-95276084bc2a}" />
@@ -757,8 +757,8 @@ https://wingless-seraph.net</value>
 			<destination>{95b9b67d-4a1e-45ab-806f-e46ce640bf5a}</destination>
 		</relationship>
 		<relationship name="automationPoints">
-			<destination>{341dbf49-5c08-4da8-bf07-959bc7cc4a33}</destination>
 			<destination>{cc3fb3d9-237f-49a8-860a-b1033b3c25e0}</destination>
+			<destination>{341dbf49-5c08-4da8-bf07-959bc7cc4a33}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{32711e68-8501-4f40-8460-26b05baad567}" />
@@ -922,14 +922,6 @@ https://wingless-seraph.net</value>
 			<value>10</value>
 		</property>
 	</object>
-	<object class="AutomationPoint" id="{c700dd03-b643-4a8c-a869-9598f82e167a}">
-		<property name="position">
-			<value>1</value>
-		</property>
-		<property name="value">
-			<value>0</value>
-		</property>
-	</object>
 	<object class="AutomationPoint" id="{77b248f2-bc58-44de-b574-b4517d285e56}">
 		<property name="position">
 			<value>0.5</value>
@@ -941,12 +933,12 @@ https://wingless-seraph.net</value>
 			<value>-1</value>
 		</property>
 	</object>
-	<object class="AutomationPoint" id="{341dbf49-5c08-4da8-bf07-959bc7cc4a33}">
+	<object class="AutomationPoint" id="{c700dd03-b643-4a8c-a869-9598f82e167a}">
 		<property name="position">
-			<value>0.5</value>
+			<value>1</value>
 		</property>
 		<property name="value">
-			<value>-18.3755226</value>
+			<value>0</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{cc3fb3d9-237f-49a8-860a-b1033b3c25e0}">
@@ -961,6 +953,14 @@ https://wingless-seraph.net</value>
 		</property>
 		<property name="isSCurve">
 			<value>true</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{341dbf49-5c08-4da8-bf07-959bc7cc4a33}">
+		<property name="position">
+			<value>0.5</value>
+		</property>
+		<property name="value">
+			<value>-18.3755226</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{8afa49fd-c69b-4cdc-9833-7a5a912be83e}">
@@ -987,12 +987,20 @@ https://wingless-seraph.net</value>
 			<destination>{b8b3154f-b7b5-47d7-b7c6-a020b1f48e76}</destination>
 		</relationship>
 		<relationship name="automationPoints">
+			<destination>{2b6b830e-1ea2-4253-9f29-59c571262cf8}</destination>
 			<destination>{f15cd947-a91f-4c57-ae2c-c7c5ee6a7416}</destination>
 			<destination>{a93b7c63-b1fc-4f71-8c23-be1f7b93e1a0}</destination>
 			<destination>{87dd62d9-4abd-4f27-a4cc-2d37bedbf247}</destination>
 			<destination>{582bac1f-87af-4a70-bae5-36d0edb9aba5}</destination>
-			<destination>{2b6b830e-1ea2-4253-9f29-59c571262cf8}</destination>
 		</relationship>
+	</object>
+	<object class="AutomationPoint" id="{2b6b830e-1ea2-4253-9f29-59c571262cf8}">
+		<property name="position">
+			<value>180</value>
+		</property>
+		<property name="value">
+			<value>22000</value>
+		</property>
 	</object>
 	<object class="AutomationPoint" id="{f15cd947-a91f-4c57-ae2c-c7c5ee6a7416}">
 		<property name="position">
@@ -1048,14 +1056,6 @@ https://wingless-seraph.net</value>
 		</property>
 		<property name="isSCurve">
 			<value>true</value>
-		</property>
-	</object>
-	<object class="AutomationPoint" id="{2b6b830e-1ea2-4253-9f29-59c571262cf8}">
-		<property name="position">
-			<value>180</value>
-		</property>
-		<property name="value">
-			<value>22000</value>
 		</property>
 	</object>
 </objects>

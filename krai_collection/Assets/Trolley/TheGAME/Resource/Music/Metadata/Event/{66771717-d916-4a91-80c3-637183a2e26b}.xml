@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.01.00">
+<objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{66771717-d916-4a91-80c3-637183a2e26b}">
 		<property name="name">
 			<value>voices_mountain_top</value>
@@ -280,11 +280,19 @@
 			<destination>{71cd9c89-74b5-4e32-91a6-60f554458d30}</destination>
 		</relationship>
 		<relationship name="automationPoints">
-			<destination>{4bdcbc25-f88e-49bd-b2f5-ac670d0e364c}</destination>
 			<destination>{97618e09-d8da-4a68-bd1f-c9effe562040}</destination>
+			<destination>{4bdcbc25-f88e-49bd-b2f5-ac670d0e364c}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{802eb8fa-c386-4e3d-98ac-3e7009125f71}" />
+	<object class="AutomationPoint" id="{97618e09-d8da-4a68-bd1f-c9effe562040}">
+		<property name="position">
+			<value>4.6000000000000005</value>
+		</property>
+		<property name="value">
+			<value>0</value>
+		</property>
+	</object>
 	<object class="AutomationPoint" id="{4bdcbc25-f88e-49bd-b2f5-ac670d0e364c}">
 		<property name="position">
 			<value>0</value>
@@ -294,14 +302,6 @@
 		</property>
 		<property name="curveShape">
 			<value>1</value>
-		</property>
-	</object>
-	<object class="AutomationPoint" id="{97618e09-d8da-4a68-bd1f-c9effe562040}">
-		<property name="position">
-			<value>4.6000000000000005</value>
-		</property>
-		<property name="value">
-			<value>0</value>
 		</property>
 	</object>
 </objects>

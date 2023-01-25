@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.01.00">
+<objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{b36aaf9f-2f14-4c45-8cf0-fc622a0ea38a}">
 		<property name="note">
 			<value>This is an example of an event that can use the FMOD Spatializer or the 3D Object Spatializer for spatialization.
@@ -94,9 +94,9 @@ Note that the audio does not continue through the bus - it is sent through the o
 	<object class="MarkerTrack" id="{349544cc-0a66-4f37-af57-a6fe7895f203}" />
 	<object class="GroupTrack" id="{82610bd3-5e0c-4b13-8136-847d81068378}">
 		<relationship name="modules">
+			<destination>{8a96b5c3-089c-485e-bf31-696b538389b3}</destination>
 			<destination>{5df50cf0-4cd7-4756-98f0-9c4033d1f02e}</destination>
 			<destination>{a8183756-2707-4e38-9503-e7bf3187fc3e}</destination>
-			<destination>{8a96b5c3-089c-485e-bf31-696b538389b3}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{cbc9f740-e904-443e-9a1d-40dfff5632f0}</destination>
@@ -124,10 +124,10 @@ Note that the audio does not continue through the bus - it is sent through the o
 	<object class="ParameterProxy" id="{15a4d5e5-893e-434f-bb4c-d2e3cd2ca713}">
 		<relationship name="modules">
 			<destination>{88e51282-d2e5-48af-81db-d1c26708053e}</destination>
-			<destination>{9338a35d-3dfa-4f1b-b9f7-589fa817569f}</destination>
 			<destination>{8a96b5c3-089c-485e-bf31-696b538389b3}</destination>
-			<destination>{a8183756-2707-4e38-9503-e7bf3187fc3e}</destination>
+			<destination>{9338a35d-3dfa-4f1b-b9f7-589fa817569f}</destination>
 			<destination>{5df50cf0-4cd7-4756-98f0-9c4033d1f02e}</destination>
+			<destination>{a8183756-2707-4e38-9503-e7bf3187fc3e}</destination>
 		</relationship>
 		<relationship name="preset">
 			<destination>{07534c48-7d66-4b77-93a5-90f0821e092c}</destination>
@@ -150,6 +150,26 @@ Note that the audio does not continue through the bus - it is sent through the o
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{dd70aa02-4085-487e-ae6e-f9d314678cd2}" />
+	<object class="SingleSound" id="{8a96b5c3-089c-485e-bf31-696b538389b3}">
+		<property name="isCutoff">
+			<value>true</value>
+		</property>
+		<property name="length">
+			<value>0.60000008344650269</value>
+		</property>
+		<property name="maxVoices">
+			<value>1</value>
+		</property>
+		<property name="looping">
+			<value>true</value>
+		</property>
+		<relationship name="fadeOutCurve">
+			<destination>{e98e7d25-3974-40a9-a164-94a69046fdae}</destination>
+		</relationship>
+		<relationship name="audioFile">
+			<destination>{d7a083d4-a113-4291-8655-263448f4434a}</destination>
+		</relationship>
+	</object>
 	<object class="SingleSound" id="{5df50cf0-4cd7-4756-98f0-9c4033d1f02e}">
 		<property name="isCutoff">
 			<value>true</value>
@@ -197,26 +217,6 @@ Note that the audio does not continue through the bus - it is sent through the o
 		</relationship>
 		<relationship name="audioFile">
 			<destination>{ed8e59a3-a77d-49be-90cb-016928a71e33}</destination>
-		</relationship>
-	</object>
-	<object class="SingleSound" id="{8a96b5c3-089c-485e-bf31-696b538389b3}">
-		<property name="isCutoff">
-			<value>true</value>
-		</property>
-		<property name="length">
-			<value>0.60000008344650269</value>
-		</property>
-		<property name="maxVoices">
-			<value>1</value>
-		</property>
-		<property name="looping">
-			<value>true</value>
-		</property>
-		<relationship name="fadeOutCurve">
-			<destination>{e98e7d25-3974-40a9-a164-94a69046fdae}</destination>
-		</relationship>
-		<relationship name="audioFile">
-			<destination>{d7a083d4-a113-4291-8655-263448f4434a}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{cbc9f740-e904-443e-9a1d-40dfff5632f0}">
@@ -317,6 +317,14 @@ Note that the audio does not continue through the bus - it is sent through the o
 	</object>
 	<object class="MixerBusPanner" id="{cbf1ebbb-ca13-45a5-a9d3-c97ce940d214}" />
 	<object class="MixerBusFader" id="{7efaa07d-84de-4507-9d04-5ec9c17b9535}" />
+	<object class="FadeCurve" id="{e98e7d25-3974-40a9-a164-94a69046fdae}">
+		<relationship name="startPoint">
+			<destination>{afb56de8-3407-43ce-9edb-b9ae2f7ca4a3}</destination>
+		</relationship>
+		<relationship name="endPoint">
+			<destination>{aa61901a-08db-485d-a853-127cd2794227}</destination>
+		</relationship>
+	</object>
 	<object class="FadeCurve" id="{989f93d3-bcb1-481d-9516-ba504928a66b}">
 		<relationship name="startPoint">
 			<destination>{48943b60-9ec3-41db-9806-2dba6d819cc7}</destination>
@@ -339,14 +347,6 @@ Note that the audio does not continue through the bus - it is sent through the o
 		</relationship>
 		<relationship name="endPoint">
 			<destination>{29726caf-a4bf-45f7-9a77-90a3234014e7}</destination>
-		</relationship>
-	</object>
-	<object class="FadeCurve" id="{e98e7d25-3974-40a9-a164-94a69046fdae}">
-		<relationship name="startPoint">
-			<destination>{afb56de8-3407-43ce-9edb-b9ae2f7ca4a3}</destination>
-		</relationship>
-		<relationship name="endPoint">
-			<destination>{aa61901a-08db-485d-a853-127cd2794227}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{13e9099f-5707-417f-97e5-195db5a57079}">
@@ -406,6 +406,25 @@ Note that the audio does not continue through the bus - it is sent through the o
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{fe5f25a1-4d35-448b-aee9-c1b599a0c4bc}" />
+	<object class="AutomationPoint" id="{afb56de8-3407-43ce-9edb-b9ae2f7ca4a3}">
+		<property name="position">
+			<value>0.40000000000000002</value>
+		</property>
+		<property name="value">
+			<value>1</value>
+		</property>
+		<property name="curveShape">
+			<value>0.25471893</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{aa61901a-08db-485d-a853-127cd2794227}">
+		<property name="position">
+			<value>0.60000000000000009</value>
+		</property>
+		<property name="value">
+			<value>0</value>
+		</property>
+	</object>
 	<object class="AutomationPoint" id="{48943b60-9ec3-41db-9806-2dba6d819cc7}">
 		<property name="position">
 			<value>1</value>
@@ -461,25 +480,6 @@ Note that the audio does not continue through the bus - it is sent through the o
 		</property>
 		<property name="value">
 			<value>1</value>
-		</property>
-	</object>
-	<object class="AutomationPoint" id="{afb56de8-3407-43ce-9edb-b9ae2f7ca4a3}">
-		<property name="position">
-			<value>0.40000000000000002</value>
-		</property>
-		<property name="value">
-			<value>1</value>
-		</property>
-		<property name="curveShape">
-			<value>0.25471893</value>
-		</property>
-	</object>
-	<object class="AutomationPoint" id="{aa61901a-08db-485d-a853-127cd2794227}">
-		<property name="position">
-			<value>0.60000000000000009</value>
-		</property>
-		<property name="value">
-			<value>0</value>
 		</property>
 	</object>
 	<object class="MixerSend" id="{d406045a-ea28-4cb9-a0cf-c01bc9839950}">
@@ -596,18 +596,10 @@ Note that the audio does not continue through the bus - it is sent through the o
 			<destination>{e38d3ac3-5b68-4f54-94c8-0d4bfa3809c2}</destination>
 		</relationship>
 		<relationship name="automationPoints">
-			<destination>{bf775459-9a08-4d7e-bdef-fb606d367e6f}</destination>
 			<destination>{728cb421-8fbd-4131-abf1-07eb960887a2}</destination>
 			<destination>{ddc1e24e-9c73-46ed-be6b-b693ca79fe45}</destination>
+			<destination>{bf775459-9a08-4d7e-bdef-fb606d367e6f}</destination>
 		</relationship>
-	</object>
-	<object class="AutomationPoint" id="{bf775459-9a08-4d7e-bdef-fb606d367e6f}">
-		<property name="position">
-			<value>0.98999999999999999</value>
-		</property>
-		<property name="value">
-			<value>3.81469727e-06</value>
-		</property>
 	</object>
 	<object class="AutomationPoint" id="{728cb421-8fbd-4131-abf1-07eb960887a2}">
 		<property name="position">
@@ -620,6 +612,14 @@ Note that the audio does not continue through the bus - it is sent through the o
 	<object class="AutomationPoint" id="{ddc1e24e-9c73-46ed-be6b-b693ca79fe45}">
 		<property name="position">
 			<value>0</value>
+		</property>
+		<property name="value">
+			<value>3.81469727e-06</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{bf775459-9a08-4d7e-bdef-fb606d367e6f}">
+		<property name="position">
+			<value>0.98999999999999999</value>
 		</property>
 		<property name="value">
 			<value>3.81469727e-06</value>

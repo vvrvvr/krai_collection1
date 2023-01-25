@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.01.00">
+<objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{6670dd97-e4ef-4029-92d0-ffc469e0ef3b}">
 		<property name="name">
 			<value>voices_swamp</value>

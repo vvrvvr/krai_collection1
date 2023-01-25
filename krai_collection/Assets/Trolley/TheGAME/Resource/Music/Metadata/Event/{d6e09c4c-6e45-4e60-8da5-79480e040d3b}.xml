@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.01.00">
+<objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{d6e09c4c-6e45-4e60-8da5-79480e040d3b}">
 		<property name="name">
 			<value>menu_ambience</value>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.01.00">
+<objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{22f3fed6-2b45-4fff-aa85-5351bc5fe9cd}">
 		<property name="note">
 			<value>This is an example of a persistent event and use of snapshot instruments.
